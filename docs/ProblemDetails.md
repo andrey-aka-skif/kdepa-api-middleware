@@ -1,4 +1,4 @@
-# Crud.ProblemDetails
+# KdepaApiMiddleware.ProblemDetails
 
 ## Properties
 

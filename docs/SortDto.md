@@ -1,4 +1,4 @@
-# Crud.SortDto
+# KdepaApiMiddleware.SortDto
 
 ## Properties
 

@@ -1,6 +1,5 @@
 .babelrc
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 docs/ProblemDetails.md
@@ -20,9 +19,3 @@ src/model/SimpleQueryFilter.js
 src/model/SortDto.js
 src/model/Station.js
 src/model/StationPaginatedItemsViewModel.js
-test/api/StationsApi.spec.js
-test/model/ProblemDetails.spec.js
-test/model/SimpleQueryFilter.spec.js
-test/model/SortDto.spec.js
-test/model/Station.spec.js
-test/model/StationPaginatedItemsViewModel.spec.js

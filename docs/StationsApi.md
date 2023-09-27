@@ -1,4 +1,4 @@
-# Crud.StationsApi
+# KdepaApiMiddleware.StationsApi
 
 All URIs are relative to *http://localhost:5275/api*
 
@@ -22,16 +22,15 @@ Method | HTTP request | Description
 ### Example
 
 ```javascript
-import Crud from '_crud';
+import KdepaApiMiddleware from 'kdepa_api_middleware';
 
-let apiInstance = new Crud.StationsApi();
-apiInstance.stationsDefaultGet((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+let apiInstance = new KdepaApiMiddleware.StationsApi();
+apiInstance.stationsDefaultGet().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -61,21 +60,20 @@ No authorization required
 ### Example
 
 ```javascript
-import Crud from '_crud';
+import KdepaApiMiddleware from 'kdepa_api_middleware';
 
-let apiInstance = new Crud.StationsApi();
+let apiInstance = new KdepaApiMiddleware.StationsApi();
 let opts = {
   'pageSize': 10, // Number | 
   'pageIndex': 0, // Number | 
   'ids': [null] // [Number] | 
 };
-apiInstance.stationsGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.stationsGet(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -110,17 +108,16 @@ No authorization required
 ### Example
 
 ```javascript
-import Crud from '_crud';
+import KdepaApiMiddleware from 'kdepa_api_middleware';
 
-let apiInstance = new Crud.StationsApi();
+let apiInstance = new KdepaApiMiddleware.StationsApi();
 let id = 56; // Number | 
-apiInstance.stationsIdDelete(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.stationsIdDelete(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -153,17 +150,16 @@ No authorization required
 ### Example
 
 ```javascript
-import Crud from '_crud';
+import KdepaApiMiddleware from 'kdepa_api_middleware';
 
-let apiInstance = new Crud.StationsApi();
+let apiInstance = new KdepaApiMiddleware.StationsApi();
 let id = 56; // Number | 
-apiInstance.stationsIdGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.stationsIdGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -196,19 +192,18 @@ No authorization required
 ### Example
 
 ```javascript
-import Crud from '_crud';
+import KdepaApiMiddleware from 'kdepa_api_middleware';
 
-let apiInstance = new Crud.StationsApi();
+let apiInstance = new KdepaApiMiddleware.StationsApi();
 let opts = {
-  'station': new Crud.Station() // Station | 
+  'station': new KdepaApiMiddleware.Station() // Station | 
 };
-apiInstance.stationsPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.stationsPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -241,19 +236,18 @@ No authorization required
 ### Example
 
 ```javascript
-import Crud from '_crud';
+import KdepaApiMiddleware from 'kdepa_api_middleware';
 
-let apiInstance = new Crud.StationsApi();
+let apiInstance = new KdepaApiMiddleware.StationsApi();
 let opts = {
-  'station': new Crud.Station() // Station | 
+  'station': new KdepaApiMiddleware.Station() // Station | 
 };
-apiInstance.stationsPut(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.stationsPut(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

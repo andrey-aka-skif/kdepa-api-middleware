@@ -1,4 +1,4 @@
-# Crud.SimpleQueryFilter
+# KdepaApiMiddleware.SimpleQueryFilter
 
 ## Properties
 

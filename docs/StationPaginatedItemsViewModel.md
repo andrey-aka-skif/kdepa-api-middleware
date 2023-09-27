@@ -1,4 +1,4 @@
-# Crud.StationPaginatedItemsViewModel
+# KdepaApiMiddleware.StationPaginatedItemsViewModel
 
 ## Properties
 
