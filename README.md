@@ -102,7 +102,6 @@ var Crud = require('_crud');
 
 
 var api = new Crud.StationsApi()
-var version = "version_example"; // {String} 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -110,22 +109,22 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.apiVversionStationsDefaultGet(version, callback);
+api.stationsDefaultGet(callback);
 
 ```
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost:5275*
+All URIs are relative to *http://localhost:5275/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*Crud.StationsApi* | [**apiVversionStationsDefaultGet**](docs/StationsApi.md#apiVversionStationsDefaultGet) | **GET** /api/v{version}/Stations/default | Получить Станции по умолчанию
-*Crud.StationsApi* | [**apiVversionStationsGet**](docs/StationsApi.md#apiVversionStationsGet) | **GET** /api/v{version}/Stations | Получить пагинированный списка Станций
-*Crud.StationsApi* | [**apiVversionStationsIdDelete**](docs/StationsApi.md#apiVversionStationsIdDelete) | **DELETE** /api/v{version}/Stations/{id} | Удалить Станцию
-*Crud.StationsApi* | [**apiVversionStationsIdGet**](docs/StationsApi.md#apiVversionStationsIdGet) | **GET** /api/v{version}/Stations/{id} | Получить Станции по id
-*Crud.StationsApi* | [**apiVversionStationsPost**](docs/StationsApi.md#apiVversionStationsPost) | **POST** /api/v{version}/Stations | Создать Станцию
-*Crud.StationsApi* | [**apiVversionStationsPut**](docs/StationsApi.md#apiVversionStationsPut) | **PUT** /api/v{version}/Stations | Обновить Станцию
+*Crud.StationsApi* | [**stationsDefaultGet**](docs/StationsApi.md#stationsDefaultGet) | **GET** /Stations/default | Получить Станции по умолчанию
+*Crud.StationsApi* | [**stationsGet**](docs/StationsApi.md#stationsGet) | **GET** /Stations | Получить пагинированный списка Станций
+*Crud.StationsApi* | [**stationsIdDelete**](docs/StationsApi.md#stationsIdDelete) | **DELETE** /Stations/{id} | Удалить Станцию
+*Crud.StationsApi* | [**stationsIdGet**](docs/StationsApi.md#stationsIdGet) | **GET** /Stations/{id} | Получить Станции по id
+*Crud.StationsApi* | [**stationsPost**](docs/StationsApi.md#stationsPost) | **POST** /Stations | Создать Станцию
+*Crud.StationsApi* | [**stationsPut**](docs/StationsApi.md#stationsPut) | **PUT** /Stations | Обновить Станцию
 
 
 ## Documentation for Models

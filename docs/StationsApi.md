@@ -1,21 +1,21 @@
 # Crud.StationsApi
 
-All URIs are relative to *http://localhost:5275*
+All URIs are relative to *http://localhost:5275/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiVversionStationsDefaultGet**](StationsApi.md#apiVversionStationsDefaultGet) | **GET** /api/v{version}/Stations/default | Получить Станции по умолчанию
-[**apiVversionStationsGet**](StationsApi.md#apiVversionStationsGet) | **GET** /api/v{version}/Stations | Получить пагинированный списка Станций
-[**apiVversionStationsIdDelete**](StationsApi.md#apiVversionStationsIdDelete) | **DELETE** /api/v{version}/Stations/{id} | Удалить Станцию
-[**apiVversionStationsIdGet**](StationsApi.md#apiVversionStationsIdGet) | **GET** /api/v{version}/Stations/{id} | Получить Станции по id
-[**apiVversionStationsPost**](StationsApi.md#apiVversionStationsPost) | **POST** /api/v{version}/Stations | Создать Станцию
-[**apiVversionStationsPut**](StationsApi.md#apiVversionStationsPut) | **PUT** /api/v{version}/Stations | Обновить Станцию
+[**stationsDefaultGet**](StationsApi.md#stationsDefaultGet) | **GET** /Stations/default | Получить Станции по умолчанию
+[**stationsGet**](StationsApi.md#stationsGet) | **GET** /Stations | Получить пагинированный списка Станций
+[**stationsIdDelete**](StationsApi.md#stationsIdDelete) | **DELETE** /Stations/{id} | Удалить Станцию
+[**stationsIdGet**](StationsApi.md#stationsIdGet) | **GET** /Stations/{id} | Получить Станции по id
+[**stationsPost**](StationsApi.md#stationsPost) | **POST** /Stations | Создать Станцию
+[**stationsPut**](StationsApi.md#stationsPut) | **PUT** /Stations | Обновить Станцию
 
 
 
-## apiVversionStationsDefaultGet
+## stationsDefaultGet
 
-> Station apiVversionStationsDefaultGet(version)
+> Station stationsDefaultGet()
 
 Получить Станции по умолчанию
 
@@ -25,8 +25,7 @@ Method | HTTP request | Description
 import Crud from '_crud';
 
 let apiInstance = new Crud.StationsApi();
-let version = "version_example"; // String | 
-apiInstance.apiVversionStationsDefaultGet(version, (error, data, response) => {
+apiInstance.stationsDefaultGet((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -37,10 +36,7 @@ apiInstance.apiVversionStationsDefaultGet(version, (error, data, response) => {
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **version** | **String**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -56,9 +52,9 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## apiVversionStationsGet
+## stationsGet
 
-> StationPaginatedItemsViewModel apiVversionStationsGet(version, opts)
+> StationPaginatedItemsViewModel stationsGet(opts)
 
 Получить пагинированный списка Станций
 
@@ -68,13 +64,12 @@ No authorization required
 import Crud from '_crud';
 
 let apiInstance = new Crud.StationsApi();
-let version = "version_example"; // String | 
 let opts = {
   'pageSize': 10, // Number | 
   'pageIndex': 0, // Number | 
   'ids': [null] // [Number] | 
 };
-apiInstance.apiVversionStationsGet(version, opts, (error, data, response) => {
+apiInstance.stationsGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -88,7 +83,6 @@ apiInstance.apiVversionStationsGet(version, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | **String**|  | 
  **pageSize** | **Number**|  | [optional] [default to 10]
  **pageIndex** | **Number**|  | [optional] [default to 0]
  **ids** | [**[Number]**](Number.md)|  | [optional] 
@@ -107,9 +101,9 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## apiVversionStationsIdDelete
+## stationsIdDelete
 
-> apiVversionStationsIdDelete(id, version)
+> stationsIdDelete(id)
 
 Удалить Станцию
 
@@ -120,8 +114,7 @@ import Crud from '_crud';
 
 let apiInstance = new Crud.StationsApi();
 let id = 56; // Number | 
-let version = "version_example"; // String | 
-apiInstance.apiVversionStationsIdDelete(id, version, (error, data, response) => {
+apiInstance.stationsIdDelete(id, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -136,7 +129,6 @@ apiInstance.apiVversionStationsIdDelete(id, version, (error, data, response) => 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**|  | 
- **version** | **String**|  | 
 
 ### Return type
 
@@ -152,9 +144,9 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## apiVversionStationsIdGet
+## stationsIdGet
 
-> Station apiVversionStationsIdGet(id, version)
+> Station stationsIdGet(id)
 
 Получить Станции по id
 
@@ -165,8 +157,7 @@ import Crud from '_crud';
 
 let apiInstance = new Crud.StationsApi();
 let id = 56; // Number | 
-let version = "version_example"; // String | 
-apiInstance.apiVversionStationsIdGet(id, version, (error, data, response) => {
+apiInstance.stationsIdGet(id, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -181,7 +172,6 @@ apiInstance.apiVversionStationsIdGet(id, version, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**|  | 
- **version** | **String**|  | 
 
 ### Return type
 
@@ -197,9 +187,9 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## apiVversionStationsPost
+## stationsPost
 
-> Station apiVversionStationsPost(version, opts)
+> Station stationsPost(opts)
 
 Создать Станцию
 
@@ -209,11 +199,10 @@ No authorization required
 import Crud from '_crud';
 
 let apiInstance = new Crud.StationsApi();
-let version = "version_example"; // String | 
 let opts = {
   'station': new Crud.Station() // Station | 
 };
-apiInstance.apiVversionStationsPost(version, opts, (error, data, response) => {
+apiInstance.stationsPost(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -227,7 +216,6 @@ apiInstance.apiVversionStationsPost(version, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | **String**|  | 
  **station** | [**Station**](Station.md)|  | [optional] 
 
 ### Return type
@@ -244,9 +232,9 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## apiVversionStationsPut
+## stationsPut
 
-> Station apiVversionStationsPut(version, opts)
+> Station stationsPut(opts)
 
 Обновить Станцию
 
@@ -256,11 +244,10 @@ No authorization required
 import Crud from '_crud';
 
 let apiInstance = new Crud.StationsApi();
-let version = "version_example"; // String | 
 let opts = {
   'station': new Crud.Station() // Station | 
 };
-apiInstance.apiVversionStationsPut(version, opts, (error, data, response) => {
+apiInstance.stationsPut(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -274,7 +261,6 @@ apiInstance.apiVversionStationsPut(version, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | **String**|  | 
  **station** | [**Station**](Station.md)|  | [optional] 
 
 ### Return type

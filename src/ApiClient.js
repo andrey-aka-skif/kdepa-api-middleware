@@ -33,11 +33,11 @@ class ApiClient {
      * Overrides the default value set in spec file if present
      * @param {String} basePath
      */
-    constructor(basePath = 'http://localhost:5275') {
+    constructor(basePath = 'http://localhost:5275/api') {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
-         * @default http://localhost:5275
+         * @default http://localhost:5275/api
          */
         this.basePath = basePath.replace(/\/+$/, '');
 
@@ -592,11 +592,11 @@ class ApiClient {
     hostSettings() {
         return [
             {
-              'url': "http://localhost:5275",
+              'url': "http://localhost:5275/api",
               'description': "No description provided",
             },
             {
-              'url': "http://kdepa",
+              'url': "http://kdepa/api",
               'description': "No description provided",
             }
       ];

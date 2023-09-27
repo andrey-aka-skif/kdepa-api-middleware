@@ -37,8 +37,8 @@ export default class StationsApi {
 
 
     /**
-     * Callback function to receive the result of the apiVversionStationsDefaultGet operation.
-     * @callback module:api/StationsApi~apiVversionStationsDefaultGetCallback
+     * Callback function to receive the result of the stationsDefaultGet operation.
+     * @callback module:api/StationsApi~stationsDefaultGetCallback
      * @param {String} error Error message, if any.
      * @param {module:model/Station} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -46,19 +46,13 @@ export default class StationsApi {
 
     /**
      * Получить Станции по умолчанию
-     * @param {String} version 
-     * @param {module:api/StationsApi~apiVversionStationsDefaultGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StationsApi~stationsDefaultGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Station}
      */
-    apiVversionStationsDefaultGet(version, callback) {
+    stationsDefaultGet(callback) {
       let postBody = null;
-      // verify the required parameter 'version' is set
-      if (version === undefined || version === null) {
-        throw new Error("Missing the required parameter 'version' when calling apiVversionStationsDefaultGet");
-      }
 
       let pathParams = {
-        'version': version
       };
       let queryParams = {
       };
@@ -72,15 +66,15 @@ export default class StationsApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = Station;
       return this.apiClient.callApi(
-        '/api/v{version}/Stations/default', 'GET',
+        '/Stations/default', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the apiVversionStationsGet operation.
-     * @callback module:api/StationsApi~apiVversionStationsGetCallback
+     * Callback function to receive the result of the stationsGet operation.
+     * @callback module:api/StationsApi~stationsGetCallback
      * @param {String} error Error message, if any.
      * @param {module:model/StationPaginatedItemsViewModel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -88,24 +82,18 @@ export default class StationsApi {
 
     /**
      * Получить пагинированный списка Станций
-     * @param {String} version 
      * @param {Object} opts Optional parameters
      * @param {Number} [pageSize = 10)] 
      * @param {Number} [pageIndex = 0)] 
      * @param {Array.<Number>} [ids] 
-     * @param {module:api/StationsApi~apiVversionStationsGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StationsApi~stationsGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/StationPaginatedItemsViewModel}
      */
-    apiVversionStationsGet(version, opts, callback) {
+    stationsGet(opts, callback) {
       opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'version' is set
-      if (version === undefined || version === null) {
-        throw new Error("Missing the required parameter 'version' when calling apiVversionStationsGet");
-      }
 
       let pathParams = {
-        'version': version
       };
       let queryParams = {
         'pageSize': opts['pageSize'],
@@ -122,15 +110,15 @@ export default class StationsApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = StationPaginatedItemsViewModel;
       return this.apiClient.callApi(
-        '/api/v{version}/Stations', 'GET',
+        '/Stations', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the apiVversionStationsIdDelete operation.
-     * @callback module:api/StationsApi~apiVversionStationsIdDeleteCallback
+     * Callback function to receive the result of the stationsIdDelete operation.
+     * @callback module:api/StationsApi~stationsIdDeleteCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -139,23 +127,17 @@ export default class StationsApi {
     /**
      * Удалить Станцию
      * @param {Number} id 
-     * @param {String} version 
-     * @param {module:api/StationsApi~apiVversionStationsIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StationsApi~stationsIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    apiVversionStationsIdDelete(id, version, callback) {
+    stationsIdDelete(id, callback) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling apiVversionStationsIdDelete");
-      }
-      // verify the required parameter 'version' is set
-      if (version === undefined || version === null) {
-        throw new Error("Missing the required parameter 'version' when calling apiVversionStationsIdDelete");
+        throw new Error("Missing the required parameter 'id' when calling stationsIdDelete");
       }
 
       let pathParams = {
-        'id': id,
-        'version': version
+        'id': id
       };
       let queryParams = {
       };
@@ -169,15 +151,15 @@ export default class StationsApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = null;
       return this.apiClient.callApi(
-        '/api/v{version}/Stations/{id}', 'DELETE',
+        '/Stations/{id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the apiVversionStationsIdGet operation.
-     * @callback module:api/StationsApi~apiVversionStationsIdGetCallback
+     * Callback function to receive the result of the stationsIdGet operation.
+     * @callback module:api/StationsApi~stationsIdGetCallback
      * @param {String} error Error message, if any.
      * @param {module:model/Station} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -186,24 +168,18 @@ export default class StationsApi {
     /**
      * Получить Станции по id
      * @param {Number} id 
-     * @param {String} version 
-     * @param {module:api/StationsApi~apiVversionStationsIdGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StationsApi~stationsIdGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Station}
      */
-    apiVversionStationsIdGet(id, version, callback) {
+    stationsIdGet(id, callback) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling apiVversionStationsIdGet");
-      }
-      // verify the required parameter 'version' is set
-      if (version === undefined || version === null) {
-        throw new Error("Missing the required parameter 'version' when calling apiVversionStationsIdGet");
+        throw new Error("Missing the required parameter 'id' when calling stationsIdGet");
       }
 
       let pathParams = {
-        'id': id,
-        'version': version
+        'id': id
       };
       let queryParams = {
       };
@@ -217,15 +193,15 @@ export default class StationsApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = Station;
       return this.apiClient.callApi(
-        '/api/v{version}/Stations/{id}', 'GET',
+        '/Stations/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the apiVversionStationsPost operation.
-     * @callback module:api/StationsApi~apiVversionStationsPostCallback
+     * Callback function to receive the result of the stationsPost operation.
+     * @callback module:api/StationsApi~stationsPostCallback
      * @param {String} error Error message, if any.
      * @param {module:model/Station} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -233,22 +209,16 @@ export default class StationsApi {
 
     /**
      * Создать Станцию
-     * @param {String} version 
      * @param {Object} opts Optional parameters
      * @param {module:model/Station} [station] 
-     * @param {module:api/StationsApi~apiVversionStationsPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StationsApi~stationsPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Station}
      */
-    apiVversionStationsPost(version, opts, callback) {
+    stationsPost(opts, callback) {
       opts = opts || {};
       let postBody = opts['station'];
-      // verify the required parameter 'version' is set
-      if (version === undefined || version === null) {
-        throw new Error("Missing the required parameter 'version' when calling apiVversionStationsPost");
-      }
 
       let pathParams = {
-        'version': version
       };
       let queryParams = {
       };
@@ -262,15 +232,15 @@ export default class StationsApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = Station;
       return this.apiClient.callApi(
-        '/api/v{version}/Stations', 'POST',
+        '/Stations', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the apiVversionStationsPut operation.
-     * @callback module:api/StationsApi~apiVversionStationsPutCallback
+     * Callback function to receive the result of the stationsPut operation.
+     * @callback module:api/StationsApi~stationsPutCallback
      * @param {String} error Error message, if any.
      * @param {module:model/Station} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -278,22 +248,16 @@ export default class StationsApi {
 
     /**
      * Обновить Станцию
-     * @param {String} version 
      * @param {Object} opts Optional parameters
      * @param {module:model/Station} [station] 
-     * @param {module:api/StationsApi~apiVversionStationsPutCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StationsApi~stationsPutCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Station}
      */
-    apiVversionStationsPut(version, opts, callback) {
+    stationsPut(opts, callback) {
       opts = opts || {};
       let postBody = opts['station'];
-      // verify the required parameter 'version' is set
-      if (version === undefined || version === null) {
-        throw new Error("Missing the required parameter 'version' when calling apiVversionStationsPut");
-      }
 
       let pathParams = {
-        'version': version
       };
       let queryParams = {
       };
@@ -307,7 +271,7 @@ export default class StationsApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = Station;
       return this.apiClient.callApi(
-        '/api/v{version}/Stations', 'PUT',
+        '/Stations', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

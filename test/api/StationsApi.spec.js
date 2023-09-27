@@ -48,60 +48,60 @@
   }
 
   describe('StationsApi', function() {
-    describe('apiVversionStationsDefaultGet', function() {
-      it('should call apiVversionStationsDefaultGet successfully', function(done) {
-        //uncomment below and update the code to test apiVversionStationsDefaultGet
-        //instance.apiVversionStationsDefaultGet(function(error) {
+    describe('stationsDefaultGet', function() {
+      it('should call stationsDefaultGet successfully', function(done) {
+        //uncomment below and update the code to test stationsDefaultGet
+        //instance.stationsDefaultGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('apiVversionStationsGet', function() {
-      it('should call apiVversionStationsGet successfully', function(done) {
-        //uncomment below and update the code to test apiVversionStationsGet
-        //instance.apiVversionStationsGet(function(error) {
+    describe('stationsGet', function() {
+      it('should call stationsGet successfully', function(done) {
+        //uncomment below and update the code to test stationsGet
+        //instance.stationsGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('apiVversionStationsIdDelete', function() {
-      it('should call apiVversionStationsIdDelete successfully', function(done) {
-        //uncomment below and update the code to test apiVversionStationsIdDelete
-        //instance.apiVversionStationsIdDelete(function(error) {
+    describe('stationsIdDelete', function() {
+      it('should call stationsIdDelete successfully', function(done) {
+        //uncomment below and update the code to test stationsIdDelete
+        //instance.stationsIdDelete(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('apiVversionStationsIdGet', function() {
-      it('should call apiVversionStationsIdGet successfully', function(done) {
-        //uncomment below and update the code to test apiVversionStationsIdGet
-        //instance.apiVversionStationsIdGet(function(error) {
+    describe('stationsIdGet', function() {
+      it('should call stationsIdGet successfully', function(done) {
+        //uncomment below and update the code to test stationsIdGet
+        //instance.stationsIdGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('apiVversionStationsPost', function() {
-      it('should call apiVversionStationsPost successfully', function(done) {
-        //uncomment below and update the code to test apiVversionStationsPost
-        //instance.apiVversionStationsPost(function(error) {
+    describe('stationsPost', function() {
+      it('should call stationsPost successfully', function(done) {
+        //uncomment below and update the code to test stationsPost
+        //instance.stationsPost(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('apiVversionStationsPut', function() {
-      it('should call apiVversionStationsPut successfully', function(done) {
-        //uncomment below and update the code to test apiVversionStationsPut
-        //instance.apiVversionStationsPut(function(error) {
+    describe('stationsPut', function() {
+      it('should call stationsPut successfully', function(done) {
+        //uncomment below and update the code to test stationsPut
+        //instance.stationsPut(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
