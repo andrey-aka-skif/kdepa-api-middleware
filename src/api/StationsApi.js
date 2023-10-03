@@ -13,9 +13,9 @@
 
 
 import ApiClient from "../ApiClient";
-import ProblemDetails from '../model/ProblemDetails';
-import Station from '../model/Station';
-import StationPaginatedItemsViewModel from '../model/StationPaginatedItemsViewModel';
+import CreateStationDto from '../model/CreateStationDto';
+import StationDto from '../model/StationDto';
+import StationDtoPaginatedItemsDto from '../model/StationDtoPaginatedItemsDto';
 
 /**
 * Stations service.
@@ -38,8 +38,8 @@ export default class StationsApi {
 
 
     /**
-     * Получить Станции по умолчанию
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Station} and HTTP response
+     * Получить Станцию по умолчанию
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/StationDto} and HTTP response
      */
     stationsDefaultGetWithHttpInfo() {
       let postBody = null;
@@ -56,7 +56,7 @@ export default class StationsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = Station;
+      let returnType = StationDto;
       return this.apiClient.callApi(
         '/Stations/default', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -65,8 +65,8 @@ export default class StationsApi {
     }
 
     /**
-     * Получить Станции по умолчанию
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Station}
+     * Получить Станцию по умолчанию
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/StationDto}
      */
     stationsDefaultGet() {
       return this.stationsDefaultGetWithHttpInfo()
@@ -77,12 +77,14 @@ export default class StationsApi {
 
 
     /**
-     * Получить пагинированный списка Станций
+     * Получить пагинированный список Станций
      * @param {Object} opts Optional parameters
      * @param {Number} [pageSize = 10)] 
      * @param {Number} [pageIndex = 0)] 
+     * @param {String} [sortBy] 
+     * @param {Boolean} [ascending] 
      * @param {Array.<Number>} [ids] 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/StationPaginatedItemsViewModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/StationDtoPaginatedItemsDto} and HTTP response
      */
     stationsGetWithHttpInfo(opts) {
       opts = opts || {};
@@ -93,6 +95,8 @@ export default class StationsApi {
       let queryParams = {
         'pageSize': opts['pageSize'],
         'pageIndex': opts['pageIndex'],
+        'SortBy': opts['sortBy'],
+        'Ascending': opts['ascending'],
         'Ids': this.apiClient.buildCollectionParam(opts['ids'], 'multi')
       };
       let headerParams = {
@@ -103,7 +107,7 @@ export default class StationsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = StationPaginatedItemsViewModel;
+      let returnType = StationDtoPaginatedItemsDto;
       return this.apiClient.callApi(
         '/Stations', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -112,12 +116,14 @@ export default class StationsApi {
     }
 
     /**
-     * Получить пагинированный списка Станций
+     * Получить пагинированный список Станций
      * @param {Object} opts Optional parameters
      * @param {Number} opts.pageSize  (default to 10)
      * @param {Number} opts.pageIndex  (default to 0)
+     * @param {String} opts.sortBy 
+     * @param {Boolean} opts.ascending 
      * @param {Array.<Number>} opts.ids 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/StationPaginatedItemsViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/StationDtoPaginatedItemsDto}
      */
     stationsGet(opts) {
       return this.stationsGetWithHttpInfo(opts)
@@ -130,7 +136,7 @@ export default class StationsApi {
     /**
      * Удалить Станцию
      * @param {Number} id 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link String} and HTTP response
      */
     stationsIdDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -152,7 +158,7 @@ export default class StationsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = null;
+      let returnType = 'String';
       return this.apiClient.callApi(
         '/Stations/{id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -163,7 +169,7 @@ export default class StationsApi {
     /**
      * Удалить Станцию
      * @param {Number} id 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link String}
      */
     stationsIdDelete(id) {
       return this.stationsIdDeleteWithHttpInfo(id)
@@ -176,7 +182,7 @@ export default class StationsApi {
     /**
      * Получить Станции по id
      * @param {Number} id 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Station} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/StationDto} and HTTP response
      */
     stationsIdGetWithHttpInfo(id) {
       let postBody = null;
@@ -198,7 +204,7 @@ export default class StationsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = Station;
+      let returnType = StationDto;
       return this.apiClient.callApi(
         '/Stations/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -209,7 +215,7 @@ export default class StationsApi {
     /**
      * Получить Станции по id
      * @param {Number} id 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Station}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/StationDto}
      */
     stationsIdGet(id) {
       return this.stationsIdGetWithHttpInfo(id)
@@ -222,12 +228,12 @@ export default class StationsApi {
     /**
      * Создать Станцию
      * @param {Object} opts Optional parameters
-     * @param {module:model/Station} [station] 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Station} and HTTP response
+     * @param {module:model/CreateStationDto} [createStationDto] 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/StationDto} and HTTP response
      */
     stationsPostWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['station'];
+      let postBody = opts['createStationDto'];
 
       let pathParams = {
       };
@@ -241,7 +247,7 @@ export default class StationsApi {
       let authNames = [];
       let contentTypes = ['application/json', 'text/json', 'application/*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = Station;
+      let returnType = StationDto;
       return this.apiClient.callApi(
         '/Stations', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -252,8 +258,8 @@ export default class StationsApi {
     /**
      * Создать Станцию
      * @param {Object} opts Optional parameters
-     * @param {module:model/Station} opts.station 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Station}
+     * @param {module:model/CreateStationDto} opts.createStationDto 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/StationDto}
      */
     stationsPost(opts) {
       return this.stationsPostWithHttpInfo(opts)
@@ -266,12 +272,12 @@ export default class StationsApi {
     /**
      * Обновить Станцию
      * @param {Object} opts Optional parameters
-     * @param {module:model/Station} [station] 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Station} and HTTP response
+     * @param {module:model/StationDto} [stationDto] 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/StationDto} and HTTP response
      */
     stationsPutWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['station'];
+      let postBody = opts['stationDto'];
 
       let pathParams = {
       };
@@ -285,7 +291,7 @@ export default class StationsApi {
       let authNames = [];
       let contentTypes = ['application/json', 'text/json', 'application/*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = Station;
+      let returnType = StationDto;
       return this.apiClient.callApi(
         '/Stations', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -296,8 +302,8 @@ export default class StationsApi {
     /**
      * Обновить Станцию
      * @param {Object} opts Optional parameters
-     * @param {module:model/Station} opts.station 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Station}
+     * @param {module:model/StationDto} opts.stationDto 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/StationDto}
      */
     stationsPut(opts) {
       return this.stationsPutWithHttpInfo(opts)

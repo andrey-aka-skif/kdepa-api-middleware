@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KdepaApiMiddleware.SimpleQueryFilter();
+    instance = new KdepaApiMiddleware.CreateStationDto();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,28 @@
       object[property] = value;
   }
 
-  describe('SimpleQueryFilter', function() {
-    it('should create an instance of SimpleQueryFilter', function() {
-      // uncomment below and update the code to test SimpleQueryFilter
-      //var instance = new KdepaApiMiddleware.SimpleQueryFilter();
-      //expect(instance).to.be.a(KdepaApiMiddleware.SimpleQueryFilter);
+  describe('CreateStationDto', function() {
+    it('should create an instance of CreateStationDto', function() {
+      // uncomment below and update the code to test CreateStationDto
+      //var instance = new KdepaApiMiddleware.CreateStationDto();
+      //expect(instance).to.be.a(KdepaApiMiddleware.CreateStationDto);
     });
 
-    it('should have the property ids (base name: "ids")', function() {
-      // uncomment below and update the code to test the property ids
-      //var instance = new KdepaApiMiddleware.SimpleQueryFilter();
+    it('should have the property shortName (base name: "shortName")', function() {
+      // uncomment below and update the code to test the property shortName
+      //var instance = new KdepaApiMiddleware.CreateStationDto();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property fullName (base name: "fullName")', function() {
+      // uncomment below and update the code to test the property fullName
+      //var instance = new KdepaApiMiddleware.CreateStationDto();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isDefault (base name: "isDefault")', function() {
+      // uncomment below and update the code to test the property isDefault
+      //var instance = new KdepaApiMiddleware.CreateStationDto();
       //expect(instance).to.be();
     });
 

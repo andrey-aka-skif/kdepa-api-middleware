@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KdepaApiMiddleware.ProblemDetails();
+    instance = new KdepaApiMiddleware.StationDto();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,40 +47,34 @@
       object[property] = value;
   }
 
-  describe('ProblemDetails', function() {
-    it('should create an instance of ProblemDetails', function() {
-      // uncomment below and update the code to test ProblemDetails
-      //var instance = new KdepaApiMiddleware.ProblemDetails();
-      //expect(instance).to.be.a(KdepaApiMiddleware.ProblemDetails);
+  describe('StationDto', function() {
+    it('should create an instance of StationDto', function() {
+      // uncomment below and update the code to test StationDto
+      //var instance = new KdepaApiMiddleware.StationDto();
+      //expect(instance).to.be.a(KdepaApiMiddleware.StationDto);
     });
 
-    it('should have the property type (base name: "type")', function() {
-      // uncomment below and update the code to test the property type
-      //var instance = new KdepaApiMiddleware.ProblemDetails();
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new KdepaApiMiddleware.StationDto();
       //expect(instance).to.be();
     });
 
-    it('should have the property title (base name: "title")', function() {
-      // uncomment below and update the code to test the property title
-      //var instance = new KdepaApiMiddleware.ProblemDetails();
+    it('should have the property shortName (base name: "shortName")', function() {
+      // uncomment below and update the code to test the property shortName
+      //var instance = new KdepaApiMiddleware.StationDto();
       //expect(instance).to.be();
     });
 
-    it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
-      //var instance = new KdepaApiMiddleware.ProblemDetails();
+    it('should have the property fullName (base name: "fullName")', function() {
+      // uncomment below and update the code to test the property fullName
+      //var instance = new KdepaApiMiddleware.StationDto();
       //expect(instance).to.be();
     });
 
-    it('should have the property detail (base name: "detail")', function() {
-      // uncomment below and update the code to test the property detail
-      //var instance = new KdepaApiMiddleware.ProblemDetails();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property instance (base name: "instance")', function() {
-      // uncomment below and update the code to test the property instance
-      //var instance = new KdepaApiMiddleware.ProblemDetails();
+    it('should have the property isDefault (base name: "isDefault")', function() {
+      // uncomment below and update the code to test the property isDefault
+      //var instance = new KdepaApiMiddleware.StationDto();
       //expect(instance).to.be();
     });
 

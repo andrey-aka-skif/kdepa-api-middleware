@@ -12,23 +12,22 @@
  */
 
 import ApiClient from '../ApiClient';
-import SimpleQueryFilter from './SimpleQueryFilter';
 import SortDto from './SortDto';
-import Station from './Station';
+import StationDto from './StationDto';
 
 /**
- * The StationPaginatedItemsViewModel model module.
- * @module model/StationPaginatedItemsViewModel
+ * The StationDtoPaginatedItemsDto model module.
+ * @module model/StationDtoPaginatedItemsDto
  * @version 0.1.0
  */
-class StationPaginatedItemsViewModel {
+class StationDtoPaginatedItemsDto {
     /**
-     * Constructs a new <code>StationPaginatedItemsViewModel</code>.
-     * @alias module:model/StationPaginatedItemsViewModel
+     * Constructs a new <code>StationDtoPaginatedItemsDto</code>.
+     * @alias module:model/StationDtoPaginatedItemsDto
      */
     constructor() { 
         
-        StationPaginatedItemsViewModel.initialize(this);
+        StationDtoPaginatedItemsDto.initialize(this);
     }
 
     /**
@@ -40,15 +39,15 @@ class StationPaginatedItemsViewModel {
     }
 
     /**
-     * Constructs a <code>StationPaginatedItemsViewModel</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>StationDtoPaginatedItemsDto</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/StationPaginatedItemsViewModel} obj Optional instance to populate.
-     * @return {module:model/StationPaginatedItemsViewModel} The populated <code>StationPaginatedItemsViewModel</code> instance.
+     * @param {module:model/StationDtoPaginatedItemsDto} obj Optional instance to populate.
+     * @return {module:model/StationDtoPaginatedItemsDto} The populated <code>StationDtoPaginatedItemsDto</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new StationPaginatedItemsViewModel();
+            obj = obj || new StationDtoPaginatedItemsDto();
 
             if (data.hasOwnProperty('pageIndex')) {
                 obj['pageIndex'] = ApiClient.convertToType(data['pageIndex'], 'Number');
@@ -60,22 +59,22 @@ class StationPaginatedItemsViewModel {
                 obj['itemsPerPage'] = ApiClient.convertToType(data['itemsPerPage'], 'Number');
             }
             if (data.hasOwnProperty('items')) {
-                obj['items'] = ApiClient.convertToType(data['items'], [Station]);
+                obj['items'] = ApiClient.convertToType(data['items'], [StationDto]);
             }
             if (data.hasOwnProperty('sort')) {
                 obj['sort'] = SortDto.constructFromObject(data['sort']);
             }
             if (data.hasOwnProperty('filter')) {
-                obj['filter'] = SimpleQueryFilter.constructFromObject(data['filter']);
+                obj['filter'] = ApiClient.convertToType(data['filter'], Object);
             }
         }
         return obj;
     }
 
     /**
-     * Validates the JSON data with respect to <code>StationPaginatedItemsViewModel</code>.
+     * Validates the JSON data with respect to <code>StationDtoPaginatedItemsDto</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>StationPaginatedItemsViewModel</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>StationDtoPaginatedItemsDto</code>.
      */
     static validateJSON(data) {
         if (data['items']) { // data not null
@@ -85,16 +84,12 @@ class StationPaginatedItemsViewModel {
             }
             // validate the optional field `items` (array)
             for (const item of data['items']) {
-                Station.validateJSON(item);
+                StationDto.validateJSON(item);
             };
         }
         // validate the optional field `sort`
         if (data['sort']) { // data not null
           SortDto.validateJSON(data['sort']);
-        }
-        // validate the optional field `filter`
-        if (data['filter']) { // data not null
-          SimpleQueryFilter.validateJSON(data['filter']);
         }
 
         return true;
@@ -108,37 +103,37 @@ class StationPaginatedItemsViewModel {
 /**
  * @member {Number} pageIndex
  */
-StationPaginatedItemsViewModel.prototype['pageIndex'] = undefined;
+StationDtoPaginatedItemsDto.prototype['pageIndex'] = undefined;
 
 /**
  * @member {Number} totalPages
  */
-StationPaginatedItemsViewModel.prototype['totalPages'] = undefined;
+StationDtoPaginatedItemsDto.prototype['totalPages'] = undefined;
 
 /**
  * @member {Number} itemsPerPage
  */
-StationPaginatedItemsViewModel.prototype['itemsPerPage'] = undefined;
+StationDtoPaginatedItemsDto.prototype['itemsPerPage'] = undefined;
 
 /**
- * @member {Array.<module:model/Station>} items
+ * @member {Array.<module:model/StationDto>} items
  */
-StationPaginatedItemsViewModel.prototype['items'] = undefined;
+StationDtoPaginatedItemsDto.prototype['items'] = undefined;
 
 /**
  * @member {module:model/SortDto} sort
  */
-StationPaginatedItemsViewModel.prototype['sort'] = undefined;
+StationDtoPaginatedItemsDto.prototype['sort'] = undefined;
 
 /**
- * @member {module:model/SimpleQueryFilter} filter
+ * @member {Object} filter
  */
-StationPaginatedItemsViewModel.prototype['filter'] = undefined;
+StationDtoPaginatedItemsDto.prototype['filter'] = undefined;
 
 
 
 
 
 
-export default StationPaginatedItemsViewModel;
+export default StationDtoPaginatedItemsDto;
 

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KdepaApiMiddleware.StationPaginatedItemsViewModel();
+    instance = new KdepaApiMiddleware.StationDtoPaginatedItemsDto();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,46 +47,46 @@
       object[property] = value;
   }
 
-  describe('StationPaginatedItemsViewModel', function() {
-    it('should create an instance of StationPaginatedItemsViewModel', function() {
-      // uncomment below and update the code to test StationPaginatedItemsViewModel
-      //var instance = new KdepaApiMiddleware.StationPaginatedItemsViewModel();
-      //expect(instance).to.be.a(KdepaApiMiddleware.StationPaginatedItemsViewModel);
+  describe('StationDtoPaginatedItemsDto', function() {
+    it('should create an instance of StationDtoPaginatedItemsDto', function() {
+      // uncomment below and update the code to test StationDtoPaginatedItemsDto
+      //var instance = new KdepaApiMiddleware.StationDtoPaginatedItemsDto();
+      //expect(instance).to.be.a(KdepaApiMiddleware.StationDtoPaginatedItemsDto);
     });
 
     it('should have the property pageIndex (base name: "pageIndex")', function() {
       // uncomment below and update the code to test the property pageIndex
-      //var instance = new KdepaApiMiddleware.StationPaginatedItemsViewModel();
+      //var instance = new KdepaApiMiddleware.StationDtoPaginatedItemsDto();
       //expect(instance).to.be();
     });
 
     it('should have the property totalPages (base name: "totalPages")', function() {
       // uncomment below and update the code to test the property totalPages
-      //var instance = new KdepaApiMiddleware.StationPaginatedItemsViewModel();
+      //var instance = new KdepaApiMiddleware.StationDtoPaginatedItemsDto();
       //expect(instance).to.be();
     });
 
     it('should have the property itemsPerPage (base name: "itemsPerPage")', function() {
       // uncomment below and update the code to test the property itemsPerPage
-      //var instance = new KdepaApiMiddleware.StationPaginatedItemsViewModel();
+      //var instance = new KdepaApiMiddleware.StationDtoPaginatedItemsDto();
       //expect(instance).to.be();
     });
 
     it('should have the property items (base name: "items")', function() {
       // uncomment below and update the code to test the property items
-      //var instance = new KdepaApiMiddleware.StationPaginatedItemsViewModel();
+      //var instance = new KdepaApiMiddleware.StationDtoPaginatedItemsDto();
       //expect(instance).to.be();
     });
 
     it('should have the property sort (base name: "sort")', function() {
       // uncomment below and update the code to test the property sort
-      //var instance = new KdepaApiMiddleware.StationPaginatedItemsViewModel();
+      //var instance = new KdepaApiMiddleware.StationDtoPaginatedItemsDto();
       //expect(instance).to.be();
     });
 
     it('should have the property filter (base name: "filter")', function() {
       // uncomment below and update the code to test the property filter
-      //var instance = new KdepaApiMiddleware.StationPaginatedItemsViewModel();
+      //var instance = new KdepaApiMiddleware.StationDtoPaginatedItemsDto();
       //expect(instance).to.be();
     });
 

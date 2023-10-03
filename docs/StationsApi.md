@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost:5275/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**stationsDefaultGet**](StationsApi.md#stationsDefaultGet) | **GET** /Stations/default | Получить Станции по умолчанию
-[**stationsGet**](StationsApi.md#stationsGet) | **GET** /Stations | Получить пагинированный списка Станций
+[**stationsDefaultGet**](StationsApi.md#stationsDefaultGet) | **GET** /Stations/default | Получить Станцию по умолчанию
+[**stationsGet**](StationsApi.md#stationsGet) | **GET** /Stations | Получить пагинированный список Станций
 [**stationsIdDelete**](StationsApi.md#stationsIdDelete) | **DELETE** /Stations/{id} | Удалить Станцию
 [**stationsIdGet**](StationsApi.md#stationsIdGet) | **GET** /Stations/{id} | Получить Станции по id
 [**stationsPost**](StationsApi.md#stationsPost) | **POST** /Stations | Создать Станцию
@@ -15,9 +15,9 @@ Method | HTTP request | Description
 
 ## stationsDefaultGet
 
-> Station stationsDefaultGet()
+> StationDto stationsDefaultGet()
 
-Получить Станции по умолчанию
+Получить Станцию по умолчанию
 
 ### Example
 
@@ -39,7 +39,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Station**](Station.md)
+[**StationDto**](StationDto.md)
 
 ### Authorization
 
@@ -53,9 +53,9 @@ No authorization required
 
 ## stationsGet
 
-> StationPaginatedItemsViewModel stationsGet(opts)
+> StationDtoPaginatedItemsDto stationsGet(opts)
 
-Получить пагинированный списка Станций
+Получить пагинированный список Станций
 
 ### Example
 
@@ -66,6 +66,8 @@ let apiInstance = new KdepaApiMiddleware.StationsApi();
 let opts = {
   'pageSize': 10, // Number | 
   'pageIndex': 0, // Number | 
+  'sortBy': "sortBy_example", // String | 
+  'ascending': true, // Boolean | 
   'ids': [null] // [Number] | 
 };
 apiInstance.stationsGet(opts).then((data) => {
@@ -83,11 +85,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pageSize** | **Number**|  | [optional] [default to 10]
  **pageIndex** | **Number**|  | [optional] [default to 0]
+ **sortBy** | **String**|  | [optional] 
+ **ascending** | **Boolean**|  | [optional] 
  **ids** | [**[Number]**](Number.md)|  | [optional] 
 
 ### Return type
 
-[**StationPaginatedItemsViewModel**](StationPaginatedItemsViewModel.md)
+[**StationDtoPaginatedItemsDto**](StationDtoPaginatedItemsDto.md)
 
 ### Authorization
 
@@ -101,7 +105,7 @@ No authorization required
 
 ## stationsIdDelete
 
-> stationsIdDelete(id)
+> String stationsIdDelete(id)
 
 Удалить Станцию
 
@@ -112,8 +116,8 @@ import KdepaApiMiddleware from 'kdepa_api_middleware';
 
 let apiInstance = new KdepaApiMiddleware.StationsApi();
 let id = 56; // Number | 
-apiInstance.stationsIdDelete(id).then(() => {
-  console.log('API called successfully.');
+apiInstance.stationsIdDelete(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
 });
@@ -129,7 +133,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**String**
 
 ### Authorization
 
@@ -143,7 +147,7 @@ No authorization required
 
 ## stationsIdGet
 
-> Station stationsIdGet(id)
+> StationDto stationsIdGet(id)
 
 Получить Станции по id
 
@@ -171,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Station**](Station.md)
+[**StationDto**](StationDto.md)
 
 ### Authorization
 
@@ -185,7 +189,7 @@ No authorization required
 
 ## stationsPost
 
-> Station stationsPost(opts)
+> StationDto stationsPost(opts)
 
 Создать Станцию
 
@@ -196,7 +200,7 @@ import KdepaApiMiddleware from 'kdepa_api_middleware';
 
 let apiInstance = new KdepaApiMiddleware.StationsApi();
 let opts = {
-  'station': new KdepaApiMiddleware.Station() // Station | 
+  'createStationDto': new KdepaApiMiddleware.CreateStationDto() // CreateStationDto | 
 };
 apiInstance.stationsPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -211,11 +215,11 @@ apiInstance.stationsPost(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **station** | [**Station**](Station.md)|  | [optional] 
+ **createStationDto** | [**CreateStationDto**](CreateStationDto.md)|  | [optional] 
 
 ### Return type
 
-[**Station**](Station.md)
+[**StationDto**](StationDto.md)
 
 ### Authorization
 
@@ -229,7 +233,7 @@ No authorization required
 
 ## stationsPut
 
-> Station stationsPut(opts)
+> StationDto stationsPut(opts)
 
 Обновить Станцию
 
@@ -240,7 +244,7 @@ import KdepaApiMiddleware from 'kdepa_api_middleware';
 
 let apiInstance = new KdepaApiMiddleware.StationsApi();
 let opts = {
-  'station': new KdepaApiMiddleware.Station() // Station | 
+  'stationDto': new KdepaApiMiddleware.StationDto() // StationDto | 
 };
 apiInstance.stationsPut(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -255,11 +259,11 @@ apiInstance.stationsPut(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **station** | [**Station**](Station.md)|  | [optional] 
+ **stationDto** | [**StationDto**](StationDto.md)|  | [optional] 
 
 ### Return type
 
-[**Station**](Station.md)
+[**StationDto**](StationDto.md)
 
 ### Authorization
 

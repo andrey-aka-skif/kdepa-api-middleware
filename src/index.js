@@ -13,11 +13,10 @@
 
 
 import ApiClient from './ApiClient';
-import ProblemDetails from './model/ProblemDetails';
-import SimpleQueryFilter from './model/SimpleQueryFilter';
+import CreateStationDto from './model/CreateStationDto';
 import SortDto from './model/SortDto';
-import Station from './model/Station';
-import StationPaginatedItemsViewModel from './model/StationPaginatedItemsViewModel';
+import StationDto from './model/StationDto';
+import StationDtoPaginatedItemsDto from './model/StationDtoPaginatedItemsDto';
 import StationsApi from './api/StationsApi';
 
 
@@ -60,16 +59,10 @@ export {
     ApiClient,
 
     /**
-     * The ProblemDetails model constructor.
-     * @property {module:model/ProblemDetails}
+     * The CreateStationDto model constructor.
+     * @property {module:model/CreateStationDto}
      */
-    ProblemDetails,
-
-    /**
-     * The SimpleQueryFilter model constructor.
-     * @property {module:model/SimpleQueryFilter}
-     */
-    SimpleQueryFilter,
+    CreateStationDto,
 
     /**
      * The SortDto model constructor.
@@ -78,16 +71,16 @@ export {
     SortDto,
 
     /**
-     * The Station model constructor.
-     * @property {module:model/Station}
+     * The StationDto model constructor.
+     * @property {module:model/StationDto}
      */
-    Station,
+    StationDto,
 
     /**
-     * The StationPaginatedItemsViewModel model constructor.
-     * @property {module:model/StationPaginatedItemsViewModel}
+     * The StationDtoPaginatedItemsDto model constructor.
+     * @property {module:model/StationDtoPaginatedItemsDto}
      */
-    StationPaginatedItemsViewModel,
+    StationDtoPaginatedItemsDto,
 
     /**
     * The StationsApi service constructor.
