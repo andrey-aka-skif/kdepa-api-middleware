@@ -1,5 +1,5 @@
 /**
- * kdepa-api-middleware
+ * kdepa-api
  * КДЭПА CRUD API
  *
  * The version of the OpenAPI document: 0.1.0
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KdepaApiMiddleware);
+    factory(root.expect, root.KdepaApi);
   }
-}(this, function(expect, KdepaApiMiddleware) {
+}(this, function(expect, KdepaApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KdepaApiMiddleware.CreateStationDto();
+    instance = new KdepaApi.UpdateShopRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,22 @@
       object[property] = value;
   }
 
-  describe('CreateStationDto', function() {
-    it('should create an instance of CreateStationDto', function() {
-      // uncomment below and update the code to test CreateStationDto
-      //var instance = new KdepaApiMiddleware.CreateStationDto();
-      //expect(instance).to.be.a(KdepaApiMiddleware.CreateStationDto);
+  describe('UpdateShopRequest', function() {
+    it('should create an instance of UpdateShopRequest', function() {
+      // uncomment below and update the code to test UpdateShopRequest
+      //var instance = new KdepaApi.UpdateShopRequest();
+      //expect(instance).to.be.a(KdepaApi.UpdateShopRequest);
     });
 
     it('should have the property shortName (base name: "shortName")', function() {
       // uncomment below and update the code to test the property shortName
-      //var instance = new KdepaApiMiddleware.CreateStationDto();
+      //var instance = new KdepaApi.UpdateShopRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property fullName (base name: "fullName")', function() {
       // uncomment below and update the code to test the property fullName
-      //var instance = new KdepaApiMiddleware.CreateStationDto();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property isDefault (base name: "isDefault")', function() {
-      // uncomment below and update the code to test the property isDefault
-      //var instance = new KdepaApiMiddleware.CreateStationDto();
+      //var instance = new KdepaApi.UpdateShopRequest();
       //expect(instance).to.be();
     });
 

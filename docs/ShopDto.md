@@ -1,11 +1,11 @@
-# KdepaApiMiddleware.CreateStationDto
+# KdepaApi.ShopDto
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **Number** |  | [optional] 
 **shortName** | **String** |  | [optional] 
 **fullName** | **String** |  | [optional] 
-**isDefault** | **Boolean** |  | [optional] 
 
 

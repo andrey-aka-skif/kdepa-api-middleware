@@ -1,10 +1,9 @@
-# KdepaApi.SortDto
+# KdepaApi.QueryIdsFilterDto
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sortBy** | **String** |  | [optional] 
-**ascending** | **Boolean** |  | [optional] 
+**ids** | **[Number]** |  | [optional] 
 
 

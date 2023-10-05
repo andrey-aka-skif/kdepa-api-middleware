@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The StationDto model module.
- * @module model/StationDto
+ * The UpdateShopRequest model module.
+ * @module model/UpdateShopRequest
  * @version 0.1.0
  */
-class StationDto {
+class UpdateShopRequest {
     /**
-     * Constructs a new <code>StationDto</code>.
-     * @alias module:model/StationDto
+     * Constructs a new <code>UpdateShopRequest</code>.
+     * @alias module:model/UpdateShopRequest
      */
     constructor() { 
         
-        StationDto.initialize(this);
+        UpdateShopRequest.initialize(this);
     }
 
     /**
@@ -37,36 +37,30 @@ class StationDto {
     }
 
     /**
-     * Constructs a <code>StationDto</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>UpdateShopRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/StationDto} obj Optional instance to populate.
-     * @return {module:model/StationDto} The populated <code>StationDto</code> instance.
+     * @param {module:model/UpdateShopRequest} obj Optional instance to populate.
+     * @return {module:model/UpdateShopRequest} The populated <code>UpdateShopRequest</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new StationDto();
+            obj = obj || new UpdateShopRequest();
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-            }
             if (data.hasOwnProperty('shortName')) {
                 obj['shortName'] = ApiClient.convertToType(data['shortName'], 'String');
             }
             if (data.hasOwnProperty('fullName')) {
                 obj['fullName'] = ApiClient.convertToType(data['fullName'], 'String');
             }
-            if (data.hasOwnProperty('isDefault')) {
-                obj['isDefault'] = ApiClient.convertToType(data['isDefault'], 'Boolean');
-            }
         }
         return obj;
     }
 
     /**
-     * Validates the JSON data with respect to <code>StationDto</code>.
+     * Validates the JSON data with respect to <code>UpdateShopRequest</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>StationDto</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UpdateShopRequest</code>.
      */
     static validateJSON(data) {
         // ensure the json data is a string
@@ -87,29 +81,19 @@ class StationDto {
 
 
 /**
- * @member {Number} id
- */
-StationDto.prototype['id'] = undefined;
-
-/**
  * @member {String} shortName
  */
-StationDto.prototype['shortName'] = undefined;
+UpdateShopRequest.prototype['shortName'] = undefined;
 
 /**
  * @member {String} fullName
  */
-StationDto.prototype['fullName'] = undefined;
-
-/**
- * @member {Boolean} isDefault
- */
-StationDto.prototype['isDefault'] = undefined;
+UpdateShopRequest.prototype['fullName'] = undefined;
 
 
 
 
 
 
-export default StationDto;
+export default UpdateShopRequest;
 

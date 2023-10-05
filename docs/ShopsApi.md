@@ -1,68 +1,29 @@
-# KdepaApi.StationsApi
+# KdepaApi.ShopsApi
 
 All URIs are relative to *http://localhost:5275/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**stationsDefaultGet**](StationsApi.md#stationsDefaultGet) | **GET** /Stations/default | Получить Станцию по умолчанию
-[**stationsGet**](StationsApi.md#stationsGet) | **GET** /Stations | Получить пагинированный список Станций
-[**stationsIdDelete**](StationsApi.md#stationsIdDelete) | **DELETE** /Stations/{id} | Удалить Станцию
-[**stationsIdGet**](StationsApi.md#stationsIdGet) | **GET** /Stations/{id} | Получить Станцию по id
-[**stationsIdPut**](StationsApi.md#stationsIdPut) | **PUT** /Stations/{id} | Обновить Станцию
-[**stationsPost**](StationsApi.md#stationsPost) | **POST** /Stations | Создать Станцию
+[**shopsGet**](ShopsApi.md#shopsGet) | **GET** /Shops | Получить пагинированный список Цехов
+[**shopsIdDelete**](ShopsApi.md#shopsIdDelete) | **DELETE** /Shops/{id} | Удалить Цех
+[**shopsIdGet**](ShopsApi.md#shopsIdGet) | **GET** /Shops/{id} | Получить Цех по id
+[**shopsIdPut**](ShopsApi.md#shopsIdPut) | **PUT** /Shops/{id} | Обновить Цех
+[**shopsPost**](ShopsApi.md#shopsPost) | **POST** /Shops | Создать Цех
 
 
 
-## stationsDefaultGet
+## shopsGet
 
-> StationDto stationsDefaultGet()
+> ShopDtoQueryIdsFilterDtoPagedItemsDto shopsGet(opts)
 
-Получить Станцию по умолчанию
-
-### Example
-
-```javascript
-import KdepaApi from 'kdepa_api';
-
-let apiInstance = new KdepaApi.StationsApi();
-apiInstance.stationsDefaultGet().then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**StationDto**](StationDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## stationsGet
-
-> StationDtoQueryIdsFilterDtoPagedItemsDto stationsGet(opts)
-
-Получить пагинированный список Станций
+Получить пагинированный список Цехов
 
 ### Example
 
 ```javascript
 import KdepaApi from 'kdepa_api';
 
-let apiInstance = new KdepaApi.StationsApi();
+let apiInstance = new KdepaApi.ShopsApi();
 let opts = {
   'pageSize': 10, // Number | 
   'pageIndex': 0, // Number | 
@@ -70,7 +31,7 @@ let opts = {
   'ascending': true, // Boolean | 
   'ids': [null] // [Number] | 
 };
-apiInstance.stationsGet(opts).then((data) => {
+apiInstance.shopsGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -91,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StationDtoQueryIdsFilterDtoPagedItemsDto**](StationDtoQueryIdsFilterDtoPagedItemsDto.md)
+[**ShopDtoQueryIdsFilterDtoPagedItemsDto**](ShopDtoQueryIdsFilterDtoPagedItemsDto.md)
 
 ### Authorization
 
@@ -103,20 +64,20 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## stationsIdDelete
+## shopsIdDelete
 
-> String stationsIdDelete(id)
+> String shopsIdDelete(id)
 
-Удалить Станцию
+Удалить Цех
 
 ### Example
 
 ```javascript
 import KdepaApi from 'kdepa_api';
 
-let apiInstance = new KdepaApi.StationsApi();
+let apiInstance = new KdepaApi.ShopsApi();
 let id = 56; // Number | 
-apiInstance.stationsIdDelete(id).then((data) => {
+apiInstance.shopsIdDelete(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -145,20 +106,20 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## stationsIdGet
+## shopsIdGet
 
-> StationDto stationsIdGet(id)
+> ShopDto shopsIdGet(id)
 
-Получить Станцию по id
+Получить Цех по id
 
 ### Example
 
 ```javascript
 import KdepaApi from 'kdepa_api';
 
-let apiInstance = new KdepaApi.StationsApi();
+let apiInstance = new KdepaApi.ShopsApi();
 let id = 56; // Number | 
-apiInstance.stationsIdGet(id).then((data) => {
+apiInstance.shopsIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -175,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StationDto**](StationDto.md)
+[**ShopDto**](ShopDto.md)
 
 ### Authorization
 
@@ -187,23 +148,23 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## stationsIdPut
+## shopsIdPut
 
-> StationDto stationsIdPut(id, opts)
+> ShopDto shopsIdPut(id, opts)
 
-Обновить Станцию
+Обновить Цех
 
 ### Example
 
 ```javascript
 import KdepaApi from 'kdepa_api';
 
-let apiInstance = new KdepaApi.StationsApi();
+let apiInstance = new KdepaApi.ShopsApi();
 let id = 56; // Number | 
 let opts = {
-  'updateStationRequest': new KdepaApi.UpdateStationRequest() // UpdateStationRequest | 
+  'updateShopRequest': new KdepaApi.UpdateShopRequest() // UpdateShopRequest | 
 };
-apiInstance.stationsIdPut(id, opts).then((data) => {
+apiInstance.shopsIdPut(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -217,11 +178,11 @@ apiInstance.stationsIdPut(id, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**|  | 
- **updateStationRequest** | [**UpdateStationRequest**](UpdateStationRequest.md)|  | [optional] 
+ **updateShopRequest** | [**UpdateShopRequest**](UpdateShopRequest.md)|  | [optional] 
 
 ### Return type
 
-[**StationDto**](StationDto.md)
+[**ShopDto**](ShopDto.md)
 
 ### Authorization
 
@@ -233,22 +194,22 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## stationsPost
+## shopsPost
 
-> StationDto stationsPost(opts)
+> ShopDto shopsPost(opts)
 
-Создать Станцию
+Создать Цех
 
 ### Example
 
 ```javascript
 import KdepaApi from 'kdepa_api';
 
-let apiInstance = new KdepaApi.StationsApi();
+let apiInstance = new KdepaApi.ShopsApi();
 let opts = {
-  'createStationRequest': new KdepaApi.CreateStationRequest() // CreateStationRequest | 
+  'createShopRequest': new KdepaApi.CreateShopRequest() // CreateShopRequest | 
 };
-apiInstance.stationsPost(opts).then((data) => {
+apiInstance.shopsPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -261,11 +222,11 @@ apiInstance.stationsPost(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createStationRequest** | [**CreateStationRequest**](CreateStationRequest.md)|  | [optional] 
+ **createShopRequest** | [**CreateShopRequest**](CreateShopRequest.md)|  | [optional] 
 
 ### Return type
 
-[**StationDto**](StationDto.md)
+[**ShopDto**](ShopDto.md)
 
 ### Authorization
 

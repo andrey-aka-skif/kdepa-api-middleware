@@ -1,5 +1,5 @@
 /**
- * kdepa-api-middleware
+ * kdepa-api
  * КДЭПА CRUD API
  *
  * The version of the OpenAPI document: 0.1.0
@@ -12,22 +12,23 @@
  */
 
 import ApiClient from '../ApiClient';
+import QueryIdsFilterDto from './QueryIdsFilterDto';
 import SortDto from './SortDto';
 import StationDto from './StationDto';
 
 /**
- * The StationDtoPaginatedItemsDto model module.
- * @module model/StationDtoPaginatedItemsDto
+ * The StationDtoQueryIdsFilterDtoPagedItemsDto model module.
+ * @module model/StationDtoQueryIdsFilterDtoPagedItemsDto
  * @version 0.1.0
  */
-class StationDtoPaginatedItemsDto {
+class StationDtoQueryIdsFilterDtoPagedItemsDto {
     /**
-     * Constructs a new <code>StationDtoPaginatedItemsDto</code>.
-     * @alias module:model/StationDtoPaginatedItemsDto
+     * Constructs a new <code>StationDtoQueryIdsFilterDtoPagedItemsDto</code>.
+     * @alias module:model/StationDtoQueryIdsFilterDtoPagedItemsDto
      */
     constructor() { 
         
-        StationDtoPaginatedItemsDto.initialize(this);
+        StationDtoQueryIdsFilterDtoPagedItemsDto.initialize(this);
     }
 
     /**
@@ -39,24 +40,27 @@ class StationDtoPaginatedItemsDto {
     }
 
     /**
-     * Constructs a <code>StationDtoPaginatedItemsDto</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>StationDtoQueryIdsFilterDtoPagedItemsDto</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/StationDtoPaginatedItemsDto} obj Optional instance to populate.
-     * @return {module:model/StationDtoPaginatedItemsDto} The populated <code>StationDtoPaginatedItemsDto</code> instance.
+     * @param {module:model/StationDtoQueryIdsFilterDtoPagedItemsDto} obj Optional instance to populate.
+     * @return {module:model/StationDtoQueryIdsFilterDtoPagedItemsDto} The populated <code>StationDtoQueryIdsFilterDtoPagedItemsDto</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new StationDtoPaginatedItemsDto();
+            obj = obj || new StationDtoQueryIdsFilterDtoPagedItemsDto();
 
             if (data.hasOwnProperty('pageIndex')) {
                 obj['pageIndex'] = ApiClient.convertToType(data['pageIndex'], 'Number');
             }
+            if (data.hasOwnProperty('pageSize')) {
+                obj['pageSize'] = ApiClient.convertToType(data['pageSize'], 'Number');
+            }
+            if (data.hasOwnProperty('totalItems')) {
+                obj['totalItems'] = ApiClient.convertToType(data['totalItems'], 'Number');
+            }
             if (data.hasOwnProperty('totalPages')) {
                 obj['totalPages'] = ApiClient.convertToType(data['totalPages'], 'Number');
-            }
-            if (data.hasOwnProperty('itemsPerPage')) {
-                obj['itemsPerPage'] = ApiClient.convertToType(data['itemsPerPage'], 'Number');
             }
             if (data.hasOwnProperty('items')) {
                 obj['items'] = ApiClient.convertToType(data['items'], [StationDto]);
@@ -65,16 +69,16 @@ class StationDtoPaginatedItemsDto {
                 obj['sort'] = SortDto.constructFromObject(data['sort']);
             }
             if (data.hasOwnProperty('filter')) {
-                obj['filter'] = ApiClient.convertToType(data['filter'], Object);
+                obj['filter'] = QueryIdsFilterDto.constructFromObject(data['filter']);
             }
         }
         return obj;
     }
 
     /**
-     * Validates the JSON data with respect to <code>StationDtoPaginatedItemsDto</code>.
+     * Validates the JSON data with respect to <code>StationDtoQueryIdsFilterDtoPagedItemsDto</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>StationDtoPaginatedItemsDto</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>StationDtoQueryIdsFilterDtoPagedItemsDto</code>.
      */
     static validateJSON(data) {
         if (data['items']) { // data not null
@@ -91,6 +95,10 @@ class StationDtoPaginatedItemsDto {
         if (data['sort']) { // data not null
           SortDto.validateJSON(data['sort']);
         }
+        // validate the optional field `filter`
+        if (data['filter']) { // data not null
+          QueryIdsFilterDto.validateJSON(data['filter']);
+        }
 
         return true;
     }
@@ -103,37 +111,42 @@ class StationDtoPaginatedItemsDto {
 /**
  * @member {Number} pageIndex
  */
-StationDtoPaginatedItemsDto.prototype['pageIndex'] = undefined;
+StationDtoQueryIdsFilterDtoPagedItemsDto.prototype['pageIndex'] = undefined;
+
+/**
+ * @member {Number} pageSize
+ */
+StationDtoQueryIdsFilterDtoPagedItemsDto.prototype['pageSize'] = undefined;
+
+/**
+ * @member {Number} totalItems
+ */
+StationDtoQueryIdsFilterDtoPagedItemsDto.prototype['totalItems'] = undefined;
 
 /**
  * @member {Number} totalPages
  */
-StationDtoPaginatedItemsDto.prototype['totalPages'] = undefined;
-
-/**
- * @member {Number} itemsPerPage
- */
-StationDtoPaginatedItemsDto.prototype['itemsPerPage'] = undefined;
+StationDtoQueryIdsFilterDtoPagedItemsDto.prototype['totalPages'] = undefined;
 
 /**
  * @member {Array.<module:model/StationDto>} items
  */
-StationDtoPaginatedItemsDto.prototype['items'] = undefined;
+StationDtoQueryIdsFilterDtoPagedItemsDto.prototype['items'] = undefined;
 
 /**
  * @member {module:model/SortDto} sort
  */
-StationDtoPaginatedItemsDto.prototype['sort'] = undefined;
+StationDtoQueryIdsFilterDtoPagedItemsDto.prototype['sort'] = undefined;
 
 /**
- * @member {Object} filter
+ * @member {module:model/QueryIdsFilterDto} filter
  */
-StationDtoPaginatedItemsDto.prototype['filter'] = undefined;
+StationDtoQueryIdsFilterDtoPagedItemsDto.prototype['filter'] = undefined;
 
 
 
 
 
 
-export default StationDtoPaginatedItemsDto;
+export default StationDtoQueryIdsFilterDtoPagedItemsDto;
 

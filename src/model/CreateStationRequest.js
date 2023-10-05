@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The StationDto model module.
- * @module model/StationDto
+ * The CreateStationRequest model module.
+ * @module model/CreateStationRequest
  * @version 0.1.0
  */
-class StationDto {
+class CreateStationRequest {
     /**
-     * Constructs a new <code>StationDto</code>.
-     * @alias module:model/StationDto
+     * Constructs a new <code>CreateStationRequest</code>.
+     * @alias module:model/CreateStationRequest
      */
     constructor() { 
         
-        StationDto.initialize(this);
+        CreateStationRequest.initialize(this);
     }
 
     /**
@@ -37,19 +37,16 @@ class StationDto {
     }
 
     /**
-     * Constructs a <code>StationDto</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>CreateStationRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/StationDto} obj Optional instance to populate.
-     * @return {module:model/StationDto} The populated <code>StationDto</code> instance.
+     * @param {module:model/CreateStationRequest} obj Optional instance to populate.
+     * @return {module:model/CreateStationRequest} The populated <code>CreateStationRequest</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new StationDto();
+            obj = obj || new CreateStationRequest();
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-            }
             if (data.hasOwnProperty('shortName')) {
                 obj['shortName'] = ApiClient.convertToType(data['shortName'], 'String');
             }
@@ -64,9 +61,9 @@ class StationDto {
     }
 
     /**
-     * Validates the JSON data with respect to <code>StationDto</code>.
+     * Validates the JSON data with respect to <code>CreateStationRequest</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>StationDto</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateStationRequest</code>.
      */
     static validateJSON(data) {
         // ensure the json data is a string
@@ -87,29 +84,24 @@ class StationDto {
 
 
 /**
- * @member {Number} id
- */
-StationDto.prototype['id'] = undefined;
-
-/**
  * @member {String} shortName
  */
-StationDto.prototype['shortName'] = undefined;
+CreateStationRequest.prototype['shortName'] = undefined;
 
 /**
  * @member {String} fullName
  */
-StationDto.prototype['fullName'] = undefined;
+CreateStationRequest.prototype['fullName'] = undefined;
 
 /**
  * @member {Boolean} isDefault
  */
-StationDto.prototype['isDefault'] = undefined;
+CreateStationRequest.prototype['isDefault'] = undefined;
 
 
 
 
 
 
-export default StationDto;
+export default CreateStationRequest;
 

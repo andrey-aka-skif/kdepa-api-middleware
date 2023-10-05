@@ -1,5 +1,5 @@
 /**
- * kdepa-api-middleware
+ * kdepa-api
  * КДЭПА CRUD API
  *
  * The version of the OpenAPI document: 0.1.0
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KdepaApiMiddleware);
+    factory(root.expect, root.KdepaApi);
   }
-}(this, function(expect, KdepaApiMiddleware) {
+}(this, function(expect, KdepaApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KdepaApiMiddleware.StationDto();
+    instance = new KdepaApi.StationDto();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('StationDto', function() {
     it('should create an instance of StationDto', function() {
       // uncomment below and update the code to test StationDto
-      //var instance = new KdepaApiMiddleware.StationDto();
-      //expect(instance).to.be.a(KdepaApiMiddleware.StationDto);
+      //var instance = new KdepaApi.StationDto();
+      //expect(instance).to.be.a(KdepaApi.StationDto);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new KdepaApiMiddleware.StationDto();
+      //var instance = new KdepaApi.StationDto();
       //expect(instance).to.be();
     });
 
     it('should have the property shortName (base name: "shortName")', function() {
       // uncomment below and update the code to test the property shortName
-      //var instance = new KdepaApiMiddleware.StationDto();
+      //var instance = new KdepaApi.StationDto();
       //expect(instance).to.be();
     });
 
     it('should have the property fullName (base name: "fullName")', function() {
       // uncomment below and update the code to test the property fullName
-      //var instance = new KdepaApiMiddleware.StationDto();
+      //var instance = new KdepaApi.StationDto();
       //expect(instance).to.be();
     });
 
     it('should have the property isDefault (base name: "isDefault")', function() {
       // uncomment below and update the code to test the property isDefault
-      //var instance = new KdepaApiMiddleware.StationDto();
+      //var instance = new KdepaApi.StationDto();
       //expect(instance).to.be();
     });
 

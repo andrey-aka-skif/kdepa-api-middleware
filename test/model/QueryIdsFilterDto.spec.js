@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KdepaApi.SortDto();
+    instance = new KdepaApi.QueryIdsFilterDto();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,16 @@
       object[property] = value;
   }
 
-  describe('SortDto', function() {
-    it('should create an instance of SortDto', function() {
-      // uncomment below and update the code to test SortDto
-      //var instance = new KdepaApi.SortDto();
-      //expect(instance).to.be.a(KdepaApi.SortDto);
+  describe('QueryIdsFilterDto', function() {
+    it('should create an instance of QueryIdsFilterDto', function() {
+      // uncomment below and update the code to test QueryIdsFilterDto
+      //var instance = new KdepaApi.QueryIdsFilterDto();
+      //expect(instance).to.be.a(KdepaApi.QueryIdsFilterDto);
     });
 
-    it('should have the property sortBy (base name: "sortBy")', function() {
-      // uncomment below and update the code to test the property sortBy
-      //var instance = new KdepaApi.SortDto();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property ascending (base name: "ascending")', function() {
-      // uncomment below and update the code to test the property ascending
-      //var instance = new KdepaApi.SortDto();
+    it('should have the property ids (base name: "ids")', function() {
+      // uncomment below and update the code to test the property ids
+      //var instance = new KdepaApi.QueryIdsFilterDto();
       //expect(instance).to.be();
     });
 

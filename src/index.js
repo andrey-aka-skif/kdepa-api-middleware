@@ -1,5 +1,5 @@
 /**
- * kdepa-api-middleware
+ * kdepa-api
  * КДЭПА CRUD API
  *
  * The version of the OpenAPI document: 0.1.0
@@ -13,10 +13,17 @@
 
 
 import ApiClient from './ApiClient';
-import CreateStationDto from './model/CreateStationDto';
+import CreateShopRequest from './model/CreateShopRequest';
+import CreateStationRequest from './model/CreateStationRequest';
+import QueryIdsFilterDto from './model/QueryIdsFilterDto';
+import ShopDto from './model/ShopDto';
+import ShopDtoQueryIdsFilterDtoPagedItemsDto from './model/ShopDtoQueryIdsFilterDtoPagedItemsDto';
 import SortDto from './model/SortDto';
 import StationDto from './model/StationDto';
-import StationDtoPaginatedItemsDto from './model/StationDtoPaginatedItemsDto';
+import StationDtoQueryIdsFilterDtoPagedItemsDto from './model/StationDtoQueryIdsFilterDtoPagedItemsDto';
+import UpdateShopRequest from './model/UpdateShopRequest';
+import UpdateStationRequest from './model/UpdateStationRequest';
+import ShopsApi from './api/ShopsApi';
 import StationsApi from './api/StationsApi';
 
 
@@ -26,9 +33,9 @@ import StationsApi from './api/StationsApi';
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
 * <pre>
-* var KdepaApiMiddleware = require('index'); // See note below*.
-* var xxxSvc = new KdepaApiMiddleware.XxxApi(); // Allocate the API class we're going to use.
-* var yyyModel = new KdepaApiMiddleware.Yyy(); // Construct a model instance.
+* var KdepaApi = require('index'); // See note below*.
+* var xxxSvc = new KdepaApi.XxxApi(); // Allocate the API class we're going to use.
+* var yyyModel = new KdepaApi.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -40,8 +47,8 @@ import StationsApi from './api/StationsApi';
 * <p>
 * A non-AMD browser application (discouraged) might do something like this:
 * <pre>
-* var xxxSvc = new KdepaApiMiddleware.XxxApi(); // Allocate the API class we're going to use.
-* var yyy = new KdepaApiMiddleware.Yyy(); // Construct a model instance.
+* var xxxSvc = new KdepaApi.XxxApi(); // Allocate the API class we're going to use.
+* var yyy = new KdepaApi.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -59,10 +66,34 @@ export {
     ApiClient,
 
     /**
-     * The CreateStationDto model constructor.
-     * @property {module:model/CreateStationDto}
+     * The CreateShopRequest model constructor.
+     * @property {module:model/CreateShopRequest}
      */
-    CreateStationDto,
+    CreateShopRequest,
+
+    /**
+     * The CreateStationRequest model constructor.
+     * @property {module:model/CreateStationRequest}
+     */
+    CreateStationRequest,
+
+    /**
+     * The QueryIdsFilterDto model constructor.
+     * @property {module:model/QueryIdsFilterDto}
+     */
+    QueryIdsFilterDto,
+
+    /**
+     * The ShopDto model constructor.
+     * @property {module:model/ShopDto}
+     */
+    ShopDto,
+
+    /**
+     * The ShopDtoQueryIdsFilterDtoPagedItemsDto model constructor.
+     * @property {module:model/ShopDtoQueryIdsFilterDtoPagedItemsDto}
+     */
+    ShopDtoQueryIdsFilterDtoPagedItemsDto,
 
     /**
      * The SortDto model constructor.
@@ -77,10 +108,28 @@ export {
     StationDto,
 
     /**
-     * The StationDtoPaginatedItemsDto model constructor.
-     * @property {module:model/StationDtoPaginatedItemsDto}
+     * The StationDtoQueryIdsFilterDtoPagedItemsDto model constructor.
+     * @property {module:model/StationDtoQueryIdsFilterDtoPagedItemsDto}
      */
-    StationDtoPaginatedItemsDto,
+    StationDtoQueryIdsFilterDtoPagedItemsDto,
+
+    /**
+     * The UpdateShopRequest model constructor.
+     * @property {module:model/UpdateShopRequest}
+     */
+    UpdateShopRequest,
+
+    /**
+     * The UpdateStationRequest model constructor.
+     * @property {module:model/UpdateStationRequest}
+     */
+    UpdateStationRequest,
+
+    /**
+    * The ShopsApi service constructor.
+    * @property {module:api/ShopsApi}
+    */
+    ShopsApi,
 
     /**
     * The StationsApi service constructor.

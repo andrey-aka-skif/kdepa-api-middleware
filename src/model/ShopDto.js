@@ -1,5 +1,5 @@
 /**
- * kdepa-api-middleware
+ * kdepa-api
  * КДЭПА CRUD API
  *
  * The version of the OpenAPI document: 0.1.0
@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The CreateStationDto model module.
- * @module model/CreateStationDto
+ * The ShopDto model module.
+ * @module model/ShopDto
  * @version 0.1.0
  */
-class CreateStationDto {
+class ShopDto {
     /**
-     * Constructs a new <code>CreateStationDto</code>.
-     * @alias module:model/CreateStationDto
+     * Constructs a new <code>ShopDto</code>.
+     * @alias module:model/ShopDto
      */
     constructor() { 
         
-        CreateStationDto.initialize(this);
+        ShopDto.initialize(this);
     }
 
     /**
@@ -37,33 +37,33 @@ class CreateStationDto {
     }
 
     /**
-     * Constructs a <code>CreateStationDto</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ShopDto</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/CreateStationDto} obj Optional instance to populate.
-     * @return {module:model/CreateStationDto} The populated <code>CreateStationDto</code> instance.
+     * @param {module:model/ShopDto} obj Optional instance to populate.
+     * @return {module:model/ShopDto} The populated <code>ShopDto</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new CreateStationDto();
+            obj = obj || new ShopDto();
 
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'Number');
+            }
             if (data.hasOwnProperty('shortName')) {
                 obj['shortName'] = ApiClient.convertToType(data['shortName'], 'String');
             }
             if (data.hasOwnProperty('fullName')) {
                 obj['fullName'] = ApiClient.convertToType(data['fullName'], 'String');
             }
-            if (data.hasOwnProperty('isDefault')) {
-                obj['isDefault'] = ApiClient.convertToType(data['isDefault'], 'Boolean');
-            }
         }
         return obj;
     }
 
     /**
-     * Validates the JSON data with respect to <code>CreateStationDto</code>.
+     * Validates the JSON data with respect to <code>ShopDto</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateStationDto</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ShopDto</code>.
      */
     static validateJSON(data) {
         // ensure the json data is a string
@@ -84,24 +84,24 @@ class CreateStationDto {
 
 
 /**
+ * @member {Number} id
+ */
+ShopDto.prototype['id'] = undefined;
+
+/**
  * @member {String} shortName
  */
-CreateStationDto.prototype['shortName'] = undefined;
+ShopDto.prototype['shortName'] = undefined;
 
 /**
  * @member {String} fullName
  */
-CreateStationDto.prototype['fullName'] = undefined;
-
-/**
- * @member {Boolean} isDefault
- */
-CreateStationDto.prototype['isDefault'] = undefined;
+ShopDto.prototype['fullName'] = undefined;
 
 
 
 
 
 
-export default CreateStationDto;
+export default ShopDto;
 

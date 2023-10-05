@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KdepaApi.SortDto();
+    instance = new KdepaApi.UpdateStationRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,28 @@
       object[property] = value;
   }
 
-  describe('SortDto', function() {
-    it('should create an instance of SortDto', function() {
-      // uncomment below and update the code to test SortDto
-      //var instance = new KdepaApi.SortDto();
-      //expect(instance).to.be.a(KdepaApi.SortDto);
+  describe('UpdateStationRequest', function() {
+    it('should create an instance of UpdateStationRequest', function() {
+      // uncomment below and update the code to test UpdateStationRequest
+      //var instance = new KdepaApi.UpdateStationRequest();
+      //expect(instance).to.be.a(KdepaApi.UpdateStationRequest);
     });
 
-    it('should have the property sortBy (base name: "sortBy")', function() {
-      // uncomment below and update the code to test the property sortBy
-      //var instance = new KdepaApi.SortDto();
+    it('should have the property shortName (base name: "shortName")', function() {
+      // uncomment below and update the code to test the property shortName
+      //var instance = new KdepaApi.UpdateStationRequest();
       //expect(instance).to.be();
     });
 
-    it('should have the property ascending (base name: "ascending")', function() {
-      // uncomment below and update the code to test the property ascending
-      //var instance = new KdepaApi.SortDto();
+    it('should have the property fullName (base name: "fullName")', function() {
+      // uncomment below and update the code to test the property fullName
+      //var instance = new KdepaApi.UpdateStationRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isDefault (base name: "isDefault")', function() {
+      // uncomment below and update the code to test the property isDefault
+      //var instance = new KdepaApi.UpdateStationRequest();
       //expect(instance).to.be();
     });
 

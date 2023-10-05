@@ -1,5 +1,5 @@
 /**
- * kdepa-api-middleware
+ * kdepa-api
  * КДЭПА CRUD API
  *
  * The version of the OpenAPI document: 0.1.0
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KdepaApiMiddleware);
+    factory(root.expect, root.KdepaApi);
   }
-}(this, function(expect, KdepaApiMiddleware) {
+}(this, function(expect, KdepaApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KdepaApiMiddleware.StationDtoPaginatedItemsDto();
+    instance = new KdepaApi.StationDtoQueryIdsFilterDtoPagedItemsDto();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,46 +47,52 @@
       object[property] = value;
   }
 
-  describe('StationDtoPaginatedItemsDto', function() {
-    it('should create an instance of StationDtoPaginatedItemsDto', function() {
-      // uncomment below and update the code to test StationDtoPaginatedItemsDto
-      //var instance = new KdepaApiMiddleware.StationDtoPaginatedItemsDto();
-      //expect(instance).to.be.a(KdepaApiMiddleware.StationDtoPaginatedItemsDto);
+  describe('StationDtoQueryIdsFilterDtoPagedItemsDto', function() {
+    it('should create an instance of StationDtoQueryIdsFilterDtoPagedItemsDto', function() {
+      // uncomment below and update the code to test StationDtoQueryIdsFilterDtoPagedItemsDto
+      //var instance = new KdepaApi.StationDtoQueryIdsFilterDtoPagedItemsDto();
+      //expect(instance).to.be.a(KdepaApi.StationDtoQueryIdsFilterDtoPagedItemsDto);
     });
 
     it('should have the property pageIndex (base name: "pageIndex")', function() {
       // uncomment below and update the code to test the property pageIndex
-      //var instance = new KdepaApiMiddleware.StationDtoPaginatedItemsDto();
+      //var instance = new KdepaApi.StationDtoQueryIdsFilterDtoPagedItemsDto();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property pageSize (base name: "pageSize")', function() {
+      // uncomment below and update the code to test the property pageSize
+      //var instance = new KdepaApi.StationDtoQueryIdsFilterDtoPagedItemsDto();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property totalItems (base name: "totalItems")', function() {
+      // uncomment below and update the code to test the property totalItems
+      //var instance = new KdepaApi.StationDtoQueryIdsFilterDtoPagedItemsDto();
       //expect(instance).to.be();
     });
 
     it('should have the property totalPages (base name: "totalPages")', function() {
       // uncomment below and update the code to test the property totalPages
-      //var instance = new KdepaApiMiddleware.StationDtoPaginatedItemsDto();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property itemsPerPage (base name: "itemsPerPage")', function() {
-      // uncomment below and update the code to test the property itemsPerPage
-      //var instance = new KdepaApiMiddleware.StationDtoPaginatedItemsDto();
+      //var instance = new KdepaApi.StationDtoQueryIdsFilterDtoPagedItemsDto();
       //expect(instance).to.be();
     });
 
     it('should have the property items (base name: "items")', function() {
       // uncomment below and update the code to test the property items
-      //var instance = new KdepaApiMiddleware.StationDtoPaginatedItemsDto();
+      //var instance = new KdepaApi.StationDtoQueryIdsFilterDtoPagedItemsDto();
       //expect(instance).to.be();
     });
 
     it('should have the property sort (base name: "sort")', function() {
       // uncomment below and update the code to test the property sort
-      //var instance = new KdepaApiMiddleware.StationDtoPaginatedItemsDto();
+      //var instance = new KdepaApi.StationDtoQueryIdsFilterDtoPagedItemsDto();
       //expect(instance).to.be();
     });
 
     it('should have the property filter (base name: "filter")', function() {
       // uncomment below and update the code to test the property filter
-      //var instance = new KdepaApiMiddleware.StationDtoPaginatedItemsDto();
+      //var instance = new KdepaApi.StationDtoQueryIdsFilterDtoPagedItemsDto();
       //expect(instance).to.be();
     });
 

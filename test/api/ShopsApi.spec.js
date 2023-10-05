@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KdepaApi.StationsApi();
+    instance = new KdepaApi.ShopsApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,61 +47,51 @@
       object[property] = value;
   }
 
-  describe('StationsApi', function() {
-    describe('stationsDefaultGet', function() {
-      it('should call stationsDefaultGet successfully', function(done) {
-        //uncomment below and update the code to test stationsDefaultGet
-        //instance.stationsDefaultGet(function(error) {
+  describe('ShopsApi', function() {
+    describe('shopsGet', function() {
+      it('should call shopsGet successfully', function(done) {
+        //uncomment below and update the code to test shopsGet
+        //instance.shopsGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('stationsGet', function() {
-      it('should call stationsGet successfully', function(done) {
-        //uncomment below and update the code to test stationsGet
-        //instance.stationsGet(function(error) {
+    describe('shopsIdDelete', function() {
+      it('should call shopsIdDelete successfully', function(done) {
+        //uncomment below and update the code to test shopsIdDelete
+        //instance.shopsIdDelete(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('stationsIdDelete', function() {
-      it('should call stationsIdDelete successfully', function(done) {
-        //uncomment below and update the code to test stationsIdDelete
-        //instance.stationsIdDelete(function(error) {
+    describe('shopsIdGet', function() {
+      it('should call shopsIdGet successfully', function(done) {
+        //uncomment below and update the code to test shopsIdGet
+        //instance.shopsIdGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('stationsIdGet', function() {
-      it('should call stationsIdGet successfully', function(done) {
-        //uncomment below and update the code to test stationsIdGet
-        //instance.stationsIdGet(function(error) {
+    describe('shopsIdPut', function() {
+      it('should call shopsIdPut successfully', function(done) {
+        //uncomment below and update the code to test shopsIdPut
+        //instance.shopsIdPut(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('stationsIdPut', function() {
-      it('should call stationsIdPut successfully', function(done) {
-        //uncomment below and update the code to test stationsIdPut
-        //instance.stationsIdPut(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('stationsPost', function() {
-      it('should call stationsPost successfully', function(done) {
-        //uncomment below and update the code to test stationsPost
-        //instance.stationsPost(function(error) {
+    describe('shopsPost', function() {
+      it('should call shopsPost successfully', function(done) {
+        //uncomment below and update the code to test shopsPost
+        //instance.shopsPost(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

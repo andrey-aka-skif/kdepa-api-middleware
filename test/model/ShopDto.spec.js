@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KdepaApi.SortDto();
+    instance = new KdepaApi.ShopDto();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,28 @@
       object[property] = value;
   }
 
-  describe('SortDto', function() {
-    it('should create an instance of SortDto', function() {
-      // uncomment below and update the code to test SortDto
-      //var instance = new KdepaApi.SortDto();
-      //expect(instance).to.be.a(KdepaApi.SortDto);
+  describe('ShopDto', function() {
+    it('should create an instance of ShopDto', function() {
+      // uncomment below and update the code to test ShopDto
+      //var instance = new KdepaApi.ShopDto();
+      //expect(instance).to.be.a(KdepaApi.ShopDto);
     });
 
-    it('should have the property sortBy (base name: "sortBy")', function() {
-      // uncomment below and update the code to test the property sortBy
-      //var instance = new KdepaApi.SortDto();
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new KdepaApi.ShopDto();
       //expect(instance).to.be();
     });
 
-    it('should have the property ascending (base name: "ascending")', function() {
-      // uncomment below and update the code to test the property ascending
-      //var instance = new KdepaApi.SortDto();
+    it('should have the property shortName (base name: "shortName")', function() {
+      // uncomment below and update the code to test the property shortName
+      //var instance = new KdepaApi.ShopDto();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property fullName (base name: "fullName")', function() {
+      // uncomment below and update the code to test the property fullName
+      //var instance = new KdepaApi.ShopDto();
       //expect(instance).to.be();
     });
 
