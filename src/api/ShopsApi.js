@@ -13,10 +13,9 @@
 
 
 import ApiClient from "../ApiClient";
-import CreateShopRequest from '../model/CreateShopRequest';
+import CreateOrUpdateShopRequest from '../model/CreateOrUpdateShopRequest';
 import ShopDto from '../model/ShopDto';
-import ShopDtoQueryIdsFilterDtoPagedItemsDto from '../model/ShopDtoQueryIdsFilterDtoPagedItemsDto';
-import UpdateShopRequest from '../model/UpdateShopRequest';
+import ShopDtoShopsQueryFilterDtoPagedItemsDto from '../model/ShopDtoShopsQueryFilterDtoPagedItemsDto';
 
 /**
 * Shops service.
@@ -46,7 +45,8 @@ export default class ShopsApi {
      * @param {String} [sortBy] 
      * @param {Boolean} [ascending] 
      * @param {Array.<Number>} [ids] 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ShopDtoQueryIdsFilterDtoPagedItemsDto} and HTTP response
+     * @param {String} [nameSearchString] 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ShopDtoShopsQueryFilterDtoPagedItemsDto} and HTTP response
      */
     shopsGetWithHttpInfo(opts) {
       opts = opts || {};
@@ -59,7 +59,8 @@ export default class ShopsApi {
         'pageIndex': opts['pageIndex'],
         'SortBy': opts['sortBy'],
         'Ascending': opts['ascending'],
-        'Ids': this.apiClient.buildCollectionParam(opts['ids'], 'multi')
+        'Ids': this.apiClient.buildCollectionParam(opts['ids'], 'multi'),
+        'NameSearchString': opts['nameSearchString']
       };
       let headerParams = {
       };
@@ -69,7 +70,7 @@ export default class ShopsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ShopDtoQueryIdsFilterDtoPagedItemsDto;
+      let returnType = ShopDtoShopsQueryFilterDtoPagedItemsDto;
       return this.apiClient.callApi(
         '/Shops', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -85,7 +86,8 @@ export default class ShopsApi {
      * @param {String} opts.sortBy 
      * @param {Boolean} opts.ascending 
      * @param {Array.<Number>} opts.ids 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ShopDtoQueryIdsFilterDtoPagedItemsDto}
+     * @param {String} opts.nameSearchString 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ShopDtoShopsQueryFilterDtoPagedItemsDto}
      */
     shopsGet(opts) {
       return this.shopsGetWithHttpInfo(opts)
@@ -191,12 +193,12 @@ export default class ShopsApi {
      * Обновить Цех
      * @param {Number} id 
      * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateShopRequest} [updateShopRequest] 
+     * @param {module:model/CreateOrUpdateShopRequest} [createOrUpdateShopRequest] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ShopDto} and HTTP response
      */
     shopsIdPutWithHttpInfo(id, opts) {
       opts = opts || {};
-      let postBody = opts['updateShopRequest'];
+      let postBody = opts['createOrUpdateShopRequest'];
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling shopsIdPut");
@@ -227,7 +229,7 @@ export default class ShopsApi {
      * Обновить Цех
      * @param {Number} id 
      * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateShopRequest} opts.updateShopRequest 
+     * @param {module:model/CreateOrUpdateShopRequest} opts.createOrUpdateShopRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ShopDto}
      */
     shopsIdPut(id, opts) {
@@ -241,12 +243,12 @@ export default class ShopsApi {
     /**
      * Создать Цех
      * @param {Object} opts Optional parameters
-     * @param {module:model/CreateShopRequest} [createShopRequest] 
+     * @param {module:model/CreateOrUpdateShopRequest} [createOrUpdateShopRequest] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ShopDto} and HTTP response
      */
     shopsPostWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['createShopRequest'];
+      let postBody = opts['createOrUpdateShopRequest'];
 
       let pathParams = {
       };
@@ -271,7 +273,7 @@ export default class ShopsApi {
     /**
      * Создать Цех
      * @param {Object} opts Optional parameters
-     * @param {module:model/CreateShopRequest} opts.createShopRequest 
+     * @param {module:model/CreateOrUpdateShopRequest} opts.createOrUpdateShopRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ShopDto}
      */
     shopsPost(opts) {

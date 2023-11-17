@@ -101,15 +101,24 @@ Please follow the [installation](#installation) instruction and execute the foll
 var KdepaApi = require('kdepa_api');
 
 
-var api = new KdepaApi.ShopsApi()
+var api = new KdepaApi.AssembliesApi()
 var opts = {
   'pageSize': 10, // {Number} 
   'pageIndex': 0, // {Number} 
   'sortBy': "sortBy_example", // {String} 
   'ascending': true, // {Boolean} 
-  'ids': [null] // {[Number]} 
+  'ids': [null], // {[Number]} 
+  'positionIds': [null], // {[Number]} 
+  'valveIds': [null], // {[Number]} 
+  'driveIds': [null], // {[Number]} 
+  'motorIds': [null], // {[Number]} 
+  'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // {Date} 
+  'dateTo': new Date("2013-10-20T19:20:30+01:00"), // {Date} 
+  'openTime': 789, // {Number} 
+  'closeTime': 789, // {Number} 
+  'isFastActing': true // {Boolean} 
 };
-api.shopsGet(opts).then(function(data) {
+api.assembliesGet(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -120,10 +129,62 @@ api.shopsGet(opts).then(function(data) {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost:5275/api*
+All URIs are relative to *http://127.0.0.1:5005/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*KdepaApi.AssembliesApi* | [**assembliesGet**](docs/AssembliesApi.md#assembliesGet) | **GET** /Assemblies | Получить пагинированный список Сборок
+*KdepaApi.AssembliesApi* | [**assembliesIdDelete**](docs/AssembliesApi.md#assembliesIdDelete) | **DELETE** /Assemblies/{id} | Удалить Сборку
+*KdepaApi.AssembliesApi* | [**assembliesIdGet**](docs/AssembliesApi.md#assembliesIdGet) | **GET** /Assemblies/{id} | Получить Сборку по id
+*KdepaApi.AssembliesApi* | [**assembliesIdPut**](docs/AssembliesApi.md#assembliesIdPut) | **PUT** /Assemblies/{id} | Обновить Сборку
+*KdepaApi.AssembliesApi* | [**assembliesPost**](docs/AssembliesApi.md#assembliesPost) | **POST** /Assemblies | Создать Сборку
+*KdepaApi.BlocksApi* | [**blocksGet**](docs/BlocksApi.md#blocksGet) | **GET** /Blocks | Получить пагинированный список Блоков
+*KdepaApi.BlocksApi* | [**blocksIdDelete**](docs/BlocksApi.md#blocksIdDelete) | **DELETE** /Blocks/{id} | Удалить Блок
+*KdepaApi.BlocksApi* | [**blocksIdGet**](docs/BlocksApi.md#blocksIdGet) | **GET** /Blocks/{id} | Получить Блок по id
+*KdepaApi.BlocksApi* | [**blocksIdPut**](docs/BlocksApi.md#blocksIdPut) | **PUT** /Blocks/{id} | Обновить Блок
+*KdepaApi.BlocksApi* | [**blocksPost**](docs/BlocksApi.md#blocksPost) | **POST** /Blocks | Создать Блок
+*KdepaApi.CabinetsApi* | [**cabinetsGet**](docs/CabinetsApi.md#cabinetsGet) | **GET** /Cabinets | Получить пагинированный список Помещений
+*KdepaApi.CabinetsApi* | [**cabinetsIdDelete**](docs/CabinetsApi.md#cabinetsIdDelete) | **DELETE** /Cabinets/{id} | Удалить Помещение
+*KdepaApi.CabinetsApi* | [**cabinetsIdGet**](docs/CabinetsApi.md#cabinetsIdGet) | **GET** /Cabinets/{id} | Получить Помещение по id
+*KdepaApi.CabinetsApi* | [**cabinetsIdPut**](docs/CabinetsApi.md#cabinetsIdPut) | **PUT** /Cabinets/{id} | Обновить Помещение
+*KdepaApi.CabinetsApi* | [**cabinetsPost**](docs/CabinetsApi.md#cabinetsPost) | **POST** /Cabinets | Создать Помещение
+*KdepaApi.DebugApi* | [**debugEndpointUrlsGet**](docs/DebugApi.md#debugEndpointUrlsGet) | **GET** /Debug/endpoint-urls | Список url конечных точек ресурсов API
+*KdepaApi.DebugApi* | [**debugEndpointsGet**](docs/DebugApi.md#debugEndpointsGet) | **GET** /Debug/endpoints | Список конечных точек ресурсов API
+*KdepaApi.DebugApi* | [**debugHelloGet**](docs/DebugApi.md#debugHelloGet) | **GET** /Debug/hello | Сообщить о работоспособности
+*KdepaApi.DocsApi* | [**docsGet**](docs/DocsApi.md#docsGet) | **GET** /Docs | Получить пагинированный список Документов
+*KdepaApi.DocsApi* | [**docsIdGet**](docs/DocsApi.md#docsIdGet) | **GET** /Docs/{id} | Получить Документ по id
+*KdepaApi.DriveMarksApi* | [**driveMarksGet**](docs/DriveMarksApi.md#driveMarksGet) | **GET** /DriveMarks | Получить пагинированный список Марок Привода
+*KdepaApi.DriveMarksApi* | [**driveMarksIdDelete**](docs/DriveMarksApi.md#driveMarksIdDelete) | **DELETE** /DriveMarks/{id} | Удалить Марку Привода
+*KdepaApi.DriveMarksApi* | [**driveMarksIdGet**](docs/DriveMarksApi.md#driveMarksIdGet) | **GET** /DriveMarks/{id} | Получить Марку Привода по id
+*KdepaApi.DriveMarksApi* | [**driveMarksIdPut**](docs/DriveMarksApi.md#driveMarksIdPut) | **PUT** /DriveMarks/{id} | Обновить Марку Привода
+*KdepaApi.DriveMarksApi* | [**driveMarksPost**](docs/DriveMarksApi.md#driveMarksPost) | **POST** /DriveMarks | Создать Марку Привода
+*KdepaApi.DrivesApi* | [**drivesGet**](docs/DrivesApi.md#drivesGet) | **GET** /Drives | Получить пагинированный список Приводов
+*KdepaApi.DrivesApi* | [**drivesIdDelete**](docs/DrivesApi.md#drivesIdDelete) | **DELETE** /Drives/{id} | Удалить Привод
+*KdepaApi.DrivesApi* | [**drivesIdGet**](docs/DrivesApi.md#drivesIdGet) | **GET** /Drives/{id} | Получить Привод по id
+*KdepaApi.DrivesApi* | [**drivesIdPut**](docs/DrivesApi.md#drivesIdPut) | **PUT** /Drives/{id} | Обновить Привод
+*KdepaApi.DrivesApi* | [**drivesPost**](docs/DrivesApi.md#drivesPost) | **POST** /Drives | Создать Привод
+*KdepaApi.FactoriesApi* | [**factoriesGet**](docs/FactoriesApi.md#factoriesGet) | **GET** /Factories | Получить пагинированный список Изготовителей
+*KdepaApi.FactoriesApi* | [**factoriesIdDelete**](docs/FactoriesApi.md#factoriesIdDelete) | **DELETE** /Factories/{id} | Удалить Изготовителя
+*KdepaApi.FactoriesApi* | [**factoriesIdGet**](docs/FactoriesApi.md#factoriesIdGet) | **GET** /Factories/{id} | Получить Изготовителя по id
+*KdepaApi.FactoriesApi* | [**factoriesIdPut**](docs/FactoriesApi.md#factoriesIdPut) | **PUT** /Factories/{id} | Обновить Изготовителя
+*KdepaApi.FactoriesApi* | [**factoriesPost**](docs/FactoriesApi.md#factoriesPost) | **POST** /Factories | Создать Изготовителя
+*KdepaApi.MotorMarksApi* | [**motorMarksGet**](docs/MotorMarksApi.md#motorMarksGet) | **GET** /MotorMarks | Получить пагинированный список Марок Двигателей
+*KdepaApi.MotorMarksApi* | [**motorMarksIdDelete**](docs/MotorMarksApi.md#motorMarksIdDelete) | **DELETE** /MotorMarks/{id} | Удалить Марку Двигателя
+*KdepaApi.MotorMarksApi* | [**motorMarksIdGet**](docs/MotorMarksApi.md#motorMarksIdGet) | **GET** /MotorMarks/{id} | Получить Марку Двигателя по id
+*KdepaApi.MotorMarksApi* | [**motorMarksIdPut**](docs/MotorMarksApi.md#motorMarksIdPut) | **PUT** /MotorMarks/{id} | Обновить Марку Двигателя
+*KdepaApi.MotorMarksApi* | [**motorMarksPost**](docs/MotorMarksApi.md#motorMarksPost) | **POST** /MotorMarks | Создать Марку Двигателя
+*KdepaApi.MotorsApi* | [**motorsGet**](docs/MotorsApi.md#motorsGet) | **GET** /Motors | Получить пагинированный список Двигателей
+*KdepaApi.MotorsApi* | [**motorsIdDelete**](docs/MotorsApi.md#motorsIdDelete) | **DELETE** /Motors/{id} | Удалить Двигатель
+*KdepaApi.MotorsApi* | [**motorsIdGet**](docs/MotorsApi.md#motorsIdGet) | **GET** /Motors/{id} | Получить Двигатель по id
+*KdepaApi.MotorsApi* | [**motorsIdPut**](docs/MotorsApi.md#motorsIdPut) | **PUT** /Motors/{id} | Обновить Двигатель
+*KdepaApi.MotorsApi* | [**motorsPost**](docs/MotorsApi.md#motorsPost) | **POST** /Motors | Создать Двигатель
+*KdepaApi.OkmpConnectionsApi* | [**dumpGet**](docs/OkmpConnectionsApi.md#dumpGet) | **GET** /dump | Получить дамп БД
+*KdepaApi.PositionsApi* | [**positionsGet**](docs/PositionsApi.md#positionsGet) | **GET** /Positions | Получить пагинированный список Оперативных Позиций
+*KdepaApi.PositionsApi* | [**positionsIdDelete**](docs/PositionsApi.md#positionsIdDelete) | **DELETE** /Positions/{id} | Удалить Оперативную Позицию
+*KdepaApi.PositionsApi* | [**positionsIdExtendedGet**](docs/PositionsApi.md#positionsIdExtendedGet) | **GET** /Positions/{id}/extended | Получить Оперативную позицию по id, включая контент Справочников
+*KdepaApi.PositionsApi* | [**positionsIdGet**](docs/PositionsApi.md#positionsIdGet) | **GET** /Positions/{id} | Получить Оперативную Позицию по id
+*KdepaApi.PositionsApi* | [**positionsIdPut**](docs/PositionsApi.md#positionsIdPut) | **PUT** /Positions/{id} | Обновить Оперативную Позицию
+*KdepaApi.PositionsApi* | [**positionsPost**](docs/PositionsApi.md#positionsPost) | **POST** /Positions | Создать Оперативную Позицию
 *KdepaApi.ShopsApi* | [**shopsGet**](docs/ShopsApi.md#shopsGet) | **GET** /Shops | Получить пагинированный список Цехов
 *KdepaApi.ShopsApi* | [**shopsIdDelete**](docs/ShopsApi.md#shopsIdDelete) | **DELETE** /Shops/{id} | Удалить Цех
 *KdepaApi.ShopsApi* | [**shopsIdGet**](docs/ShopsApi.md#shopsIdGet) | **GET** /Shops/{id} | Получить Цех по id
@@ -135,20 +196,119 @@ Class | Method | HTTP request | Description
 *KdepaApi.StationsApi* | [**stationsIdGet**](docs/StationsApi.md#stationsIdGet) | **GET** /Stations/{id} | Получить Станцию по id
 *KdepaApi.StationsApi* | [**stationsIdPut**](docs/StationsApi.md#stationsIdPut) | **PUT** /Stations/{id} | Обновить Станцию
 *KdepaApi.StationsApi* | [**stationsPost**](docs/StationsApi.md#stationsPost) | **POST** /Stations | Создать Станцию
+*KdepaApi.SurveysApi* | [**surveysGet**](docs/SurveysApi.md#surveysGet) | **GET** /Surveys | Получить пагинированый список Обследований
+*KdepaApi.SurveysApi* | [**surveysIdChannelsChannelIdGet**](docs/SurveysApi.md#surveysIdChannelsChannelIdGet) | **GET** /Surveys/{id}/channels/{channelId} | Получить график канала по id Обследования и channelId канала
+*KdepaApi.SurveysApi* | [**surveysIdDelete**](docs/SurveysApi.md#surveysIdDelete) | **DELETE** /Surveys/{id} | Удалить Обследование
+*KdepaApi.SurveysApi* | [**surveysIdGet**](docs/SurveysApi.md#surveysIdGet) | **GET** /Surveys/{id} | Получить Обследование по id
+*KdepaApi.SurveysApi* | [**surveysIdPut**](docs/SurveysApi.md#surveysIdPut) | **PUT** /Surveys/{id} | Обновить Обследование
+*KdepaApi.SurveysApi* | [**surveysPost**](docs/SurveysApi.md#surveysPost) | **POST** /Surveys | Создать Обследование
+*KdepaApi.SurveysRawApi* | [**surveysRawGet**](docs/SurveysRawApi.md#surveysRawGet) | **GET** /SurveysRaw | Получить список Сырых Обследований
+*KdepaApi.SurveysRawApi* | [**surveysRawGuidChannelsIndexGet**](docs/SurveysRawApi.md#surveysRawGuidChannelsIndexGet) | **GET** /SurveysRaw/{guid}/channels/{index} | Получить график канала по guid Сырого Обследования и index канала
+*KdepaApi.SurveysRawApi* | [**surveysRawGuidDelete**](docs/SurveysRawApi.md#surveysRawGuidDelete) | **DELETE** /SurveysRaw/{guid} | Удалить Сырое Обследование
+*KdepaApi.SurveysRawApi* | [**surveysRawGuidGet**](docs/SurveysRawApi.md#surveysRawGuidGet) | **GET** /SurveysRaw/{guid} | Получить Сырое Обследование по GUID
+*KdepaApi.SurveysRawApi* | [**surveysRawPost**](docs/SurveysRawApi.md#surveysRawPost) | **POST** /SurveysRaw | Создать Сырое Обследование
+*KdepaApi.SystemsApi* | [**systemsGet**](docs/SystemsApi.md#systemsGet) | **GET** /Systems | Получить пагинированный список Систем
+*KdepaApi.SystemsApi* | [**systemsIdDelete**](docs/SystemsApi.md#systemsIdDelete) | **DELETE** /Systems/{id} | Удалить Систему
+*KdepaApi.SystemsApi* | [**systemsIdGet**](docs/SystemsApi.md#systemsIdGet) | **GET** /Systems/{id} | Получить Систему по id
+*KdepaApi.SystemsApi* | [**systemsIdPut**](docs/SystemsApi.md#systemsIdPut) | **PUT** /Systems/{id} | Обновить Систему
+*KdepaApi.SystemsApi* | [**systemsPost**](docs/SystemsApi.md#systemsPost) | **POST** /Systems | Создать Систему
+*KdepaApi.ValveMarksApi* | [**valveMarksGet**](docs/ValveMarksApi.md#valveMarksGet) | **GET** /ValveMarks | Получить пагинированный список Марок Арматур
+*KdepaApi.ValveMarksApi* | [**valveMarksIdDelete**](docs/ValveMarksApi.md#valveMarksIdDelete) | **DELETE** /ValveMarks/{id} | Удалить Марку Арматуры
+*KdepaApi.ValveMarksApi* | [**valveMarksIdExtendedGet**](docs/ValveMarksApi.md#valveMarksIdExtendedGet) | **GET** /ValveMarks/{id}/extended | Получить Марку Арматуры по id, включая контент Справочников
+*KdepaApi.ValveMarksApi* | [**valveMarksIdGet**](docs/ValveMarksApi.md#valveMarksIdGet) | **GET** /ValveMarks/{id} | Получить Марку Арматуры по id
+*KdepaApi.ValveMarksApi* | [**valveMarksIdPut**](docs/ValveMarksApi.md#valveMarksIdPut) | **PUT** /ValveMarks/{id} | Обновить Марку Арматуры
+*KdepaApi.ValveMarksApi* | [**valveMarksPost**](docs/ValveMarksApi.md#valveMarksPost) | **POST** /ValveMarks | Создать Марку Арматуры
+*KdepaApi.ValvesApi* | [**valvesGet**](docs/ValvesApi.md#valvesGet) | **GET** /Valves | Получить пагинированный список Арматур
+*KdepaApi.ValvesApi* | [**valvesIdDelete**](docs/ValvesApi.md#valvesIdDelete) | **DELETE** /Valves/{id} | Удалить Арматуру
+*KdepaApi.ValvesApi* | [**valvesIdGet**](docs/ValvesApi.md#valvesIdGet) | **GET** /Valves/{id} | Получить Арматуру по id
+*KdepaApi.ValvesApi* | [**valvesIdPut**](docs/ValvesApi.md#valvesIdPut) | **PUT** /Valves/{id} | Обновить Арматуру
+*KdepaApi.ValvesApi* | [**valvesPost**](docs/ValvesApi.md#valvesPost) | **POST** /Valves | Создать Арматуру
 
 
 ## Documentation for Models
 
- - [KdepaApi.CreateShopRequest](docs/CreateShopRequest.md)
- - [KdepaApi.CreateStationRequest](docs/CreateStationRequest.md)
+ - [KdepaApi.AssembliesQueryFilterDto](docs/AssembliesQueryFilterDto.md)
+ - [KdepaApi.AssemblyDto](docs/AssemblyDto.md)
+ - [KdepaApi.AssemblyDtoAssembliesQueryFilterDtoPagedItemsDto](docs/AssemblyDtoAssembliesQueryFilterDtoPagedItemsDto.md)
+ - [KdepaApi.BlockDto](docs/BlockDto.md)
+ - [KdepaApi.BlockDtoBlocksQueryFilterDtoPagedItemsDto](docs/BlockDtoBlocksQueryFilterDtoPagedItemsDto.md)
+ - [KdepaApi.BlocksQueryFilterDto](docs/BlocksQueryFilterDto.md)
+ - [KdepaApi.CabinetDto](docs/CabinetDto.md)
+ - [KdepaApi.CabinetDtoCabinetsQueryFilterDtoPagedItemsDto](docs/CabinetDtoCabinetsQueryFilterDtoPagedItemsDto.md)
+ - [KdepaApi.CabinetsQueryFilterDto](docs/CabinetsQueryFilterDto.md)
+ - [KdepaApi.ChannelDto](docs/ChannelDto.md)
+ - [KdepaApi.ChannelRawDto](docs/ChannelRawDto.md)
+ - [KdepaApi.ChartFilterDto](docs/ChartFilterDto.md)
+ - [KdepaApi.ChartPoint](docs/ChartPoint.md)
+ - [KdepaApi.ChartType](docs/ChartType.md)
+ - [KdepaApi.CreateChannelSubRequest](docs/CreateChannelSubRequest.md)
+ - [KdepaApi.CreateOrUpdateAssemblyRequest](docs/CreateOrUpdateAssemblyRequest.md)
+ - [KdepaApi.CreateOrUpdateBlockRequest](docs/CreateOrUpdateBlockRequest.md)
+ - [KdepaApi.CreateOrUpdateCabinetRequest](docs/CreateOrUpdateCabinetRequest.md)
+ - [KdepaApi.CreateOrUpdateDriveMarkRequest](docs/CreateOrUpdateDriveMarkRequest.md)
+ - [KdepaApi.CreateOrUpdateDriveRequest](docs/CreateOrUpdateDriveRequest.md)
+ - [KdepaApi.CreateOrUpdateFactoryRequest](docs/CreateOrUpdateFactoryRequest.md)
+ - [KdepaApi.CreateOrUpdateMotorMarkRequest](docs/CreateOrUpdateMotorMarkRequest.md)
+ - [KdepaApi.CreateOrUpdateMotorRequest](docs/CreateOrUpdateMotorRequest.md)
+ - [KdepaApi.CreateOrUpdatePositionRequest](docs/CreateOrUpdatePositionRequest.md)
+ - [KdepaApi.CreateOrUpdateShopRequest](docs/CreateOrUpdateShopRequest.md)
+ - [KdepaApi.CreateOrUpdateStationRequest](docs/CreateOrUpdateStationRequest.md)
+ - [KdepaApi.CreateOrUpdateStationSystemRequest](docs/CreateOrUpdateStationSystemRequest.md)
+ - [KdepaApi.CreateOrUpdateValveMarkRequest](docs/CreateOrUpdateValveMarkRequest.md)
+ - [KdepaApi.CreateOrUpdateValveRequest](docs/CreateOrUpdateValveRequest.md)
+ - [KdepaApi.CreateSurveyRequest](docs/CreateSurveyRequest.md)
+ - [KdepaApi.DocFileDto](docs/DocFileDto.md)
+ - [KdepaApi.DocFileDtoQueryIdsFilterDtoPagedItemsDto](docs/DocFileDtoQueryIdsFilterDtoPagedItemsDto.md)
+ - [KdepaApi.DriveDto](docs/DriveDto.md)
+ - [KdepaApi.DriveDtoDrivesQueryFilterDtoPagedItemsDto](docs/DriveDtoDrivesQueryFilterDtoPagedItemsDto.md)
+ - [KdepaApi.DriveMarkDto](docs/DriveMarkDto.md)
+ - [KdepaApi.DriveMarkDtoDriveMarksQueryFilterDtoPagedItemsDto](docs/DriveMarkDtoDriveMarksQueryFilterDtoPagedItemsDto.md)
+ - [KdepaApi.DriveMarksQueryFilterDto](docs/DriveMarksQueryFilterDto.md)
+ - [KdepaApi.DrivesQueryFilterDto](docs/DrivesQueryFilterDto.md)
+ - [KdepaApi.EquipmentGroupDto](docs/EquipmentGroupDto.md)
+ - [KdepaApi.FactoriesQueryFilterDto](docs/FactoriesQueryFilterDto.md)
+ - [KdepaApi.FactoryDto](docs/FactoryDto.md)
+ - [KdepaApi.FactoryDtoFactoriesQueryFilterDtoPagedItemsDto](docs/FactoryDtoFactoriesQueryFilterDtoPagedItemsDto.md)
+ - [KdepaApi.MotorDto](docs/MotorDto.md)
+ - [KdepaApi.MotorDtoMotorsQueryFilterDtoPagedItemsDto](docs/MotorDtoMotorsQueryFilterDtoPagedItemsDto.md)
+ - [KdepaApi.MotorMarkDto](docs/MotorMarkDto.md)
+ - [KdepaApi.MotorMarkDtoMotorMarksQueryFilterDtoPagedItemsDto](docs/MotorMarkDtoMotorMarksQueryFilterDtoPagedItemsDto.md)
+ - [KdepaApi.MotorMarksQueryFilterDto](docs/MotorMarksQueryFilterDto.md)
+ - [KdepaApi.MotorsQueryFilterDto](docs/MotorsQueryFilterDto.md)
+ - [KdepaApi.PositionDto](docs/PositionDto.md)
+ - [KdepaApi.PositionDtoPositionsQueryFilterDtoPagedItemsDto](docs/PositionDtoPositionsQueryFilterDtoPagedItemsDto.md)
+ - [KdepaApi.PositionExtendedDto](docs/PositionExtendedDto.md)
+ - [KdepaApi.PositionsQueryFilterDto](docs/PositionsQueryFilterDto.md)
+ - [KdepaApi.ProblemDetails](docs/ProblemDetails.md)
  - [KdepaApi.QueryIdsFilterDto](docs/QueryIdsFilterDto.md)
+ - [KdepaApi.SafetyClassDto](docs/SafetyClassDto.md)
+ - [KdepaApi.SeismicCategoryDto](docs/SeismicCategoryDto.md)
  - [KdepaApi.ShopDto](docs/ShopDto.md)
- - [KdepaApi.ShopDtoQueryIdsFilterDtoPagedItemsDto](docs/ShopDtoQueryIdsFilterDtoPagedItemsDto.md)
+ - [KdepaApi.ShopDtoShopsQueryFilterDtoPagedItemsDto](docs/ShopDtoShopsQueryFilterDtoPagedItemsDto.md)
+ - [KdepaApi.ShopsQueryFilterDto](docs/ShopsQueryFilterDto.md)
+ - [KdepaApi.SlicingDto](docs/SlicingDto.md)
  - [KdepaApi.SortDto](docs/SortDto.md)
  - [KdepaApi.StationDto](docs/StationDto.md)
  - [KdepaApi.StationDtoQueryIdsFilterDtoPagedItemsDto](docs/StationDtoQueryIdsFilterDtoPagedItemsDto.md)
- - [KdepaApi.UpdateShopRequest](docs/UpdateShopRequest.md)
- - [KdepaApi.UpdateStationRequest](docs/UpdateStationRequest.md)
+ - [KdepaApi.StationSystemDto](docs/StationSystemDto.md)
+ - [KdepaApi.StationSystemDtoSystemsQueryFilterDtoPagedItemsDto](docs/StationSystemDtoSystemsQueryFilterDtoPagedItemsDto.md)
+ - [KdepaApi.SurveyDto](docs/SurveyDto.md)
+ - [KdepaApi.SurveyDtoSurveysQueryFilterDtoPagedItemsDto](docs/SurveyDtoSurveysQueryFilterDtoPagedItemsDto.md)
+ - [KdepaApi.SurveyRawDto](docs/SurveyRawDto.md)
+ - [KdepaApi.SystemsQueryFilterDto](docs/SystemsQueryFilterDto.md)
+ - [KdepaApi.TimeRangeDto](docs/TimeRangeDto.md)
+ - [KdepaApi.TimeSpan](docs/TimeSpan.md)
+ - [KdepaApi.UpdateChannelSubRequest](docs/UpdateChannelSubRequest.md)
+ - [KdepaApi.UpdateSurveyRequest](docs/UpdateSurveyRequest.md)
+ - [KdepaApi.UsingClassDto](docs/UsingClassDto.md)
+ - [KdepaApi.ValveDto](docs/ValveDto.md)
+ - [KdepaApi.ValveDtoValvesQueryFilterDtoPagedItemsDto](docs/ValveDtoValvesQueryFilterDtoPagedItemsDto.md)
+ - [KdepaApi.ValveMarkDto](docs/ValveMarkDto.md)
+ - [KdepaApi.ValveMarkDtoValveMarksQueryFilterDtoPagedItemsDto](docs/ValveMarkDtoValveMarksQueryFilterDtoPagedItemsDto.md)
+ - [KdepaApi.ValveMarkExtendedDto](docs/ValveMarkExtendedDto.md)
+ - [KdepaApi.ValveMarksQueryFilterDto](docs/ValveMarksQueryFilterDto.md)
+ - [KdepaApi.ValveTypeDto](docs/ValveTypeDto.md)
+ - [KdepaApi.ValvesQueryFilterDto](docs/ValvesQueryFilterDto.md)
 
 
 ## Documentation for Authorization

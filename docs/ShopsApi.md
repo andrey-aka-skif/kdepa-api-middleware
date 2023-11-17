@@ -1,6 +1,6 @@
 # KdepaApi.ShopsApi
 
-All URIs are relative to *http://localhost:5275/api*
+All URIs are relative to *http://127.0.0.1:5005/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## shopsGet
 
-> ShopDtoQueryIdsFilterDtoPagedItemsDto shopsGet(opts)
+> ShopDtoShopsQueryFilterDtoPagedItemsDto shopsGet(opts)
 
 Получить пагинированный список Цехов
 
@@ -29,7 +29,8 @@ let opts = {
   'pageIndex': 0, // Number | 
   'sortBy': "sortBy_example", // String | 
   'ascending': true, // Boolean | 
-  'ids': [null] // [Number] | 
+  'ids': [null], // [Number] | 
+  'nameSearchString': "nameSearchString_example" // String | 
 };
 apiInstance.shopsGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -49,10 +50,11 @@ Name | Type | Description  | Notes
  **sortBy** | **String**|  | [optional] 
  **ascending** | **Boolean**|  | [optional] 
  **ids** | [**[Number]**](Number.md)|  | [optional] 
+ **nameSearchString** | **String**|  | [optional] 
 
 ### Return type
 
-[**ShopDtoQueryIdsFilterDtoPagedItemsDto**](ShopDtoQueryIdsFilterDtoPagedItemsDto.md)
+[**ShopDtoShopsQueryFilterDtoPagedItemsDto**](ShopDtoShopsQueryFilterDtoPagedItemsDto.md)
 
 ### Authorization
 
@@ -162,7 +164,7 @@ import KdepaApi from 'kdepa_api';
 let apiInstance = new KdepaApi.ShopsApi();
 let id = 56; // Number | 
 let opts = {
-  'updateShopRequest': new KdepaApi.UpdateShopRequest() // UpdateShopRequest | 
+  'createOrUpdateShopRequest': new KdepaApi.CreateOrUpdateShopRequest() // CreateOrUpdateShopRequest | 
 };
 apiInstance.shopsIdPut(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -178,7 +180,7 @@ apiInstance.shopsIdPut(id, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**|  | 
- **updateShopRequest** | [**UpdateShopRequest**](UpdateShopRequest.md)|  | [optional] 
+ **createOrUpdateShopRequest** | [**CreateOrUpdateShopRequest**](CreateOrUpdateShopRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -207,7 +209,7 @@ import KdepaApi from 'kdepa_api';
 
 let apiInstance = new KdepaApi.ShopsApi();
 let opts = {
-  'createShopRequest': new KdepaApi.CreateShopRequest() // CreateShopRequest | 
+  'createOrUpdateShopRequest': new KdepaApi.CreateOrUpdateShopRequest() // CreateOrUpdateShopRequest | 
 };
 apiInstance.shopsPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -222,7 +224,7 @@ apiInstance.shopsPost(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createShopRequest** | [**CreateShopRequest**](CreateShopRequest.md)|  | [optional] 
+ **createOrUpdateShopRequest** | [**CreateOrUpdateShopRequest**](CreateOrUpdateShopRequest.md)|  | [optional] 
 
 ### Return type
 

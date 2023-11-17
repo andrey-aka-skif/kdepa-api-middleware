@@ -13,10 +13,9 @@
 
 
 import ApiClient from "../ApiClient";
-import CreateStationRequest from '../model/CreateStationRequest';
+import CreateOrUpdateStationRequest from '../model/CreateOrUpdateStationRequest';
 import StationDto from '../model/StationDto';
 import StationDtoQueryIdsFilterDtoPagedItemsDto from '../model/StationDtoQueryIdsFilterDtoPagedItemsDto';
-import UpdateStationRequest from '../model/UpdateStationRequest';
 
 /**
 * Stations service.
@@ -230,12 +229,12 @@ export default class StationsApi {
      * Обновить Станцию
      * @param {Number} id 
      * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateStationRequest} [updateStationRequest] 
+     * @param {module:model/CreateOrUpdateStationRequest} [createOrUpdateStationRequest] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/StationDto} and HTTP response
      */
     stationsIdPutWithHttpInfo(id, opts) {
       opts = opts || {};
-      let postBody = opts['updateStationRequest'];
+      let postBody = opts['createOrUpdateStationRequest'];
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling stationsIdPut");
@@ -266,7 +265,7 @@ export default class StationsApi {
      * Обновить Станцию
      * @param {Number} id 
      * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateStationRequest} opts.updateStationRequest 
+     * @param {module:model/CreateOrUpdateStationRequest} opts.createOrUpdateStationRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/StationDto}
      */
     stationsIdPut(id, opts) {
@@ -280,12 +279,12 @@ export default class StationsApi {
     /**
      * Создать Станцию
      * @param {Object} opts Optional parameters
-     * @param {module:model/CreateStationRequest} [createStationRequest] 
+     * @param {module:model/CreateOrUpdateStationRequest} [createOrUpdateStationRequest] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/StationDto} and HTTP response
      */
     stationsPostWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['createStationRequest'];
+      let postBody = opts['createOrUpdateStationRequest'];
 
       let pathParams = {
       };
@@ -310,7 +309,7 @@ export default class StationsApi {
     /**
      * Создать Станцию
      * @param {Object} opts Optional parameters
-     * @param {module:model/CreateStationRequest} opts.createStationRequest 
+     * @param {module:model/CreateOrUpdateStationRequest} opts.createOrUpdateStationRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/StationDto}
      */
     stationsPost(opts) {

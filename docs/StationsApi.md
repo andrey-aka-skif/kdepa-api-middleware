@@ -1,6 +1,6 @@
 # KdepaApi.StationsApi
 
-All URIs are relative to *http://localhost:5275/api*
+All URIs are relative to *http://127.0.0.1:5005/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -201,7 +201,7 @@ import KdepaApi from 'kdepa_api';
 let apiInstance = new KdepaApi.StationsApi();
 let id = 56; // Number | 
 let opts = {
-  'updateStationRequest': new KdepaApi.UpdateStationRequest() // UpdateStationRequest | 
+  'createOrUpdateStationRequest': new KdepaApi.CreateOrUpdateStationRequest() // CreateOrUpdateStationRequest | 
 };
 apiInstance.stationsIdPut(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -217,7 +217,7 @@ apiInstance.stationsIdPut(id, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**|  | 
- **updateStationRequest** | [**UpdateStationRequest**](UpdateStationRequest.md)|  | [optional] 
+ **createOrUpdateStationRequest** | [**CreateOrUpdateStationRequest**](CreateOrUpdateStationRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -246,7 +246,7 @@ import KdepaApi from 'kdepa_api';
 
 let apiInstance = new KdepaApi.StationsApi();
 let opts = {
-  'createStationRequest': new KdepaApi.CreateStationRequest() // CreateStationRequest | 
+  'createOrUpdateStationRequest': new KdepaApi.CreateOrUpdateStationRequest() // CreateOrUpdateStationRequest | 
 };
 apiInstance.stationsPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -261,7 +261,7 @@ apiInstance.stationsPost(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createStationRequest** | [**CreateStationRequest**](CreateStationRequest.md)|  | [optional] 
+ **createOrUpdateStationRequest** | [**CreateOrUpdateStationRequest**](CreateOrUpdateStationRequest.md)|  | [optional] 
 
 ### Return type
 
