@@ -65,7 +65,10 @@ let apiInstance = new KdepaApi.SurveysRawApi();
 let guid = "guid_example"; // String | 
 let index = 56; // Number | 
 let opts = {
-  'chartFilterDto': new KdepaApi.ChartFilterDto() // ChartFilterDto | 
+  'type': new KdepaApi.ChartType(), // ChartType | 
+  'from': 3.4, // Number | 
+  'to': 3.4, // Number | 
+  'samples': 56 // Number | 
 };
 apiInstance.surveysRawGuidChannelsIndexGet(guid, index, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -82,7 +85,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **guid** | **String**|  | 
  **index** | **Number**|  | 
- **chartFilterDto** | [**ChartFilterDto**](ChartFilterDto.md)|  | [optional] 
+ **type** | [**ChartType**](.md)|  | [optional] 
+ **from** | **Number**|  | [optional] 
+ **to** | **Number**|  | [optional] 
+ **samples** | **Number**|  | [optional] 
 
 ### Return type
 
@@ -94,7 +100,7 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, text/json, application/*+json
+- **Content-Type**: Not defined
 - **Accept**: text/plain, application/json, text/json
 
 

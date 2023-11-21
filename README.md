@@ -238,7 +238,6 @@ Class | Method | HTTP request | Description
  - [KdepaApi.CabinetsQueryFilterDto](docs/CabinetsQueryFilterDto.md)
  - [KdepaApi.ChannelDto](docs/ChannelDto.md)
  - [KdepaApi.ChannelRawDto](docs/ChannelRawDto.md)
- - [KdepaApi.ChartFilterDto](docs/ChartFilterDto.md)
  - [KdepaApi.ChartPoint](docs/ChartPoint.md)
  - [KdepaApi.ChartType](docs/ChartType.md)
  - [KdepaApi.CreateChannelSubRequest](docs/CreateChannelSubRequest.md)

@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
-import ChartFilterDto from '../model/ChartFilterDto';
 import ChartPoint from '../model/ChartPoint';
+import ChartType from '../model/ChartType';
 import CreateSurveyRequest from '../model/CreateSurveyRequest';
 import ProblemDetails from '../model/ProblemDetails';
 import SurveyDto from '../model/SurveyDto';
@@ -103,12 +103,15 @@ export default class SurveysApi {
      * @param {Number} id 
      * @param {Number} channelId 
      * @param {Object} opts Optional parameters
-     * @param {module:model/ChartFilterDto} [chartFilterDto] 
+     * @param {module:model/ChartType} [type] 
+     * @param {Number} [from] 
+     * @param {Number} [to] 
+     * @param {Number} [samples] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ChartPoint>} and HTTP response
      */
     surveysIdChannelsChannelIdGetWithHttpInfo(id, channelId, opts) {
       opts = opts || {};
-      let postBody = opts['chartFilterDto'];
+      let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling surveysIdChannelsChannelIdGet");
@@ -123,6 +126,10 @@ export default class SurveysApi {
         'channelId': channelId
       };
       let queryParams = {
+        'Type': opts['type'],
+        'From': opts['from'],
+        'To': opts['to'],
+        'Samples': opts['samples']
       };
       let headerParams = {
       };
@@ -130,7 +137,7 @@ export default class SurveysApi {
       };
 
       let authNames = [];
-      let contentTypes = ['application/json', 'text/json', 'application/*+json'];
+      let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [ChartPoint];
       return this.apiClient.callApi(
@@ -145,7 +152,10 @@ export default class SurveysApi {
      * @param {Number} id 
      * @param {Number} channelId 
      * @param {Object} opts Optional parameters
-     * @param {module:model/ChartFilterDto} opts.chartFilterDto 
+     * @param {module:model/ChartType} opts.type 
+     * @param {Number} opts.from 
+     * @param {Number} opts.to 
+     * @param {Number} opts.samples 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ChartPoint>}
      */
     surveysIdChannelsChannelIdGet(id, channelId, opts) {

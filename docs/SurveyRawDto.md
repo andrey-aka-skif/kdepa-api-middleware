@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **fileName** | **String** |  | [optional] 
 **position** | **String** |  | [optional] 
 **dateTime** | **Date** |  | [optional] 
+**date** | **Date** |  | [optional] 
+**time** | **String** |  | [optional] 
 **resistance** | **Number** |  | [optional] 
 **mvo** | **Number** |  | [optional] 
 **mvz** | **Number** |  | [optional] 

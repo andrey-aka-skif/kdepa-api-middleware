@@ -78,6 +78,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property date (base name: "date")', function() {
+      // uncomment below and update the code to test the property date
+      //var instance = new KdepaApi.SurveyRawDto();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property time (base name: "time")', function() {
+      // uncomment below and update the code to test the property time
+      //var instance = new KdepaApi.SurveyRawDto();
+      //expect(instance).to.be();
+    });
+
     it('should have the property resistance (base name: "resistance")', function() {
       // uncomment below and update the code to test the property resistance
       //var instance = new KdepaApi.SurveyRawDto();

@@ -60,6 +60,12 @@ class SurveyRawDto {
             if (data.hasOwnProperty('dateTime')) {
                 obj['dateTime'] = ApiClient.convertToType(data['dateTime'], 'Date');
             }
+            if (data.hasOwnProperty('date')) {
+                obj['date'] = ApiClient.convertToType(data['date'], 'Date');
+            }
+            if (data.hasOwnProperty('time')) {
+                obj['time'] = ApiClient.convertToType(data['time'], 'String');
+            }
             if (data.hasOwnProperty('resistance')) {
                 obj['resistance'] = ApiClient.convertToType(data['resistance'], 'Number');
             }
@@ -99,6 +105,10 @@ class SurveyRawDto {
         // ensure the json data is a string
         if (data['position'] && !(typeof data['position'] === 'string' || data['position'] instanceof String)) {
             throw new Error("Expected the field `position` to be a primitive type in the JSON string but got " + data['position']);
+        }
+        // ensure the json data is a string
+        if (data['time'] && !(typeof data['time'] === 'string' || data['time'] instanceof String)) {
+            throw new Error("Expected the field `time` to be a primitive type in the JSON string but got " + data['time']);
         }
         // ensure the json data is a string
         if (data['direction'] && !(typeof data['direction'] === 'string' || data['direction'] instanceof String)) {
@@ -146,6 +156,16 @@ SurveyRawDto.prototype['position'] = undefined;
  * @member {Date} dateTime
  */
 SurveyRawDto.prototype['dateTime'] = undefined;
+
+/**
+ * @member {Date} date
+ */
+SurveyRawDto.prototype['date'] = undefined;
+
+/**
+ * @member {String} time
+ */
+SurveyRawDto.prototype['time'] = undefined;
 
 /**
  * @member {Number} resistance

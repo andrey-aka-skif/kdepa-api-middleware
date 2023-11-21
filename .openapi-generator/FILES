@@ -17,7 +17,6 @@ docs/CabinetsApi.md
 docs/CabinetsQueryFilterDto.md
 docs/ChannelDto.md
 docs/ChannelRawDto.md
-docs/ChartFilterDto.md
 docs/ChartPoint.md
 docs/ChartType.md
 docs/CreateChannelSubRequest.md
@@ -139,7 +138,6 @@ src/model/CabinetDtoCabinetsQueryFilterDtoPagedItemsDto.js
 src/model/CabinetsQueryFilterDto.js
 src/model/ChannelDto.js
 src/model/ChannelRawDto.js
-src/model/ChartFilterDto.js
 src/model/ChartPoint.js
 src/model/ChartType.js
 src/model/CreateChannelSubRequest.js
@@ -240,7 +238,6 @@ test/model/CabinetDtoCabinetsQueryFilterDtoPagedItemsDto.spec.js
 test/model/CabinetsQueryFilterDto.spec.js
 test/model/ChannelDto.spec.js
 test/model/ChannelRawDto.spec.js
-test/model/ChartFilterDto.spec.js
 test/model/ChartPoint.spec.js
 test/model/ChartType.spec.js
 test/model/CreateChannelSubRequest.spec.js

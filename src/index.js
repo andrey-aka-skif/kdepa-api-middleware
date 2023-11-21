@@ -24,7 +24,6 @@ import CabinetDtoCabinetsQueryFilterDtoPagedItemsDto from './model/CabinetDtoCab
 import CabinetsQueryFilterDto from './model/CabinetsQueryFilterDto';
 import ChannelDto from './model/ChannelDto';
 import ChannelRawDto from './model/ChannelRawDto';
-import ChartFilterDto from './model/ChartFilterDto';
 import ChartPoint from './model/ChartPoint';
 import ChartType from './model/ChartType';
 import CreateChannelSubRequest from './model/CreateChannelSubRequest';
@@ -219,12 +218,6 @@ export {
      * @property {module:model/ChannelRawDto}
      */
     ChannelRawDto,
-
-    /**
-     * The ChartFilterDto model constructor.
-     * @property {module:model/ChartFilterDto}
-     */
-    ChartFilterDto,
 
     /**
      * The ChartPoint model constructor.
