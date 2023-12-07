@@ -16,6 +16,7 @@ import ApiClient from './ApiClient';
 import AssembliesQueryFilterDto from './model/AssembliesQueryFilterDto';
 import AssemblyDto from './model/AssemblyDto';
 import AssemblyDtoAssembliesQueryFilterDtoPagedItemsDto from './model/AssemblyDtoAssembliesQueryFilterDtoPagedItemsDto';
+import AtmosphereTypeDto from './model/AtmosphereTypeDto';
 import BlockDto from './model/BlockDto';
 import BlockDtoBlocksQueryFilterDtoPagedItemsDto from './model/BlockDtoBlocksQueryFilterDtoPagedItemsDto';
 import BlocksQueryFilterDto from './model/BlocksQueryFilterDto';
@@ -26,6 +27,7 @@ import ChannelDto from './model/ChannelDto';
 import ChannelRawDto from './model/ChannelRawDto';
 import ChartPoint from './model/ChartPoint';
 import ChartType from './model/ChartType';
+import ClimaticExecutionDto from './model/ClimaticExecutionDto';
 import CreateChannelSubRequest from './model/CreateChannelSubRequest';
 import CreateOrUpdateAssemblyRequest from './model/CreateOrUpdateAssemblyRequest';
 import CreateOrUpdateBlockRequest from './model/CreateOrUpdateBlockRequest';
@@ -54,6 +56,7 @@ import EquipmentGroupDto from './model/EquipmentGroupDto';
 import FactoriesQueryFilterDto from './model/FactoriesQueryFilterDto';
 import FactoryDto from './model/FactoryDto';
 import FactoryDtoFactoriesQueryFilterDtoPagedItemsDto from './model/FactoryDtoFactoriesQueryFilterDtoPagedItemsDto';
+import MediumDto from './model/MediumDto';
 import MotorDto from './model/MotorDto';
 import MotorDtoMotorsQueryFilterDtoPagedItemsDto from './model/MotorDtoMotorsQueryFilterDtoPagedItemsDto';
 import MotorMarkDto from './model/MotorMarkDto';
@@ -86,6 +89,7 @@ import TimeSpan from './model/TimeSpan';
 import UpdateChannelSubRequest from './model/UpdateChannelSubRequest';
 import UpdateSurveyRequest from './model/UpdateSurveyRequest';
 import UsingClassDto from './model/UsingClassDto';
+import ValveDesignDto from './model/ValveDesignDto';
 import ValveDto from './model/ValveDto';
 import ValveDtoValvesQueryFilterDtoPagedItemsDto from './model/ValveDtoValvesQueryFilterDtoPagedItemsDto';
 import ValveMarkDto from './model/ValveMarkDto';
@@ -102,6 +106,7 @@ import DocsApi from './api/DocsApi';
 import DriveMarksApi from './api/DriveMarksApi';
 import DrivesApi from './api/DrivesApi';
 import FactoriesApi from './api/FactoriesApi';
+import LookUpApi from './api/LookUpApi';
 import MotorMarksApi from './api/MotorMarksApi';
 import MotorsApi from './api/MotorsApi';
 import OkmpConnectionsApi from './api/OkmpConnectionsApi';
@@ -172,6 +177,12 @@ export {
     AssemblyDtoAssembliesQueryFilterDtoPagedItemsDto,
 
     /**
+     * The AtmosphereTypeDto model constructor.
+     * @property {module:model/AtmosphereTypeDto}
+     */
+    AtmosphereTypeDto,
+
+    /**
      * The BlockDto model constructor.
      * @property {module:model/BlockDto}
      */
@@ -230,6 +241,12 @@ export {
      * @property {module:model/ChartType}
      */
     ChartType,
+
+    /**
+     * The ClimaticExecutionDto model constructor.
+     * @property {module:model/ClimaticExecutionDto}
+     */
+    ClimaticExecutionDto,
 
     /**
      * The CreateChannelSubRequest model constructor.
@@ -398,6 +415,12 @@ export {
      * @property {module:model/FactoryDtoFactoriesQueryFilterDtoPagedItemsDto}
      */
     FactoryDtoFactoriesQueryFilterDtoPagedItemsDto,
+
+    /**
+     * The MediumDto model constructor.
+     * @property {module:model/MediumDto}
+     */
+    MediumDto,
 
     /**
      * The MotorDto model constructor.
@@ -592,6 +615,12 @@ export {
     UsingClassDto,
 
     /**
+     * The ValveDesignDto model constructor.
+     * @property {module:model/ValveDesignDto}
+     */
+    ValveDesignDto,
+
+    /**
      * The ValveDto model constructor.
      * @property {module:model/ValveDto}
      */
@@ -686,6 +715,12 @@ export {
     * @property {module:api/FactoriesApi}
     */
     FactoriesApi,
+
+    /**
+    * The LookUpApi service constructor.
+    * @property {module:api/LookUpApi}
+    */
+    LookUpApi,
 
     /**
     * The MotorMarksApi service constructor.

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KdepaApi.EquipmentGroupDto();
+    instance = new KdepaApi.AtmosphereTypeDto();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,28 @@
       object[property] = value;
   }
 
-  describe('EquipmentGroupDto', function() {
-    it('should create an instance of EquipmentGroupDto', function() {
-      // uncomment below and update the code to test EquipmentGroupDto
-      //var instance = new KdepaApi.EquipmentGroupDto();
-      //expect(instance).to.be.a(KdepaApi.EquipmentGroupDto);
+  describe('AtmosphereTypeDto', function() {
+    it('should create an instance of AtmosphereTypeDto', function() {
+      // uncomment below and update the code to test AtmosphereTypeDto
+      //var instance = new KdepaApi.AtmosphereTypeDto();
+      //expect(instance).to.be.a(KdepaApi.AtmosphereTypeDto);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new KdepaApi.EquipmentGroupDto();
+      //var instance = new KdepaApi.AtmosphereTypeDto();
       //expect(instance).to.be();
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instance = new KdepaApi.EquipmentGroupDto();
+      //var instance = new KdepaApi.AtmosphereTypeDto();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new KdepaApi.EquipmentGroupDto();
+      //var instance = new KdepaApi.AtmosphereTypeDto();
       //expect(instance).to.be();
     });
 

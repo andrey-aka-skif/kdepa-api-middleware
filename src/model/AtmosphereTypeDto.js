@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The SafetyClassDto model module.
- * @module model/SafetyClassDto
+ * The AtmosphereTypeDto model module.
+ * @module model/AtmosphereTypeDto
  * @version 0.1.0
  */
-class SafetyClassDto {
+class AtmosphereTypeDto {
     /**
-     * Constructs a new <code>SafetyClassDto</code>.
-     * @alias module:model/SafetyClassDto
+     * Constructs a new <code>AtmosphereTypeDto</code>.
+     * @alias module:model/AtmosphereTypeDto
      */
     constructor() { 
         
-        SafetyClassDto.initialize(this);
+        AtmosphereTypeDto.initialize(this);
     }
 
     /**
@@ -37,15 +37,15 @@ class SafetyClassDto {
     }
 
     /**
-     * Constructs a <code>SafetyClassDto</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>AtmosphereTypeDto</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/SafetyClassDto} obj Optional instance to populate.
-     * @return {module:model/SafetyClassDto} The populated <code>SafetyClassDto</code> instance.
+     * @param {module:model/AtmosphereTypeDto} obj Optional instance to populate.
+     * @return {module:model/AtmosphereTypeDto} The populated <code>AtmosphereTypeDto</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new SafetyClassDto();
+            obj = obj || new AtmosphereTypeDto();
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'Number');
@@ -61,9 +61,9 @@ class SafetyClassDto {
     }
 
     /**
-     * Validates the JSON data with respect to <code>SafetyClassDto</code>.
+     * Validates the JSON data with respect to <code>AtmosphereTypeDto</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SafetyClassDto</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AtmosphereTypeDto</code>.
      */
     static validateJSON(data) {
         // ensure the json data is a string
@@ -86,22 +86,22 @@ class SafetyClassDto {
 /**
  * @member {Number} id
  */
-SafetyClassDto.prototype['id'] = undefined;
+AtmosphereTypeDto.prototype['id'] = undefined;
 
 /**
  * @member {String} value
  */
-SafetyClassDto.prototype['value'] = undefined;
+AtmosphereTypeDto.prototype['value'] = undefined;
 
 /**
  * @member {String} description
  */
-SafetyClassDto.prototype['description'] = undefined;
+AtmosphereTypeDto.prototype['description'] = undefined;
 
 
 
 
 
 
-export default SafetyClassDto;
+export default AtmosphereTypeDto;
 

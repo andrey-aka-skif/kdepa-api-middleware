@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KdepaApi.EquipmentGroupDto();
+    instance = new KdepaApi.ValveDesignDto();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,22 @@
       object[property] = value;
   }
 
-  describe('EquipmentGroupDto', function() {
-    it('should create an instance of EquipmentGroupDto', function() {
-      // uncomment below and update the code to test EquipmentGroupDto
-      //var instance = new KdepaApi.EquipmentGroupDto();
-      //expect(instance).to.be.a(KdepaApi.EquipmentGroupDto);
+  describe('ValveDesignDto', function() {
+    it('should create an instance of ValveDesignDto', function() {
+      // uncomment below and update the code to test ValveDesignDto
+      //var instance = new KdepaApi.ValveDesignDto();
+      //expect(instance).to.be.a(KdepaApi.ValveDesignDto);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new KdepaApi.EquipmentGroupDto();
+      //var instance = new KdepaApi.ValveDesignDto();
       //expect(instance).to.be();
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instance = new KdepaApi.EquipmentGroupDto();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property description (base name: "description")', function() {
-      // uncomment below and update the code to test the property description
-      //var instance = new KdepaApi.EquipmentGroupDto();
+      //var instance = new KdepaApi.ValveDesignDto();
       //expect(instance).to.be();
     });
 

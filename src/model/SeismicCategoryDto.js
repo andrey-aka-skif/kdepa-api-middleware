@@ -53,6 +53,9 @@ class SeismicCategoryDto {
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
         }
         return obj;
     }
@@ -66,6 +69,10 @@ class SeismicCategoryDto {
         // ensure the json data is a string
         if (data['value'] && !(typeof data['value'] === 'string' || data['value'] instanceof String)) {
             throw new Error("Expected the field `value` to be a primitive type in the JSON string but got " + data['value']);
+        }
+        // ensure the json data is a string
+        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
+            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
         }
 
         return true;
@@ -85,6 +92,11 @@ SeismicCategoryDto.prototype['id'] = undefined;
  * @member {String} value
  */
 SeismicCategoryDto.prototype['value'] = undefined;
+
+/**
+ * @member {String} description
+ */
+SeismicCategoryDto.prototype['description'] = undefined;
 
 
 

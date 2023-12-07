@@ -7,6 +7,7 @@ docs/AssembliesApi.md
 docs/AssembliesQueryFilterDto.md
 docs/AssemblyDto.md
 docs/AssemblyDtoAssembliesQueryFilterDtoPagedItemsDto.md
+docs/AtmosphereTypeDto.md
 docs/BlockDto.md
 docs/BlockDtoBlocksQueryFilterDtoPagedItemsDto.md
 docs/BlocksApi.md
@@ -19,6 +20,7 @@ docs/ChannelDto.md
 docs/ChannelRawDto.md
 docs/ChartPoint.md
 docs/ChartType.md
+docs/ClimaticExecutionDto.md
 docs/CreateChannelSubRequest.md
 docs/CreateOrUpdateAssemblyRequest.md
 docs/CreateOrUpdateBlockRequest.md
@@ -52,6 +54,8 @@ docs/FactoriesApi.md
 docs/FactoriesQueryFilterDto.md
 docs/FactoryDto.md
 docs/FactoryDtoFactoriesQueryFilterDtoPagedItemsDto.md
+docs/LookUpApi.md
+docs/MediumDto.md
 docs/MotorDto.md
 docs/MotorDtoMotorsQueryFilterDtoPagedItemsDto.md
 docs/MotorMarkDto.md
@@ -93,6 +97,7 @@ docs/TimeSpan.md
 docs/UpdateChannelSubRequest.md
 docs/UpdateSurveyRequest.md
 docs/UsingClassDto.md
+docs/ValveDesignDto.md
 docs/ValveDto.md
 docs/ValveDtoValvesQueryFilterDtoPagedItemsDto.md
 docs/ValveMarkDto.md
@@ -115,6 +120,7 @@ src/api/DocsApi.js
 src/api/DriveMarksApi.js
 src/api/DrivesApi.js
 src/api/FactoriesApi.js
+src/api/LookUpApi.js
 src/api/MotorMarksApi.js
 src/api/MotorsApi.js
 src/api/OkmpConnectionsApi.js
@@ -130,6 +136,7 @@ src/index.js
 src/model/AssembliesQueryFilterDto.js
 src/model/AssemblyDto.js
 src/model/AssemblyDtoAssembliesQueryFilterDtoPagedItemsDto.js
+src/model/AtmosphereTypeDto.js
 src/model/BlockDto.js
 src/model/BlockDtoBlocksQueryFilterDtoPagedItemsDto.js
 src/model/BlocksQueryFilterDto.js
@@ -140,6 +147,7 @@ src/model/ChannelDto.js
 src/model/ChannelRawDto.js
 src/model/ChartPoint.js
 src/model/ChartType.js
+src/model/ClimaticExecutionDto.js
 src/model/CreateChannelSubRequest.js
 src/model/CreateOrUpdateAssemblyRequest.js
 src/model/CreateOrUpdateBlockRequest.js
@@ -168,6 +176,7 @@ src/model/EquipmentGroupDto.js
 src/model/FactoriesQueryFilterDto.js
 src/model/FactoryDto.js
 src/model/FactoryDtoFactoriesQueryFilterDtoPagedItemsDto.js
+src/model/MediumDto.js
 src/model/MotorDto.js
 src/model/MotorDtoMotorsQueryFilterDtoPagedItemsDto.js
 src/model/MotorMarkDto.js
@@ -200,6 +209,7 @@ src/model/TimeSpan.js
 src/model/UpdateChannelSubRequest.js
 src/model/UpdateSurveyRequest.js
 src/model/UsingClassDto.js
+src/model/ValveDesignDto.js
 src/model/ValveDto.js
 src/model/ValveDtoValvesQueryFilterDtoPagedItemsDto.js
 src/model/ValveMarkDto.js
@@ -216,6 +226,7 @@ test/api/DocsApi.spec.js
 test/api/DriveMarksApi.spec.js
 test/api/DrivesApi.spec.js
 test/api/FactoriesApi.spec.js
+test/api/LookUpApi.spec.js
 test/api/MotorMarksApi.spec.js
 test/api/MotorsApi.spec.js
 test/api/OkmpConnectionsApi.spec.js
@@ -230,6 +241,7 @@ test/api/ValvesApi.spec.js
 test/model/AssembliesQueryFilterDto.spec.js
 test/model/AssemblyDto.spec.js
 test/model/AssemblyDtoAssembliesQueryFilterDtoPagedItemsDto.spec.js
+test/model/AtmosphereTypeDto.spec.js
 test/model/BlockDto.spec.js
 test/model/BlockDtoBlocksQueryFilterDtoPagedItemsDto.spec.js
 test/model/BlocksQueryFilterDto.spec.js
@@ -240,6 +252,7 @@ test/model/ChannelDto.spec.js
 test/model/ChannelRawDto.spec.js
 test/model/ChartPoint.spec.js
 test/model/ChartType.spec.js
+test/model/ClimaticExecutionDto.spec.js
 test/model/CreateChannelSubRequest.spec.js
 test/model/CreateOrUpdateAssemblyRequest.spec.js
 test/model/CreateOrUpdateBlockRequest.spec.js
@@ -268,6 +281,7 @@ test/model/EquipmentGroupDto.spec.js
 test/model/FactoriesQueryFilterDto.spec.js
 test/model/FactoryDto.spec.js
 test/model/FactoryDtoFactoriesQueryFilterDtoPagedItemsDto.spec.js
+test/model/MediumDto.spec.js
 test/model/MotorDto.spec.js
 test/model/MotorDtoMotorsQueryFilterDtoPagedItemsDto.spec.js
 test/model/MotorMarkDto.spec.js
@@ -300,6 +314,7 @@ test/model/TimeSpan.spec.js
 test/model/UpdateChannelSubRequest.spec.js
 test/model/UpdateSurveyRequest.spec.js
 test/model/UsingClassDto.spec.js
+test/model/ValveDesignDto.spec.js
 test/model/ValveDto.spec.js
 test/model/ValveDtoValvesQueryFilterDtoPagedItemsDto.spec.js
 test/model/ValveMarkDto.spec.js

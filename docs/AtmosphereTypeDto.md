@@ -1,4 +1,4 @@
-# KdepaApi.UsingClassDto
+# KdepaApi.AtmosphereTypeDto
 
 ## Properties
 

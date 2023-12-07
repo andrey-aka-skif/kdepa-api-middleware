@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The SafetyClassDto model module.
- * @module model/SafetyClassDto
+ * The MediumDto model module.
+ * @module model/MediumDto
  * @version 0.1.0
  */
-class SafetyClassDto {
+class MediumDto {
     /**
-     * Constructs a new <code>SafetyClassDto</code>.
-     * @alias module:model/SafetyClassDto
+     * Constructs a new <code>MediumDto</code>.
+     * @alias module:model/MediumDto
      */
     constructor() { 
         
-        SafetyClassDto.initialize(this);
+        MediumDto.initialize(this);
     }
 
     /**
@@ -37,15 +37,15 @@ class SafetyClassDto {
     }
 
     /**
-     * Constructs a <code>SafetyClassDto</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>MediumDto</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/SafetyClassDto} obj Optional instance to populate.
-     * @return {module:model/SafetyClassDto} The populated <code>SafetyClassDto</code> instance.
+     * @param {module:model/MediumDto} obj Optional instance to populate.
+     * @return {module:model/MediumDto} The populated <code>MediumDto</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new SafetyClassDto();
+            obj = obj || new MediumDto();
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'Number');
@@ -53,26 +53,19 @@ class SafetyClassDto {
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
-            }
         }
         return obj;
     }
 
     /**
-     * Validates the JSON data with respect to <code>SafetyClassDto</code>.
+     * Validates the JSON data with respect to <code>MediumDto</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SafetyClassDto</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>MediumDto</code>.
      */
     static validateJSON(data) {
         // ensure the json data is a string
         if (data['value'] && !(typeof data['value'] === 'string' || data['value'] instanceof String)) {
             throw new Error("Expected the field `value` to be a primitive type in the JSON string but got " + data['value']);
-        }
-        // ensure the json data is a string
-        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
-            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
         }
 
         return true;
@@ -86,22 +79,17 @@ class SafetyClassDto {
 /**
  * @member {Number} id
  */
-SafetyClassDto.prototype['id'] = undefined;
+MediumDto.prototype['id'] = undefined;
 
 /**
  * @member {String} value
  */
-SafetyClassDto.prototype['value'] = undefined;
-
-/**
- * @member {String} description
- */
-SafetyClassDto.prototype['description'] = undefined;
+MediumDto.prototype['value'] = undefined;
 
 
 
 
 
 
-export default SafetyClassDto;
+export default MediumDto;
 
