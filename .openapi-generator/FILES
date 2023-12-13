@@ -87,8 +87,11 @@ docs/StationSystemDtoSystemsQueryFilterDtoPagedItemsDto.md
 docs/StationsApi.md
 docs/SurveyDto.md
 docs/SurveyDtoSurveysQueryFilterDtoPagedItemsDto.md
+docs/SurveyExtendedDto.md
+docs/SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto.md
 docs/SurveyRawDto.md
 docs/SurveysApi.md
+docs/SurveysExtendedQueryFilterDto.md
 docs/SurveysRawApi.md
 docs/SystemsApi.md
 docs/SystemsQueryFilterDto.md
@@ -202,7 +205,10 @@ src/model/StationSystemDto.js
 src/model/StationSystemDtoSystemsQueryFilterDtoPagedItemsDto.js
 src/model/SurveyDto.js
 src/model/SurveyDtoSurveysQueryFilterDtoPagedItemsDto.js
+src/model/SurveyExtendedDto.js
+src/model/SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto.js
 src/model/SurveyRawDto.js
+src/model/SurveysExtendedQueryFilterDto.js
 src/model/SystemsQueryFilterDto.js
 src/model/TimeRangeDto.js
 src/model/TimeSpan.js
@@ -307,7 +313,10 @@ test/model/StationSystemDto.spec.js
 test/model/StationSystemDtoSystemsQueryFilterDtoPagedItemsDto.spec.js
 test/model/SurveyDto.spec.js
 test/model/SurveyDtoSurveysQueryFilterDtoPagedItemsDto.spec.js
+test/model/SurveyExtendedDto.spec.js
+test/model/SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto.spec.js
 test/model/SurveyRawDto.spec.js
+test/model/SurveysExtendedQueryFilterDto.spec.js
 test/model/SystemsQueryFilterDto.spec.js
 test/model/TimeRangeDto.spec.js
 test/model/TimeSpan.spec.js

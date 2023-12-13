@@ -96,12 +96,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property isFastActing (base name: "isFastActing")', function() {
-      // uncomment below and update the code to test the property isFastActing
-      //var instance = new KdepaApi.CreateOrUpdateAssemblyRequest();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));

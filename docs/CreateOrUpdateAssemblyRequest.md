@@ -11,6 +11,5 @@ Name | Type | Description | Notes
 **buildingDate** | **Date** |  | [optional] 
 **openTime** | **Number** |  | [optional] 
 **closeTime** | **Number** |  | [optional] 
-**isFastActing** | **Boolean** |  | [optional] 
 
 

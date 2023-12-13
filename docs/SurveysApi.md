@@ -4,6 +4,7 @@ All URIs are relative to *http://127.0.0.1:5005/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**surveysExtendedGet**](SurveysApi.md#surveysExtendedGet) | **GET** /Surveys/extended | Получить расширенный пагинированый список Обследований
 [**surveysGet**](SurveysApi.md#surveysGet) | **GET** /Surveys | Получить пагинированый список Обследований
 [**surveysIdChannelsChannelIdGet**](SurveysApi.md#surveysIdChannelsChannelIdGet) | **GET** /Surveys/{id}/channels/{channelId} | Получить график канала по id Обследования и channelId канала
 [**surveysIdDelete**](SurveysApi.md#surveysIdDelete) | **DELETE** /Surveys/{id} | Удалить Обследование
@@ -11,6 +12,82 @@ Method | HTTP request | Description
 [**surveysIdPut**](SurveysApi.md#surveysIdPut) | **PUT** /Surveys/{id} | Обновить Обследование
 [**surveysPost**](SurveysApi.md#surveysPost) | **POST** /Surveys | Создать Обследование
 
+
+
+## surveysExtendedGet
+
+> SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto surveysExtendedGet(opts)
+
+Получить расширенный пагинированый список Обследований
+
+### Example
+
+```javascript
+import KdepaApi from 'kdepa_api';
+
+let apiInstance = new KdepaApi.SurveysApi();
+let opts = {
+  'pageSize': 10, // Number | 
+  'pageIndex': 0, // Number | 
+  'sortBy': "sortBy_example", // String | 
+  'ascending': true, // Boolean | 
+  'positionIds': [null], // [Number] | 
+  'dateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'dateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'hasElectricChannel': true, // Boolean | 
+  'hasTorqueChannel': true, // Boolean | 
+  'hasActualAssembly': true, // Boolean | 
+  'hasArchivalAssembly': true, // Boolean | 
+  'isSynched': true, // Boolean | 
+  'isSliced': true, // Boolean | 
+  'isAnalyzed': true, // Boolean | 
+  'hasStatAnalysis': true, // Boolean | 
+  'hasTorqueAnalysis': true, // Boolean | 
+  'hasTrend': true // Boolean | 
+};
+apiInstance.surveysExtendedGet(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pageSize** | **Number**|  | [optional] [default to 10]
+ **pageIndex** | **Number**|  | [optional] [default to 0]
+ **sortBy** | **String**|  | [optional] 
+ **ascending** | **Boolean**|  | [optional] 
+ **positionIds** | [**[Number]**](Number.md)|  | [optional] 
+ **dateFrom** | **Date**|  | [optional] 
+ **dateTo** | **Date**|  | [optional] 
+ **hasElectricChannel** | **Boolean**|  | [optional] 
+ **hasTorqueChannel** | **Boolean**|  | [optional] 
+ **hasActualAssembly** | **Boolean**|  | [optional] 
+ **hasArchivalAssembly** | **Boolean**|  | [optional] 
+ **isSynched** | **Boolean**|  | [optional] 
+ **isSliced** | **Boolean**|  | [optional] 
+ **isAnalyzed** | **Boolean**|  | [optional] 
+ **hasStatAnalysis** | **Boolean**|  | [optional] 
+ **hasTorqueAnalysis** | **Boolean**|  | [optional] 
+ **hasTrend** | **Boolean**|  | [optional] 
+
+### Return type
+
+[**SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto**](SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ## surveysGet

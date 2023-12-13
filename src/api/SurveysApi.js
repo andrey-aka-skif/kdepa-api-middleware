@@ -19,6 +19,7 @@ import CreateSurveyRequest from '../model/CreateSurveyRequest';
 import ProblemDetails from '../model/ProblemDetails';
 import SurveyDto from '../model/SurveyDto';
 import SurveyDtoSurveysQueryFilterDtoPagedItemsDto from '../model/SurveyDtoSurveysQueryFilterDtoPagedItemsDto';
+import SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto from '../model/SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto';
 import UpdateSurveyRequest from '../model/UpdateSurveyRequest';
 
 /**
@@ -39,6 +40,99 @@ export default class SurveysApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+
+    /**
+     * Получить расширенный пагинированый список Обследований
+     * @param {Object} opts Optional parameters
+     * @param {Number} [pageSize = 10)] 
+     * @param {Number} [pageIndex = 0)] 
+     * @param {String} [sortBy] 
+     * @param {Boolean} [ascending] 
+     * @param {Array.<Number>} [positionIds] 
+     * @param {Date} [dateFrom] 
+     * @param {Date} [dateTo] 
+     * @param {Boolean} [hasElectricChannel] 
+     * @param {Boolean} [hasTorqueChannel] 
+     * @param {Boolean} [hasActualAssembly] 
+     * @param {Boolean} [hasArchivalAssembly] 
+     * @param {Boolean} [isSynched] 
+     * @param {Boolean} [isSliced] 
+     * @param {Boolean} [isAnalyzed] 
+     * @param {Boolean} [hasStatAnalysis] 
+     * @param {Boolean} [hasTorqueAnalysis] 
+     * @param {Boolean} [hasTrend] 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto} and HTTP response
+     */
+    surveysExtendedGetWithHttpInfo(opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'pageSize': opts['pageSize'],
+        'pageIndex': opts['pageIndex'],
+        'SortBy': opts['sortBy'],
+        'Ascending': opts['ascending'],
+        'PositionIds': this.apiClient.buildCollectionParam(opts['positionIds'], 'multi'),
+        'DateFrom': opts['dateFrom'],
+        'DateTo': opts['dateTo'],
+        'HasElectricChannel': opts['hasElectricChannel'],
+        'HasTorqueChannel': opts['hasTorqueChannel'],
+        'HasActualAssembly': opts['hasActualAssembly'],
+        'HasArchivalAssembly': opts['hasArchivalAssembly'],
+        'IsSynched': opts['isSynched'],
+        'IsSliced': opts['isSliced'],
+        'IsAnalyzed': opts['isAnalyzed'],
+        'HasStatAnalysis': opts['hasStatAnalysis'],
+        'HasTorqueAnalysis': opts['hasTorqueAnalysis'],
+        'HasTrend': opts['hasTrend']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto;
+      return this.apiClient.callApi(
+        '/Surveys/extended', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Получить расширенный пагинированый список Обследований
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.pageSize  (default to 10)
+     * @param {Number} opts.pageIndex  (default to 0)
+     * @param {String} opts.sortBy 
+     * @param {Boolean} opts.ascending 
+     * @param {Array.<Number>} opts.positionIds 
+     * @param {Date} opts.dateFrom 
+     * @param {Date} opts.dateTo 
+     * @param {Boolean} opts.hasElectricChannel 
+     * @param {Boolean} opts.hasTorqueChannel 
+     * @param {Boolean} opts.hasActualAssembly 
+     * @param {Boolean} opts.hasArchivalAssembly 
+     * @param {Boolean} opts.isSynched 
+     * @param {Boolean} opts.isSliced 
+     * @param {Boolean} opts.isAnalyzed 
+     * @param {Boolean} opts.hasStatAnalysis 
+     * @param {Boolean} opts.hasTorqueAnalysis 
+     * @param {Boolean} opts.hasTrend 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto}
+     */
+    surveysExtendedGet(opts) {
+      return this.surveysExtendedGetWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
 
 
     /**

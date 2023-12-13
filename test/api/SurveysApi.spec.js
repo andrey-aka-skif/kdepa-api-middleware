@@ -48,6 +48,16 @@
   }
 
   describe('SurveysApi', function() {
+    describe('surveysExtendedGet', function() {
+      it('should call surveysExtendedGet successfully', function(done) {
+        //uncomment below and update the code to test surveysExtendedGet
+        //instance.surveysExtendedGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('surveysGet', function() {
       it('should call surveysGet successfully', function(done) {
         //uncomment below and update the code to test surveysGet

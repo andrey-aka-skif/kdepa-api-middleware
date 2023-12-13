@@ -82,7 +82,10 @@ import StationSystemDto from './model/StationSystemDto';
 import StationSystemDtoSystemsQueryFilterDtoPagedItemsDto from './model/StationSystemDtoSystemsQueryFilterDtoPagedItemsDto';
 import SurveyDto from './model/SurveyDto';
 import SurveyDtoSurveysQueryFilterDtoPagedItemsDto from './model/SurveyDtoSurveysQueryFilterDtoPagedItemsDto';
+import SurveyExtendedDto from './model/SurveyExtendedDto';
+import SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto from './model/SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto';
 import SurveyRawDto from './model/SurveyRawDto';
+import SurveysExtendedQueryFilterDto from './model/SurveysExtendedQueryFilterDto';
 import SystemsQueryFilterDto from './model/SystemsQueryFilterDto';
 import TimeRangeDto from './model/TimeRangeDto';
 import TimeSpan from './model/TimeSpan';
@@ -573,10 +576,28 @@ export {
     SurveyDtoSurveysQueryFilterDtoPagedItemsDto,
 
     /**
+     * The SurveyExtendedDto model constructor.
+     * @property {module:model/SurveyExtendedDto}
+     */
+    SurveyExtendedDto,
+
+    /**
+     * The SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto model constructor.
+     * @property {module:model/SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto}
+     */
+    SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto,
+
+    /**
      * The SurveyRawDto model constructor.
      * @property {module:model/SurveyRawDto}
      */
     SurveyRawDto,
+
+    /**
+     * The SurveysExtendedQueryFilterDto model constructor.
+     * @property {module:model/SurveysExtendedQueryFilterDto}
+     */
+    SurveysExtendedQueryFilterDto,
 
     /**
      * The SystemsQueryFilterDto model constructor.

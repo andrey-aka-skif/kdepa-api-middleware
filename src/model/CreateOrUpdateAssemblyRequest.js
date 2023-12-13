@@ -68,9 +68,6 @@ class CreateOrUpdateAssemblyRequest {
             if (data.hasOwnProperty('closeTime')) {
                 obj['closeTime'] = ApiClient.convertToType(data['closeTime'], 'Number');
             }
-            if (data.hasOwnProperty('isFastActing')) {
-                obj['isFastActing'] = ApiClient.convertToType(data['isFastActing'], 'Boolean');
-            }
         }
         return obj;
     }
@@ -124,11 +121,6 @@ CreateOrUpdateAssemblyRequest.prototype['openTime'] = undefined;
  * @member {Number} closeTime
  */
 CreateOrUpdateAssemblyRequest.prototype['closeTime'] = undefined;
-
-/**
- * @member {Boolean} isFastActing
- */
-CreateOrUpdateAssemblyRequest.prototype['isFastActing'] = undefined;
 
 
 

@@ -205,6 +205,7 @@ Class | Method | HTTP request | Description
 *KdepaApi.StationsApi* | [**stationsIdGet**](docs/StationsApi.md#stationsIdGet) | **GET** /Stations/{id} | Получить Станцию по id
 *KdepaApi.StationsApi* | [**stationsIdPut**](docs/StationsApi.md#stationsIdPut) | **PUT** /Stations/{id} | Обновить Станцию
 *KdepaApi.StationsApi* | [**stationsPost**](docs/StationsApi.md#stationsPost) | **POST** /Stations | Создать Станцию
+*KdepaApi.SurveysApi* | [**surveysExtendedGet**](docs/SurveysApi.md#surveysExtendedGet) | **GET** /Surveys/extended | Получить расширенный пагинированый список Обследований
 *KdepaApi.SurveysApi* | [**surveysGet**](docs/SurveysApi.md#surveysGet) | **GET** /Surveys | Получить пагинированый список Обследований
 *KdepaApi.SurveysApi* | [**surveysIdChannelsChannelIdGet**](docs/SurveysApi.md#surveysIdChannelsChannelIdGet) | **GET** /Surveys/{id}/channels/{channelId} | Получить график канала по id Обследования и channelId канала
 *KdepaApi.SurveysApi* | [**surveysIdDelete**](docs/SurveysApi.md#surveysIdDelete) | **DELETE** /Surveys/{id} | Удалить Обследование
@@ -305,7 +306,10 @@ Class | Method | HTTP request | Description
  - [KdepaApi.StationSystemDtoSystemsQueryFilterDtoPagedItemsDto](docs/StationSystemDtoSystemsQueryFilterDtoPagedItemsDto.md)
  - [KdepaApi.SurveyDto](docs/SurveyDto.md)
  - [KdepaApi.SurveyDtoSurveysQueryFilterDtoPagedItemsDto](docs/SurveyDtoSurveysQueryFilterDtoPagedItemsDto.md)
+ - [KdepaApi.SurveyExtendedDto](docs/SurveyExtendedDto.md)
+ - [KdepaApi.SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto](docs/SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto.md)
  - [KdepaApi.SurveyRawDto](docs/SurveyRawDto.md)
+ - [KdepaApi.SurveysExtendedQueryFilterDto](docs/SurveysExtendedQueryFilterDto.md)
  - [KdepaApi.SystemsQueryFilterDto](docs/SystemsQueryFilterDto.md)
  - [KdepaApi.TimeRangeDto](docs/TimeRangeDto.md)
  - [KdepaApi.TimeSpan](docs/TimeSpan.md)
