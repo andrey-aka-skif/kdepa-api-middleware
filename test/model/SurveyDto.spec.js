@@ -108,6 +108,24 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property synched (base name: "synched")', function() {
+      // uncomment below and update the code to test the property synched
+      //var instance = new KdepaApi.SurveyDto();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property sliced (base name: "sliced")', function() {
+      // uncomment below and update the code to test the property sliced
+      //var instance = new KdepaApi.SurveyDto();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property analyzed (base name: "analyzed")', function() {
+      // uncomment below and update the code to test the property analyzed
+      //var instance = new KdepaApi.SurveyDto();
+      //expect(instance).to.be();
+    });
+
     it('should have the property slicing (base name: "slicing")', function() {
       // uncomment below and update the code to test the property slicing
       //var instance = new KdepaApi.SurveyDto();

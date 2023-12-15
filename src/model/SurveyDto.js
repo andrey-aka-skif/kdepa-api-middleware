@@ -76,6 +76,15 @@ class SurveyDto {
             if (data.hasOwnProperty('channels')) {
                 obj['channels'] = ApiClient.convertToType(data['channels'], [ChannelDto]);
             }
+            if (data.hasOwnProperty('synched')) {
+                obj['synched'] = ApiClient.convertToType(data['synched'], 'Boolean');
+            }
+            if (data.hasOwnProperty('sliced')) {
+                obj['sliced'] = ApiClient.convertToType(data['sliced'], 'Boolean');
+            }
+            if (data.hasOwnProperty('analyzed')) {
+                obj['analyzed'] = ApiClient.convertToType(data['analyzed'], 'Boolean');
+            }
             if (data.hasOwnProperty('slicing')) {
                 obj['slicing'] = SlicingDto.constructFromObject(data['slicing']);
             }
@@ -164,6 +173,21 @@ SurveyDto.prototype['comment'] = undefined;
  * @member {Array.<module:model/ChannelDto>} channels
  */
 SurveyDto.prototype['channels'] = undefined;
+
+/**
+ * @member {Boolean} synched
+ */
+SurveyDto.prototype['synched'] = undefined;
+
+/**
+ * @member {Boolean} sliced
+ */
+SurveyDto.prototype['sliced'] = undefined;
+
+/**
+ * @member {Boolean} analyzed
+ */
+SurveyDto.prototype['analyzed'] = undefined;
 
 /**
  * @member {module:model/SlicingDto} slicing

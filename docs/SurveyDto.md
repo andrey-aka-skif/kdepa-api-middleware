@@ -13,6 +13,9 @@ Name | Type | Description | Notes
 **direction** | **String** |  | [optional] 
 **comment** | **String** |  | [optional] 
 **channels** | [**[ChannelDto]**](ChannelDto.md) |  | [optional] 
+**synched** | **Boolean** |  | [optional] 
+**sliced** | **Boolean** |  | [optional] 
+**analyzed** | **Boolean** |  | [optional] 
 **slicing** | [**SlicingDto**](SlicingDto.md) |  | [optional] 
 
 
