@@ -79,6 +79,7 @@ docs/ShopDtoShopsQueryFilterDtoPagedItemsDto.md
 docs/ShopsApi.md
 docs/ShopsQueryFilterDto.md
 docs/SlicingDto.md
+docs/SlicingRequest.md
 docs/SortDto.md
 docs/StationDto.md
 docs/StationDtoQueryIdsFilterDtoPagedItemsDto.md
@@ -198,6 +199,7 @@ src/model/ShopDto.js
 src/model/ShopDtoShopsQueryFilterDtoPagedItemsDto.js
 src/model/ShopsQueryFilterDto.js
 src/model/SlicingDto.js
+src/model/SlicingRequest.js
 src/model/SortDto.js
 src/model/StationDto.js
 src/model/StationDtoQueryIdsFilterDtoPagedItemsDto.js
@@ -306,6 +308,7 @@ test/model/ShopDto.spec.js
 test/model/ShopDtoShopsQueryFilterDtoPagedItemsDto.spec.js
 test/model/ShopsQueryFilterDto.spec.js
 test/model/SlicingDto.spec.js
+test/model/SlicingRequest.spec.js
 test/model/SortDto.spec.js
 test/model/StationDto.spec.js
 test/model/StationDtoQueryIdsFilterDtoPagedItemsDto.spec.js

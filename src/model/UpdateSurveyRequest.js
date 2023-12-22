@@ -12,7 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import SlicingDto from './SlicingDto';
+import SlicingRequest from './SlicingRequest';
+import TimeSpan from './TimeSpan';
 import UpdateChannelSubRequest from './UpdateChannelSubRequest';
 
 /**
@@ -71,7 +72,10 @@ class UpdateSurveyRequest {
                 obj['comment'] = ApiClient.convertToType(data['comment'], 'String');
             }
             if (data.hasOwnProperty('slicing')) {
-                obj['slicing'] = SlicingDto.constructFromObject(data['slicing']);
+                obj['slicing'] = SlicingRequest.constructFromObject(data['slicing']);
+            }
+            if (data.hasOwnProperty('shift')) {
+                obj['shift'] = TimeSpan.constructFromObject(data['shift']);
             }
             if (data.hasOwnProperty('channels')) {
                 obj['channels'] = ApiClient.convertToType(data['channels'], [UpdateChannelSubRequest]);
@@ -96,7 +100,11 @@ class UpdateSurveyRequest {
         }
         // validate the optional field `slicing`
         if (data['slicing']) { // data not null
-          SlicingDto.validateJSON(data['slicing']);
+          SlicingRequest.validateJSON(data['slicing']);
+        }
+        // validate the optional field `shift`
+        if (data['shift']) { // data not null
+          TimeSpan.validateJSON(data['shift']);
         }
         if (data['channels']) { // data not null
             // ensure the json data is an array
@@ -153,9 +161,14 @@ UpdateSurveyRequest.prototype['direction'] = undefined;
 UpdateSurveyRequest.prototype['comment'] = undefined;
 
 /**
- * @member {module:model/SlicingDto} slicing
+ * @member {module:model/SlicingRequest} slicing
  */
 UpdateSurveyRequest.prototype['slicing'] = undefined;
+
+/**
+ * @member {module:model/TimeSpan} shift
+ */
+UpdateSurveyRequest.prototype['shift'] = undefined;
 
 /**
  * @member {Array.<module:model/UpdateChannelSubRequest>} channels

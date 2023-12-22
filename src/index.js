@@ -75,6 +75,7 @@ import ShopDto from './model/ShopDto';
 import ShopDtoShopsQueryFilterDtoPagedItemsDto from './model/ShopDtoShopsQueryFilterDtoPagedItemsDto';
 import ShopsQueryFilterDto from './model/ShopsQueryFilterDto';
 import SlicingDto from './model/SlicingDto';
+import SlicingRequest from './model/SlicingRequest';
 import SortDto from './model/SortDto';
 import StationDto from './model/StationDto';
 import StationDtoQueryIdsFilterDtoPagedItemsDto from './model/StationDtoQueryIdsFilterDtoPagedItemsDto';
@@ -532,6 +533,12 @@ export {
      * @property {module:model/SlicingDto}
      */
     SlicingDto,
+
+    /**
+     * The SlicingRequest model constructor.
+     * @property {module:model/SlicingRequest}
+     */
+    SlicingRequest,
 
     /**
      * The SortDto model constructor.

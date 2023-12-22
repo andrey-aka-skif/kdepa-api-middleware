@@ -11,7 +11,8 @@ Name | Type | Description | Notes
 **mvz** | **Number** |  | [optional] 
 **direction** | **String** |  | [optional] 
 **comment** | **String** |  | [optional] 
-**slicing** | [**SlicingDto**](SlicingDto.md) |  | [optional] 
+**slicing** | [**SlicingRequest**](SlicingRequest.md) |  | [optional] 
+**shift** | [**TimeSpan**](TimeSpan.md) |  | [optional] 
 **channels** | [**[UpdateChannelSubRequest]**](UpdateChannelSubRequest.md) |  | [optional] 
 
 

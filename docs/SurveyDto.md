@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **synched** | **Boolean** |  | [optional] 
 **sliced** | **Boolean** |  | [optional] 
 **analyzed** | **Boolean** |  | [optional] 
+**length** | [**TimeSpan**](TimeSpan.md) |  | [optional] 
 **slicing** | [**SlicingDto**](SlicingDto.md) |  | [optional] 
 
 

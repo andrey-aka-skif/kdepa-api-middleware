@@ -102,6 +102,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property shift (base name: "shift")', function() {
+      // uncomment below and update the code to test the property shift
+      //var instance = new KdepaApi.UpdateSurveyRequest();
+      //expect(instance).to.be();
+    });
+
     it('should have the property channels (base name: "channels")', function() {
       // uncomment below and update the code to test the property channels
       //var instance = new KdepaApi.UpdateSurveyRequest();

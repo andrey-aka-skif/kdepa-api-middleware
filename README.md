@@ -299,6 +299,7 @@ Class | Method | HTTP request | Description
  - [KdepaApi.ShopDtoShopsQueryFilterDtoPagedItemsDto](docs/ShopDtoShopsQueryFilterDtoPagedItemsDto.md)
  - [KdepaApi.ShopsQueryFilterDto](docs/ShopsQueryFilterDto.md)
  - [KdepaApi.SlicingDto](docs/SlicingDto.md)
+ - [KdepaApi.SlicingRequest](docs/SlicingRequest.md)
  - [KdepaApi.SortDto](docs/SortDto.md)
  - [KdepaApi.StationDto](docs/StationDto.md)
  - [KdepaApi.StationDtoQueryIdsFilterDtoPagedItemsDto](docs/StationDtoQueryIdsFilterDtoPagedItemsDto.md)

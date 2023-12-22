@@ -126,6 +126,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property length (base name: "length")', function() {
+      // uncomment below and update the code to test the property length
+      //var instance = new KdepaApi.SurveyDto();
+      //expect(instance).to.be();
+    });
+
     it('should have the property slicing (base name: "slicing")', function() {
       // uncomment below and update the code to test the property slicing
       //var instance = new KdepaApi.SurveyDto();

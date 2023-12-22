@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import TimeRangeDto from './TimeRangeDto';
+import TimeSpan from './TimeSpan';
 
 /**
  * The ChannelDto model module.
@@ -78,6 +79,9 @@ class ChannelDto {
             if (data.hasOwnProperty('offsetFromZero')) {
                 obj['offsetFromZero'] = ApiClient.convertToType(data['offsetFromZero'], 'Number');
             }
+            if (data.hasOwnProperty('length')) {
+                obj['length'] = TimeSpan.constructFromObject(data['length']);
+            }
             if (data.hasOwnProperty('range')) {
                 obj['range'] = TimeRangeDto.constructFromObject(data['range']);
             }
@@ -102,6 +106,10 @@ class ChannelDto {
         // ensure the json data is a string
         if (data['unit'] && !(typeof data['unit'] === 'string' || data['unit'] instanceof String)) {
             throw new Error("Expected the field `unit` to be a primitive type in the JSON string but got " + data['unit']);
+        }
+        // validate the optional field `length`
+        if (data['length']) { // data not null
+          TimeSpan.validateJSON(data['length']);
         }
         // validate the optional field `range`
         if (data['range']) { // data not null
@@ -165,6 +173,11 @@ ChannelDto.prototype['samplesCount'] = undefined;
  * @member {Number} offsetFromZero
  */
 ChannelDto.prototype['offsetFromZero'] = undefined;
+
+/**
+ * @member {module:model/TimeSpan} length
+ */
+ChannelDto.prototype['length'] = undefined;
 
 /**
  * @member {module:model/TimeRangeDto} range
