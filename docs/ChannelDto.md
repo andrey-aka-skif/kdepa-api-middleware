@@ -14,7 +14,6 @@ Name | Type | Description | Notes
 **devCoeff** | **Number** |  | [optional] 
 **samplesCount** | **Number** |  | [optional] 
 **offsetFromZero** | **Number** |  | [optional] 
-**length** | [**TimeSpan**](TimeSpan.md) |  | [optional] 
-**range** | [**TimeRangeDto**](TimeRangeDto.md) |  | [optional] 
+**length** | **Number** |  | [optional] 
 
 

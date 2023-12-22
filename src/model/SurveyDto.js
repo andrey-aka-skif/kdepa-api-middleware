@@ -14,7 +14,6 @@
 import ApiClient from '../ApiClient';
 import ChannelDto from './ChannelDto';
 import SlicingDto from './SlicingDto';
-import TimeSpan from './TimeSpan';
 
 /**
  * The SurveyDto model module.
@@ -87,7 +86,7 @@ class SurveyDto {
                 obj['analyzed'] = ApiClient.convertToType(data['analyzed'], 'Boolean');
             }
             if (data.hasOwnProperty('length')) {
-                obj['length'] = TimeSpan.constructFromObject(data['length']);
+                obj['length'] = ApiClient.convertToType(data['length'], 'Number');
             }
             if (data.hasOwnProperty('slicing')) {
                 obj['slicing'] = SlicingDto.constructFromObject(data['slicing']);
@@ -119,10 +118,6 @@ class SurveyDto {
             for (const item of data['channels']) {
                 ChannelDto.validateJSON(item);
             };
-        }
-        // validate the optional field `length`
-        if (data['length']) { // data not null
-          TimeSpan.validateJSON(data['length']);
         }
         // validate the optional field `slicing`
         if (data['slicing']) { // data not null
@@ -198,7 +193,7 @@ SurveyDto.prototype['sliced'] = undefined;
 SurveyDto.prototype['analyzed'] = undefined;
 
 /**
- * @member {module:model/TimeSpan} length
+ * @member {Number} length
  */
 SurveyDto.prototype['length'] = undefined;
 

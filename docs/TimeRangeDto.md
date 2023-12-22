@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**first** | [**TimeSpan**](TimeSpan.md) |  | [optional] 
-**last** | [**TimeSpan**](TimeSpan.md) |  | [optional] 
+**first** | **Number** |  | [optional] 
+**last** | **Number** |  | [optional] 
 
 

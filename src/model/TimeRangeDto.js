@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import TimeSpan from './TimeSpan';
 
 /**
  * The TimeRangeDto model module.
@@ -49,10 +48,10 @@ class TimeRangeDto {
             obj = obj || new TimeRangeDto();
 
             if (data.hasOwnProperty('first')) {
-                obj['first'] = TimeSpan.constructFromObject(data['first']);
+                obj['first'] = ApiClient.convertToType(data['first'], 'Number');
             }
             if (data.hasOwnProperty('last')) {
-                obj['last'] = TimeSpan.constructFromObject(data['last']);
+                obj['last'] = ApiClient.convertToType(data['last'], 'Number');
             }
         }
         return obj;
@@ -64,14 +63,6 @@ class TimeRangeDto {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TimeRangeDto</code>.
      */
     static validateJSON(data) {
-        // validate the optional field `first`
-        if (data['first']) { // data not null
-          TimeSpan.validateJSON(data['first']);
-        }
-        // validate the optional field `last`
-        if (data['last']) { // data not null
-          TimeSpan.validateJSON(data['last']);
-        }
 
         return true;
     }
@@ -82,12 +73,12 @@ class TimeRangeDto {
 
 
 /**
- * @member {module:model/TimeSpan} first
+ * @member {Number} first
  */
 TimeRangeDto.prototype['first'] = undefined;
 
 /**
- * @member {module:model/TimeSpan} last
+ * @member {Number} last
  */
 TimeRangeDto.prototype['last'] = undefined;
 

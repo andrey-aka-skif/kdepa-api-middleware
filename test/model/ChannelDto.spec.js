@@ -120,12 +120,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property range (base name: "range")', function() {
-      // uncomment below and update the code to test the property range
-      //var instance = new KdepaApi.ChannelDto();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));
