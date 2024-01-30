@@ -4,7 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**assemblyId** | **Number** |  | [optional] 
 **dateTime** | **Date** |  | [optional] 
 **resistance** | **Number** |  | [optional] 
 **mvo** | **Number** |  | [optional] 
@@ -12,7 +11,6 @@ Name | Type | Description | Notes
 **direction** | **String** |  | [optional] 
 **comment** | **String** |  | [optional] 
 **slicing** | [**SlicingRequest**](SlicingRequest.md) |  | [optional] 
-**shift** | [**TimeSpan**](TimeSpan.md) |  | [optional] 
 **channels** | [**[UpdateChannelSubRequest]**](UpdateChannelSubRequest.md) |  | [optional] 
 
 

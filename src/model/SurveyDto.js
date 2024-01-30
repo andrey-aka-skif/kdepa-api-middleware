@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import ChannelDto from './ChannelDto';
+import DiagnosticDto from './DiagnosticDto';
 import SlicingDto from './SlicingDto';
 
 /**
@@ -91,6 +92,9 @@ class SurveyDto {
             if (data.hasOwnProperty('slicing')) {
                 obj['slicing'] = SlicingDto.constructFromObject(data['slicing']);
             }
+            if (data.hasOwnProperty('diagnostic')) {
+                obj['diagnostic'] = DiagnosticDto.constructFromObject(data['diagnostic']);
+            }
         }
         return obj;
     }
@@ -122,6 +126,10 @@ class SurveyDto {
         // validate the optional field `slicing`
         if (data['slicing']) { // data not null
           SlicingDto.validateJSON(data['slicing']);
+        }
+        // validate the optional field `diagnostic`
+        if (data['diagnostic']) { // data not null
+          DiagnosticDto.validateJSON(data['diagnostic']);
         }
 
         return true;
@@ -201,6 +209,11 @@ SurveyDto.prototype['length'] = undefined;
  * @member {module:model/SlicingDto} slicing
  */
 SurveyDto.prototype['slicing'] = undefined;
+
+/**
+ * @member {module:model/DiagnosticDto} diagnostic
+ */
+SurveyDto.prototype['diagnostic'] = undefined;
 
 
 

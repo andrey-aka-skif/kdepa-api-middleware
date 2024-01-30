@@ -77,12 +77,6 @@ class DriveMarkDto {
             if (data.hasOwnProperty('weight')) {
                 obj['weight'] = ApiClient.convertToType(data['weight'], 'Number');
             }
-            if (data.hasOwnProperty('movementTimeMin')) {
-                obj['movementTimeMin'] = ApiClient.convertToType(data['movementTimeMin'], 'Number');
-            }
-            if (data.hasOwnProperty('movementTimeMax')) {
-                obj['movementTimeMax'] = ApiClient.convertToType(data['movementTimeMax'], 'Number');
-            }
             if (data.hasOwnProperty('serviceLife')) {
                 obj['serviceLife'] = ApiClient.convertToType(data['serviceLife'], 'Number');
             }
@@ -177,16 +171,6 @@ DriveMarkDto.prototype['turnNumberMax'] = undefined;
  * @member {Number} weight
  */
 DriveMarkDto.prototype['weight'] = undefined;
-
-/**
- * @member {Number} movementTimeMin
- */
-DriveMarkDto.prototype['movementTimeMin'] = undefined;
-
-/**
- * @member {Number} movementTimeMax
- */
-DriveMarkDto.prototype['movementTimeMax'] = undefined;
 
 /**
  * @member {Number} serviceLife

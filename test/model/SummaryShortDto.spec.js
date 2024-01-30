@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KdepaApi.DocFileDto();
+    instance = new KdepaApi.SummaryShortDto();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,40 +47,40 @@
       object[property] = value;
   }
 
-  describe('DocFileDto', function() {
-    it('should create an instance of DocFileDto', function() {
-      // uncomment below and update the code to test DocFileDto
-      //var instance = new KdepaApi.DocFileDto();
-      //expect(instance).to.be.a(KdepaApi.DocFileDto);
+  describe('SummaryShortDto', function() {
+    it('should create an instance of SummaryShortDto', function() {
+      // uncomment below and update the code to test SummaryShortDto
+      //var instance = new KdepaApi.SummaryShortDto();
+      //expect(instance).to.be.a(KdepaApi.SummaryShortDto);
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new KdepaApi.DocFileDto();
+    it('should have the property open (base name: "open")', function() {
+      // uncomment below and update the code to test the property open
+      //var instance = new KdepaApi.SummaryShortDto();
       //expect(instance).to.be();
     });
 
-    it('should have the property shortName (base name: "shortName")', function() {
-      // uncomment below and update the code to test the property shortName
-      //var instance = new KdepaApi.DocFileDto();
+    it('should have the property close (base name: "close")', function() {
+      // uncomment below and update the code to test the property close
+      //var instance = new KdepaApi.SummaryShortDto();
       //expect(instance).to.be();
     });
 
-    it('should have the property fullName (base name: "fullName")', function() {
-      // uncomment below and update the code to test the property fullName
-      //var instance = new KdepaApi.DocFileDto();
+    it('should have the property previous (base name: "previous")', function() {
+      // uncomment below and update the code to test the property previous
+      //var instance = new KdepaApi.SummaryShortDto();
       //expect(instance).to.be();
     });
 
-    it('should have the property fileName (base name: "fileName")', function() {
-      // uncomment below and update the code to test the property fileName
-      //var instance = new KdepaApi.DocFileDto();
+    it('should have the property torque (base name: "torque")', function() {
+      // uncomment below and update the code to test the property torque
+      //var instance = new KdepaApi.SummaryShortDto();
       //expect(instance).to.be();
     });
 
-    it('should have the property contentType (base name: "contentType")', function() {
-      // uncomment below and update the code to test the property contentType
-      //var instance = new KdepaApi.DocFileDto();
+    it('should have the property recommend (base name: "recommend")', function() {
+      // uncomment below and update the code to test the property recommend
+      //var instance = new KdepaApi.SummaryShortDto();
       //expect(instance).to.be();
     });
 

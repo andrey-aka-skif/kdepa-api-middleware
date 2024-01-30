@@ -138,6 +138,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property diagnostic (base name: "diagnostic")', function() {
+      // uncomment below and update the code to test the property diagnostic
+      //var instance = new KdepaApi.SurveyDto();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

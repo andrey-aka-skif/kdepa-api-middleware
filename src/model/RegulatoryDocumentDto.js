@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The DocFileDto model module.
- * @module model/DocFileDto
+ * The RegulatoryDocumentDto model module.
+ * @module model/RegulatoryDocumentDto
  * @version 0.1.0
  */
-class DocFileDto {
+class RegulatoryDocumentDto {
     /**
-     * Constructs a new <code>DocFileDto</code>.
-     * @alias module:model/DocFileDto
+     * Constructs a new <code>RegulatoryDocumentDto</code>.
+     * @alias module:model/RegulatoryDocumentDto
      */
     constructor() { 
         
-        DocFileDto.initialize(this);
+        RegulatoryDocumentDto.initialize(this);
     }
 
     /**
@@ -37,15 +37,15 @@ class DocFileDto {
     }
 
     /**
-     * Constructs a <code>DocFileDto</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>RegulatoryDocumentDto</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/DocFileDto} obj Optional instance to populate.
-     * @return {module:model/DocFileDto} The populated <code>DocFileDto</code> instance.
+     * @param {module:model/RegulatoryDocumentDto} obj Optional instance to populate.
+     * @return {module:model/RegulatoryDocumentDto} The populated <code>RegulatoryDocumentDto</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new DocFileDto();
+            obj = obj || new RegulatoryDocumentDto();
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'Number');
@@ -56,20 +56,17 @@ class DocFileDto {
             if (data.hasOwnProperty('fullName')) {
                 obj['fullName'] = ApiClient.convertToType(data['fullName'], 'String');
             }
-            if (data.hasOwnProperty('fileName')) {
-                obj['fileName'] = ApiClient.convertToType(data['fileName'], 'String');
-            }
-            if (data.hasOwnProperty('contentType')) {
-                obj['contentType'] = ApiClient.convertToType(data['contentType'], 'String');
+            if (data.hasOwnProperty('fileId')) {
+                obj['fileId'] = ApiClient.convertToType(data['fileId'], 'Number');
             }
         }
         return obj;
     }
 
     /**
-     * Validates the JSON data with respect to <code>DocFileDto</code>.
+     * Validates the JSON data with respect to <code>RegulatoryDocumentDto</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DocFileDto</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>RegulatoryDocumentDto</code>.
      */
     static validateJSON(data) {
         // ensure the json data is a string
@@ -79,14 +76,6 @@ class DocFileDto {
         // ensure the json data is a string
         if (data['fullName'] && !(typeof data['fullName'] === 'string' || data['fullName'] instanceof String)) {
             throw new Error("Expected the field `fullName` to be a primitive type in the JSON string but got " + data['fullName']);
-        }
-        // ensure the json data is a string
-        if (data['fileName'] && !(typeof data['fileName'] === 'string' || data['fileName'] instanceof String)) {
-            throw new Error("Expected the field `fileName` to be a primitive type in the JSON string but got " + data['fileName']);
-        }
-        // ensure the json data is a string
-        if (data['contentType'] && !(typeof data['contentType'] === 'string' || data['contentType'] instanceof String)) {
-            throw new Error("Expected the field `contentType` to be a primitive type in the JSON string but got " + data['contentType']);
         }
 
         return true;
@@ -100,32 +89,27 @@ class DocFileDto {
 /**
  * @member {Number} id
  */
-DocFileDto.prototype['id'] = undefined;
+RegulatoryDocumentDto.prototype['id'] = undefined;
 
 /**
  * @member {String} shortName
  */
-DocFileDto.prototype['shortName'] = undefined;
+RegulatoryDocumentDto.prototype['shortName'] = undefined;
 
 /**
  * @member {String} fullName
  */
-DocFileDto.prototype['fullName'] = undefined;
+RegulatoryDocumentDto.prototype['fullName'] = undefined;
 
 /**
- * @member {String} fileName
+ * @member {Number} fileId
  */
-DocFileDto.prototype['fileName'] = undefined;
-
-/**
- * @member {String} contentType
- */
-DocFileDto.prototype['contentType'] = undefined;
+RegulatoryDocumentDto.prototype['fileId'] = undefined;
 
 
 
 
 
 
-export default DocFileDto;
+export default RegulatoryDocumentDto;
 

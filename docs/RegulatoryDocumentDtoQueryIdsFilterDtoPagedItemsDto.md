@@ -1,4 +1,4 @@
-# KdepaApi.DocFileDtoQueryIdsFilterDtoPagedItemsDto
+# KdepaApi.RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto
 
 ## Properties
 
@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **pageSize** | **Number** |  | [optional] 
 **totalItems** | **Number** |  | [optional] 
 **totalPages** | **Number** |  | [optional] 
-**items** | [**[DocFileDto]**](DocFileDto.md) |  | [optional] 
+**items** | [**[RegulatoryDocumentDto]**](RegulatoryDocumentDto.md) |  | [optional] 
 **sort** | [**SortDto**](SortDto.md) |  | [optional] 
 **filter** | [**QueryIdsFilterDto**](QueryIdsFilterDto.md) |  | [optional] 
 

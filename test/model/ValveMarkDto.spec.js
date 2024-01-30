@@ -96,6 +96,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property movementTimeMin (base name: "movementTimeMin")', function() {
+      // uncomment below and update the code to test the property movementTimeMin
+      //var instance = new KdepaApi.ValveMarkDto();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property movementTimeMax (base name: "movementTimeMax")', function() {
+      // uncomment below and update the code to test the property movementTimeMax
+      //var instance = new KdepaApi.ValveMarkDto();
+      //expect(instance).to.be();
+    });
+
     it('should have the property modification (base name: "modification")', function() {
       // uncomment below and update the code to test the property modification
       //var instance = new KdepaApi.ValveMarkDto();

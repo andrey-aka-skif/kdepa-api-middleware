@@ -76,11 +76,11 @@ class ValveMarkExtendedDto {
             if (data.hasOwnProperty('tn')) {
                 obj['tn'] = ApiClient.convertToType(data['tn'], 'Number');
             }
-            if (data.hasOwnProperty('openTime')) {
-                obj['openTime'] = ApiClient.convertToType(data['openTime'], 'Number');
+            if (data.hasOwnProperty('movementTimeMin')) {
+                obj['movementTimeMin'] = ApiClient.convertToType(data['movementTimeMin'], 'Number');
             }
-            if (data.hasOwnProperty('closeTime')) {
-                obj['closeTime'] = ApiClient.convertToType(data['closeTime'], 'Number');
+            if (data.hasOwnProperty('movementTimeMax')) {
+                obj['movementTimeMax'] = ApiClient.convertToType(data['movementTimeMax'], 'Number');
             }
             if (data.hasOwnProperty('modification')) {
                 obj['modification'] = ApiClient.convertToType(data['modification'], 'String');
@@ -277,14 +277,14 @@ ValveMarkExtendedDto.prototype['pn'] = undefined;
 ValveMarkExtendedDto.prototype['tn'] = undefined;
 
 /**
- * @member {Number} openTime
+ * @member {Number} movementTimeMin
  */
-ValveMarkExtendedDto.prototype['openTime'] = undefined;
+ValveMarkExtendedDto.prototype['movementTimeMin'] = undefined;
 
 /**
- * @member {Number} closeTime
+ * @member {Number} movementTimeMax
  */
-ValveMarkExtendedDto.prototype['closeTime'] = undefined;
+ValveMarkExtendedDto.prototype['movementTimeMax'] = undefined;
 
 /**
  * @member {String} modification

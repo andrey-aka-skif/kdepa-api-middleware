@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **dn** | **Number** |  | [optional] 
 **pn** | **Number** |  | [optional] 
 **tn** | **Number** |  | [optional] 
+**movementTimeMin** | **Number** |  | [optional] 
+**movementTimeMax** | **Number** |  | [optional] 
 **modification** | **String** |  | [optional] 
 **serviceLife** | **Number** |  | [optional] 
 **assignedResource** | **Number** |  | [optional] 

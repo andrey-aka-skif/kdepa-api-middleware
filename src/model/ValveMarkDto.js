@@ -68,6 +68,12 @@ class ValveMarkDto {
             if (data.hasOwnProperty('tn')) {
                 obj['tn'] = ApiClient.convertToType(data['tn'], 'Number');
             }
+            if (data.hasOwnProperty('movementTimeMin')) {
+                obj['movementTimeMin'] = ApiClient.convertToType(data['movementTimeMin'], 'Number');
+            }
+            if (data.hasOwnProperty('movementTimeMax')) {
+                obj['movementTimeMax'] = ApiClient.convertToType(data['movementTimeMax'], 'Number');
+            }
             if (data.hasOwnProperty('modification')) {
                 obj['modification'] = ApiClient.convertToType(data['modification'], 'String');
             }
@@ -194,6 +200,16 @@ ValveMarkDto.prototype['pn'] = undefined;
  * @member {Number} tn
  */
 ValveMarkDto.prototype['tn'] = undefined;
+
+/**
+ * @member {Number} movementTimeMin
+ */
+ValveMarkDto.prototype['movementTimeMin'] = undefined;
+
+/**
+ * @member {Number} movementTimeMax
+ */
+ValveMarkDto.prototype['movementTimeMax'] = undefined;
 
 /**
  * @member {String} modification

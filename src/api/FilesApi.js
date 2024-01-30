@@ -13,18 +13,18 @@
 
 
 import ApiClient from "../ApiClient";
-import DocFileDtoQueryIdsFilterDtoPagedItemsDto from '../model/DocFileDtoQueryIdsFilterDtoPagedItemsDto';
+import FileDtoQueryIdsFilterDtoPagedItemsDto from '../model/FileDtoQueryIdsFilterDtoPagedItemsDto';
 
 /**
-* Docs service.
-* @module api/DocsApi
+* Files service.
+* @module api/FilesApi
 * @version 0.1.0
 */
-export default class DocsApi {
+export default class FilesApi {
 
     /**
-    * Constructs a new DocsApi. 
-    * @alias module:api/DocsApi
+    * Constructs a new FilesApi. 
+    * @alias module:api/FilesApi
     * @class
     * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
     * default to {@link module:ApiClient#instance} if unspecified.
@@ -36,16 +36,16 @@ export default class DocsApi {
 
 
     /**
-     * Получить пагинированный список Документов
+     * Получить пагинированный список Файлов
      * @param {Object} opts Optional parameters
      * @param {Number} [pageSize = 10)] 
      * @param {Number} [pageIndex = 0)] 
      * @param {String} [sortBy] 
      * @param {Boolean} [ascending] 
      * @param {Array.<Number>} [ids] 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DocFileDtoQueryIdsFilterDtoPagedItemsDto} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FileDtoQueryIdsFilterDtoPagedItemsDto} and HTTP response
      */
-    docsGetWithHttpInfo(opts) {
+    filesGetWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -66,26 +66,26 @@ export default class DocsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = DocFileDtoQueryIdsFilterDtoPagedItemsDto;
+      let returnType = FileDtoQueryIdsFilterDtoPagedItemsDto;
       return this.apiClient.callApi(
-        '/Docs', 'GET',
+        '/Files', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Получить пагинированный список Документов
+     * Получить пагинированный список Файлов
      * @param {Object} opts Optional parameters
      * @param {Number} opts.pageSize  (default to 10)
      * @param {Number} opts.pageIndex  (default to 0)
      * @param {String} opts.sortBy 
      * @param {Boolean} opts.ascending 
      * @param {Array.<Number>} opts.ids 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DocFileDtoQueryIdsFilterDtoPagedItemsDto}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FileDtoQueryIdsFilterDtoPagedItemsDto}
      */
-    docsGet(opts) {
-      return this.docsGetWithHttpInfo(opts)
+    filesGet(opts) {
+      return this.filesGetWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -93,15 +93,15 @@ export default class DocsApi {
 
 
     /**
-     * Получить Документ по id
+     * Получить Файл по id
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link File} and HTTP response
      */
-    docsIdGetWithHttpInfo(id) {
+    filesIdGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling docsIdGet");
+        throw new Error("Missing the required parameter 'id' when calling filesIdGet");
       }
 
       let pathParams = {
@@ -119,19 +119,19 @@ export default class DocsApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = File;
       return this.apiClient.callApi(
-        '/Docs/{id}', 'GET',
+        '/Files/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Получить Документ по id
+     * Получить Файл по id
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link File}
      */
-    docsIdGet(id) {
-      return this.docsIdGetWithHttpInfo(id)
+    filesIdGet(id) {
+      return this.filesIdGetWithHttpInfo(id)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

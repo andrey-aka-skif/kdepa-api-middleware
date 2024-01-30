@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KdepaApi.DocFileDtoQueryIdsFilterDtoPagedItemsDto();
+    instance = new KdepaApi.RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,52 +47,52 @@
       object[property] = value;
   }
 
-  describe('DocFileDtoQueryIdsFilterDtoPagedItemsDto', function() {
-    it('should create an instance of DocFileDtoQueryIdsFilterDtoPagedItemsDto', function() {
-      // uncomment below and update the code to test DocFileDtoQueryIdsFilterDtoPagedItemsDto
-      //var instance = new KdepaApi.DocFileDtoQueryIdsFilterDtoPagedItemsDto();
-      //expect(instance).to.be.a(KdepaApi.DocFileDtoQueryIdsFilterDtoPagedItemsDto);
+  describe('RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto', function() {
+    it('should create an instance of RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto', function() {
+      // uncomment below and update the code to test RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto
+      //var instance = new KdepaApi.RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto();
+      //expect(instance).to.be.a(KdepaApi.RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto);
     });
 
     it('should have the property pageIndex (base name: "pageIndex")', function() {
       // uncomment below and update the code to test the property pageIndex
-      //var instance = new KdepaApi.DocFileDtoQueryIdsFilterDtoPagedItemsDto();
+      //var instance = new KdepaApi.RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto();
       //expect(instance).to.be();
     });
 
     it('should have the property pageSize (base name: "pageSize")', function() {
       // uncomment below and update the code to test the property pageSize
-      //var instance = new KdepaApi.DocFileDtoQueryIdsFilterDtoPagedItemsDto();
+      //var instance = new KdepaApi.RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto();
       //expect(instance).to.be();
     });
 
     it('should have the property totalItems (base name: "totalItems")', function() {
       // uncomment below and update the code to test the property totalItems
-      //var instance = new KdepaApi.DocFileDtoQueryIdsFilterDtoPagedItemsDto();
+      //var instance = new KdepaApi.RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto();
       //expect(instance).to.be();
     });
 
     it('should have the property totalPages (base name: "totalPages")', function() {
       // uncomment below and update the code to test the property totalPages
-      //var instance = new KdepaApi.DocFileDtoQueryIdsFilterDtoPagedItemsDto();
+      //var instance = new KdepaApi.RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto();
       //expect(instance).to.be();
     });
 
     it('should have the property items (base name: "items")', function() {
       // uncomment below and update the code to test the property items
-      //var instance = new KdepaApi.DocFileDtoQueryIdsFilterDtoPagedItemsDto();
+      //var instance = new KdepaApi.RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto();
       //expect(instance).to.be();
     });
 
     it('should have the property sort (base name: "sort")', function() {
       // uncomment below and update the code to test the property sort
-      //var instance = new KdepaApi.DocFileDtoQueryIdsFilterDtoPagedItemsDto();
+      //var instance = new KdepaApi.RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto();
       //expect(instance).to.be();
     });
 
     it('should have the property filter (base name: "filter")', function() {
       // uncomment below and update the code to test the property filter
-      //var instance = new KdepaApi.DocFileDtoQueryIdsFilterDtoPagedItemsDto();
+      //var instance = new KdepaApi.RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto();
       //expect(instance).to.be();
     });
 

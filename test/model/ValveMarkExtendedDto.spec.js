@@ -102,14 +102,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property openTime (base name: "openTime")', function() {
-      // uncomment below and update the code to test the property openTime
+    it('should have the property movementTimeMin (base name: "movementTimeMin")', function() {
+      // uncomment below and update the code to test the property movementTimeMin
       //var instance = new KdepaApi.ValveMarkExtendedDto();
       //expect(instance).to.be();
     });
 
-    it('should have the property closeTime (base name: "closeTime")', function() {
-      // uncomment below and update the code to test the property closeTime
+    it('should have the property movementTimeMax (base name: "movementTimeMax")', function() {
+      // uncomment below and update the code to test the property movementTimeMax
       //var instance = new KdepaApi.ValveMarkExtendedDto();
       //expect(instance).to.be();
     });

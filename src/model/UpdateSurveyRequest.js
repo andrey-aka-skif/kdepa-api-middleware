@@ -13,7 +13,6 @@
 
 import ApiClient from '../ApiClient';
 import SlicingRequest from './SlicingRequest';
-import TimeSpan from './TimeSpan';
 import UpdateChannelSubRequest from './UpdateChannelSubRequest';
 
 /**
@@ -50,9 +49,6 @@ class UpdateSurveyRequest {
         if (data) {
             obj = obj || new UpdateSurveyRequest();
 
-            if (data.hasOwnProperty('assemblyId')) {
-                obj['assemblyId'] = ApiClient.convertToType(data['assemblyId'], 'Number');
-            }
             if (data.hasOwnProperty('dateTime')) {
                 obj['dateTime'] = ApiClient.convertToType(data['dateTime'], 'Date');
             }
@@ -73,9 +69,6 @@ class UpdateSurveyRequest {
             }
             if (data.hasOwnProperty('slicing')) {
                 obj['slicing'] = SlicingRequest.constructFromObject(data['slicing']);
-            }
-            if (data.hasOwnProperty('shift')) {
-                obj['shift'] = TimeSpan.constructFromObject(data['shift']);
             }
             if (data.hasOwnProperty('channels')) {
                 obj['channels'] = ApiClient.convertToType(data['channels'], [UpdateChannelSubRequest]);
@@ -102,10 +95,6 @@ class UpdateSurveyRequest {
         if (data['slicing']) { // data not null
           SlicingRequest.validateJSON(data['slicing']);
         }
-        // validate the optional field `shift`
-        if (data['shift']) { // data not null
-          TimeSpan.validateJSON(data['shift']);
-        }
         if (data['channels']) { // data not null
             // ensure the json data is an array
             if (!Array.isArray(data['channels'])) {
@@ -124,11 +113,6 @@ class UpdateSurveyRequest {
 }
 
 
-
-/**
- * @member {Number} assemblyId
- */
-UpdateSurveyRequest.prototype['assemblyId'] = undefined;
 
 /**
  * @member {Date} dateTime
@@ -164,11 +148,6 @@ UpdateSurveyRequest.prototype['comment'] = undefined;
  * @member {module:model/SlicingRequest} slicing
  */
 UpdateSurveyRequest.prototype['slicing'] = undefined;
-
-/**
- * @member {module:model/TimeSpan} shift
- */
-UpdateSurveyRequest.prototype['shift'] = undefined;
 
 /**
  * @member {Array.<module:model/UpdateChannelSubRequest>} channels

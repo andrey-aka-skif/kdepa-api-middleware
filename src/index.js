@@ -44,8 +44,9 @@ import CreateOrUpdateStationSystemRequest from './model/CreateOrUpdateStationSys
 import CreateOrUpdateValveMarkRequest from './model/CreateOrUpdateValveMarkRequest';
 import CreateOrUpdateValveRequest from './model/CreateOrUpdateValveRequest';
 import CreateSurveyRequest from './model/CreateSurveyRequest';
-import DocFileDto from './model/DocFileDto';
-import DocFileDtoQueryIdsFilterDtoPagedItemsDto from './model/DocFileDtoQueryIdsFilterDtoPagedItemsDto';
+import DescriptionValuePareDto from './model/DescriptionValuePareDto';
+import DiagnosticDto from './model/DiagnosticDto';
+import DocDto from './model/DocDto';
 import DriveDto from './model/DriveDto';
 import DriveDtoDrivesQueryFilterDtoPagedItemsDto from './model/DriveDtoDrivesQueryFilterDtoPagedItemsDto';
 import DriveMarkDto from './model/DriveMarkDto';
@@ -56,6 +57,8 @@ import EquipmentGroupDto from './model/EquipmentGroupDto';
 import FactoriesQueryFilterDto from './model/FactoriesQueryFilterDto';
 import FactoryDto from './model/FactoryDto';
 import FactoryDtoFactoriesQueryFilterDtoPagedItemsDto from './model/FactoryDtoFactoriesQueryFilterDtoPagedItemsDto';
+import FileDto from './model/FileDto';
+import FileDtoQueryIdsFilterDtoPagedItemsDto from './model/FileDtoQueryIdsFilterDtoPagedItemsDto';
 import MediumDto from './model/MediumDto';
 import MotorDto from './model/MotorDto';
 import MotorDtoMotorsQueryFilterDtoPagedItemsDto from './model/MotorDtoMotorsQueryFilterDtoPagedItemsDto';
@@ -63,17 +66,22 @@ import MotorMarkDto from './model/MotorMarkDto';
 import MotorMarkDtoMotorMarksQueryFilterDtoPagedItemsDto from './model/MotorMarkDtoMotorMarksQueryFilterDtoPagedItemsDto';
 import MotorMarksQueryFilterDto from './model/MotorMarksQueryFilterDto';
 import MotorsQueryFilterDto from './model/MotorsQueryFilterDto';
+import NameValuePareDto from './model/NameValuePareDto';
 import PositionDto from './model/PositionDto';
 import PositionDtoPositionsQueryFilterDtoPagedItemsDto from './model/PositionDtoPositionsQueryFilterDtoPagedItemsDto';
 import PositionExtendedDto from './model/PositionExtendedDto';
 import PositionsQueryFilterDto from './model/PositionsQueryFilterDto';
 import ProblemDetails from './model/ProblemDetails';
 import QueryIdsFilterDto from './model/QueryIdsFilterDto';
+import RegulatoryDocumentDto from './model/RegulatoryDocumentDto';
+import RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto from './model/RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto';
 import SafetyClassDto from './model/SafetyClassDto';
 import SeismicCategoryDto from './model/SeismicCategoryDto';
 import ShopDto from './model/ShopDto';
 import ShopDtoShopsQueryFilterDtoPagedItemsDto from './model/ShopDtoShopsQueryFilterDtoPagedItemsDto';
 import ShopsQueryFilterDto from './model/ShopsQueryFilterDto';
+import SingleParamDto from './model/SingleParamDto';
+import SingleParamRowDto from './model/SingleParamRowDto';
 import SlicingDto from './model/SlicingDto';
 import SlicingRequest from './model/SlicingRequest';
 import SortDto from './model/SortDto';
@@ -81,6 +89,14 @@ import StationDto from './model/StationDto';
 import StationDtoQueryIdsFilterDtoPagedItemsDto from './model/StationDtoQueryIdsFilterDtoPagedItemsDto';
 import StationSystemDto from './model/StationSystemDto';
 import StationSystemDtoSystemsQueryFilterDtoPagedItemsDto from './model/StationSystemDtoSystemsQueryFilterDtoPagedItemsDto';
+import Statistics from './model/Statistics';
+import SubscriptDesignationDto from './model/SubscriptDesignationDto';
+import SummaryFullCloseDto from './model/SummaryFullCloseDto';
+import SummaryFullDto from './model/SummaryFullDto';
+import SummaryFullGeneralDto from './model/SummaryFullGeneralDto';
+import SummaryFullOpenDto from './model/SummaryFullOpenDto';
+import SummaryShortDto from './model/SummaryShortDto';
+import SummaryShortPreviousDto from './model/SummaryShortPreviousDto';
 import SurveyDto from './model/SurveyDto';
 import SurveyDtoSurveysQueryFilterDtoPagedItemsDto from './model/SurveyDtoSurveysQueryFilterDtoPagedItemsDto';
 import SurveyExtendedDto from './model/SurveyExtendedDto';
@@ -89,7 +105,8 @@ import SurveyRawDto from './model/SurveyRawDto';
 import SurveysExtendedQueryFilterDto from './model/SurveysExtendedQueryFilterDto';
 import SystemsQueryFilterDto from './model/SystemsQueryFilterDto';
 import TimeRangeDto from './model/TimeRangeDto';
-import TimeSpan from './model/TimeSpan';
+import TripleParamDto from './model/TripleParamDto';
+import TripleParamRowDto from './model/TripleParamRowDto';
 import UpdateChannelSubRequest from './model/UpdateChannelSubRequest';
 import UpdateSurveyRequest from './model/UpdateSurveyRequest';
 import UsingClassDto from './model/UsingClassDto';
@@ -106,15 +123,16 @@ import AssembliesApi from './api/AssembliesApi';
 import BlocksApi from './api/BlocksApi';
 import CabinetsApi from './api/CabinetsApi';
 import DebugApi from './api/DebugApi';
-import DocsApi from './api/DocsApi';
 import DriveMarksApi from './api/DriveMarksApi';
 import DrivesApi from './api/DrivesApi';
 import FactoriesApi from './api/FactoriesApi';
+import FilesApi from './api/FilesApi';
 import LookUpApi from './api/LookUpApi';
 import MotorMarksApi from './api/MotorMarksApi';
 import MotorsApi from './api/MotorsApi';
 import OkmpConnectionsApi from './api/OkmpConnectionsApi';
 import PositionsApi from './api/PositionsApi';
+import RegulatoryDocumentsApi from './api/RegulatoryDocumentsApi';
 import ShopsApi from './api/ShopsApi';
 import StationsApi from './api/StationsApi';
 import SurveysApi from './api/SurveysApi';
@@ -349,16 +367,22 @@ export {
     CreateSurveyRequest,
 
     /**
-     * The DocFileDto model constructor.
-     * @property {module:model/DocFileDto}
+     * The DescriptionValuePareDto model constructor.
+     * @property {module:model/DescriptionValuePareDto}
      */
-    DocFileDto,
+    DescriptionValuePareDto,
 
     /**
-     * The DocFileDtoQueryIdsFilterDtoPagedItemsDto model constructor.
-     * @property {module:model/DocFileDtoQueryIdsFilterDtoPagedItemsDto}
+     * The DiagnosticDto model constructor.
+     * @property {module:model/DiagnosticDto}
      */
-    DocFileDtoQueryIdsFilterDtoPagedItemsDto,
+    DiagnosticDto,
+
+    /**
+     * The DocDto model constructor.
+     * @property {module:model/DocDto}
+     */
+    DocDto,
 
     /**
      * The DriveDto model constructor.
@@ -421,6 +445,18 @@ export {
     FactoryDtoFactoriesQueryFilterDtoPagedItemsDto,
 
     /**
+     * The FileDto model constructor.
+     * @property {module:model/FileDto}
+     */
+    FileDto,
+
+    /**
+     * The FileDtoQueryIdsFilterDtoPagedItemsDto model constructor.
+     * @property {module:model/FileDtoQueryIdsFilterDtoPagedItemsDto}
+     */
+    FileDtoQueryIdsFilterDtoPagedItemsDto,
+
+    /**
      * The MediumDto model constructor.
      * @property {module:model/MediumDto}
      */
@@ -463,6 +499,12 @@ export {
     MotorsQueryFilterDto,
 
     /**
+     * The NameValuePareDto model constructor.
+     * @property {module:model/NameValuePareDto}
+     */
+    NameValuePareDto,
+
+    /**
      * The PositionDto model constructor.
      * @property {module:model/PositionDto}
      */
@@ -499,6 +541,18 @@ export {
     QueryIdsFilterDto,
 
     /**
+     * The RegulatoryDocumentDto model constructor.
+     * @property {module:model/RegulatoryDocumentDto}
+     */
+    RegulatoryDocumentDto,
+
+    /**
+     * The RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto model constructor.
+     * @property {module:model/RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto}
+     */
+    RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto,
+
+    /**
      * The SafetyClassDto model constructor.
      * @property {module:model/SafetyClassDto}
      */
@@ -527,6 +581,18 @@ export {
      * @property {module:model/ShopsQueryFilterDto}
      */
     ShopsQueryFilterDto,
+
+    /**
+     * The SingleParamDto model constructor.
+     * @property {module:model/SingleParamDto}
+     */
+    SingleParamDto,
+
+    /**
+     * The SingleParamRowDto model constructor.
+     * @property {module:model/SingleParamRowDto}
+     */
+    SingleParamRowDto,
 
     /**
      * The SlicingDto model constructor.
@@ -569,6 +635,54 @@ export {
      * @property {module:model/StationSystemDtoSystemsQueryFilterDtoPagedItemsDto}
      */
     StationSystemDtoSystemsQueryFilterDtoPagedItemsDto,
+
+    /**
+     * The Statistics model constructor.
+     * @property {module:model/Statistics}
+     */
+    Statistics,
+
+    /**
+     * The SubscriptDesignationDto model constructor.
+     * @property {module:model/SubscriptDesignationDto}
+     */
+    SubscriptDesignationDto,
+
+    /**
+     * The SummaryFullCloseDto model constructor.
+     * @property {module:model/SummaryFullCloseDto}
+     */
+    SummaryFullCloseDto,
+
+    /**
+     * The SummaryFullDto model constructor.
+     * @property {module:model/SummaryFullDto}
+     */
+    SummaryFullDto,
+
+    /**
+     * The SummaryFullGeneralDto model constructor.
+     * @property {module:model/SummaryFullGeneralDto}
+     */
+    SummaryFullGeneralDto,
+
+    /**
+     * The SummaryFullOpenDto model constructor.
+     * @property {module:model/SummaryFullOpenDto}
+     */
+    SummaryFullOpenDto,
+
+    /**
+     * The SummaryShortDto model constructor.
+     * @property {module:model/SummaryShortDto}
+     */
+    SummaryShortDto,
+
+    /**
+     * The SummaryShortPreviousDto model constructor.
+     * @property {module:model/SummaryShortPreviousDto}
+     */
+    SummaryShortPreviousDto,
 
     /**
      * The SurveyDto model constructor.
@@ -619,10 +733,16 @@ export {
     TimeRangeDto,
 
     /**
-     * The TimeSpan model constructor.
-     * @property {module:model/TimeSpan}
+     * The TripleParamDto model constructor.
+     * @property {module:model/TripleParamDto}
      */
-    TimeSpan,
+    TripleParamDto,
+
+    /**
+     * The TripleParamRowDto model constructor.
+     * @property {module:model/TripleParamRowDto}
+     */
+    TripleParamRowDto,
 
     /**
      * The UpdateChannelSubRequest model constructor.
@@ -721,12 +841,6 @@ export {
     DebugApi,
 
     /**
-    * The DocsApi service constructor.
-    * @property {module:api/DocsApi}
-    */
-    DocsApi,
-
-    /**
     * The DriveMarksApi service constructor.
     * @property {module:api/DriveMarksApi}
     */
@@ -743,6 +857,12 @@ export {
     * @property {module:api/FactoriesApi}
     */
     FactoriesApi,
+
+    /**
+    * The FilesApi service constructor.
+    * @property {module:api/FilesApi}
+    */
+    FilesApi,
 
     /**
     * The LookUpApi service constructor.
@@ -773,6 +893,12 @@ export {
     * @property {module:api/PositionsApi}
     */
     PositionsApi,
+
+    /**
+    * The RegulatoryDocumentsApi service constructor.
+    * @property {module:api/RegulatoryDocumentsApi}
+    */
+    RegulatoryDocumentsApi,
 
     /**
     * The ShopsApi service constructor.

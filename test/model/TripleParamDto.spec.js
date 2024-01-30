@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KdepaApi.DocsApi();
+    instance = new KdepaApi.TripleParamDto();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,27 +47,37 @@
       object[property] = value;
   }
 
-  describe('DocsApi', function() {
-    describe('docsGet', function() {
-      it('should call docsGet successfully', function(done) {
-        //uncomment below and update the code to test docsGet
-        //instance.docsGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('TripleParamDto', function() {
+    it('should create an instance of TripleParamDto', function() {
+      // uncomment below and update the code to test TripleParamDto
+      //var instance = new KdepaApi.TripleParamDto();
+      //expect(instance).to.be.a(KdepaApi.TripleParamDto);
     });
-    describe('docsIdGet', function() {
-      it('should call docsIdGet successfully', function(done) {
-        //uncomment below and update the code to test docsIdGet
-        //instance.docsIdGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instance = new KdepaApi.TripleParamDto();
+      //expect(instance).to.be();
     });
+
+    it('should have the property symbol (base name: "symbol")', function() {
+      // uncomment below and update the code to test the property symbol
+      //var instance = new KdepaApi.TripleParamDto();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property unit (base name: "unit")', function() {
+      // uncomment below and update the code to test the property unit
+      //var instance = new KdepaApi.TripleParamDto();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property values (base name: "values")', function() {
+      // uncomment below and update the code to test the property values
+      //var instance = new KdepaApi.TripleParamDto();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

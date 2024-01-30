@@ -18,5 +18,6 @@ Name | Type | Description | Notes
 **analyzed** | **Boolean** |  | [optional] 
 **length** | **Number** |  | [optional] 
 **slicing** | [**SlicingDto**](SlicingDto.md) |  | [optional] 
+**diagnostic** | [**DiagnosticDto**](DiagnosticDto.md) |  | [optional] 
 
 

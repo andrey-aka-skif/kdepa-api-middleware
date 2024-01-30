@@ -151,8 +151,6 @@ Class | Method | HTTP request | Description
 *KdepaApi.DebugApi* | [**debugEndpointUrlsGet**](docs/DebugApi.md#debugEndpointUrlsGet) | **GET** /Debug/endpoint-urls | Список url конечных точек ресурсов API
 *KdepaApi.DebugApi* | [**debugEndpointsGet**](docs/DebugApi.md#debugEndpointsGet) | **GET** /Debug/endpoints | Список конечных точек ресурсов API
 *KdepaApi.DebugApi* | [**debugHelloGet**](docs/DebugApi.md#debugHelloGet) | **GET** /Debug/hello | Сообщить о работоспособности
-*KdepaApi.DocsApi* | [**docsGet**](docs/DocsApi.md#docsGet) | **GET** /Docs | Получить пагинированный список Документов
-*KdepaApi.DocsApi* | [**docsIdGet**](docs/DocsApi.md#docsIdGet) | **GET** /Docs/{id} | Получить Документ по id
 *KdepaApi.DriveMarksApi* | [**driveMarksGet**](docs/DriveMarksApi.md#driveMarksGet) | **GET** /DriveMarks | Получить пагинированный список Марок Привода
 *KdepaApi.DriveMarksApi* | [**driveMarksIdDelete**](docs/DriveMarksApi.md#driveMarksIdDelete) | **DELETE** /DriveMarks/{id} | Удалить Марку Привода
 *KdepaApi.DriveMarksApi* | [**driveMarksIdGet**](docs/DriveMarksApi.md#driveMarksIdGet) | **GET** /DriveMarks/{id} | Получить Марку Привода по id
@@ -168,6 +166,8 @@ Class | Method | HTTP request | Description
 *KdepaApi.FactoriesApi* | [**factoriesIdGet**](docs/FactoriesApi.md#factoriesIdGet) | **GET** /Factories/{id} | Получить Изготовителя по id
 *KdepaApi.FactoriesApi* | [**factoriesIdPut**](docs/FactoriesApi.md#factoriesIdPut) | **PUT** /Factories/{id} | Обновить Изготовителя
 *KdepaApi.FactoriesApi* | [**factoriesPost**](docs/FactoriesApi.md#factoriesPost) | **POST** /Factories | Создать Изготовителя
+*KdepaApi.FilesApi* | [**filesGet**](docs/FilesApi.md#filesGet) | **GET** /Files | Получить пагинированный список Файлов
+*KdepaApi.FilesApi* | [**filesIdGet**](docs/FilesApi.md#filesIdGet) | **GET** /Files/{id} | Получить Файл по id
 *KdepaApi.LookUpApi* | [**lookUpAtmosphereTypesGet**](docs/LookUpApi.md#lookUpAtmosphereTypesGet) | **GET** /LookUp/atmosphere-types | Получить Типы атмосферы по ГОСТ 15150
 *KdepaApi.LookUpApi* | [**lookUpClimaticExecutionsGet**](docs/LookUpApi.md#lookUpClimaticExecutionsGet) | **GET** /LookUp/climatic-executions | Получить Климатические исполнения по ГОСТ 15150
 *KdepaApi.LookUpApi* | [**lookUpEquipmentGroupsGet**](docs/LookUpApi.md#lookUpEquipmentGroupsGet) | **GET** /LookUp/equipment-groups | Получить Группы безопасности по НП-089-15
@@ -194,6 +194,8 @@ Class | Method | HTTP request | Description
 *KdepaApi.PositionsApi* | [**positionsIdGet**](docs/PositionsApi.md#positionsIdGet) | **GET** /Positions/{id} | Получить Оперативную Позицию по id
 *KdepaApi.PositionsApi* | [**positionsIdPut**](docs/PositionsApi.md#positionsIdPut) | **PUT** /Positions/{id} | Обновить Оперативную Позицию
 *KdepaApi.PositionsApi* | [**positionsPost**](docs/PositionsApi.md#positionsPost) | **POST** /Positions | Создать Оперативную Позицию
+*KdepaApi.RegulatoryDocumentsApi* | [**regulatoryDocumentsGet**](docs/RegulatoryDocumentsApi.md#regulatoryDocumentsGet) | **GET** /RegulatoryDocuments | Получить пагинированный список Документов
+*KdepaApi.RegulatoryDocumentsApi* | [**regulatoryDocumentsIdGet**](docs/RegulatoryDocumentsApi.md#regulatoryDocumentsIdGet) | **GET** /RegulatoryDocuments/{id} | Получить Документ по id
 *KdepaApi.ShopsApi* | [**shopsGet**](docs/ShopsApi.md#shopsGet) | **GET** /Shops | Получить пагинированный список Цехов
 *KdepaApi.ShopsApi* | [**shopsIdDelete**](docs/ShopsApi.md#shopsIdDelete) | **DELETE** /Shops/{id} | Удалить Цех
 *KdepaApi.ShopsApi* | [**shopsIdGet**](docs/ShopsApi.md#shopsIdGet) | **GET** /Shops/{id} | Получить Цех по id
@@ -209,6 +211,7 @@ Class | Method | HTTP request | Description
 *KdepaApi.SurveysApi* | [**surveysGet**](docs/SurveysApi.md#surveysGet) | **GET** /Surveys | Получить пагинированый список Обследований
 *KdepaApi.SurveysApi* | [**surveysIdChannelsChannelIdGet**](docs/SurveysApi.md#surveysIdChannelsChannelIdGet) | **GET** /Surveys/{id}/channels/{channelId} | Получить график канала по id Обследования и channelId канала
 *KdepaApi.SurveysApi* | [**surveysIdDelete**](docs/SurveysApi.md#surveysIdDelete) | **DELETE** /Surveys/{id} | Удалить Обследование
+*KdepaApi.SurveysApi* | [**surveysIdDiagnosticsPost**](docs/SurveysApi.md#surveysIdDiagnosticsPost) | **POST** /Surveys/{id}/diagnostics | Создать Диагностирование для Обследования
 *KdepaApi.SurveysApi* | [**surveysIdGet**](docs/SurveysApi.md#surveysIdGet) | **GET** /Surveys/{id} | Получить Обследование по id
 *KdepaApi.SurveysApi* | [**surveysIdPut**](docs/SurveysApi.md#surveysIdPut) | **PUT** /Surveys/{id} | Обновить Обследование
 *KdepaApi.SurveysApi* | [**surveysPost**](docs/SurveysApi.md#surveysPost) | **POST** /Surveys | Создать Обследование
@@ -268,8 +271,9 @@ Class | Method | HTTP request | Description
  - [KdepaApi.CreateOrUpdateValveMarkRequest](docs/CreateOrUpdateValveMarkRequest.md)
  - [KdepaApi.CreateOrUpdateValveRequest](docs/CreateOrUpdateValveRequest.md)
  - [KdepaApi.CreateSurveyRequest](docs/CreateSurveyRequest.md)
- - [KdepaApi.DocFileDto](docs/DocFileDto.md)
- - [KdepaApi.DocFileDtoQueryIdsFilterDtoPagedItemsDto](docs/DocFileDtoQueryIdsFilterDtoPagedItemsDto.md)
+ - [KdepaApi.DescriptionValuePareDto](docs/DescriptionValuePareDto.md)
+ - [KdepaApi.DiagnosticDto](docs/DiagnosticDto.md)
+ - [KdepaApi.DocDto](docs/DocDto.md)
  - [KdepaApi.DriveDto](docs/DriveDto.md)
  - [KdepaApi.DriveDtoDrivesQueryFilterDtoPagedItemsDto](docs/DriveDtoDrivesQueryFilterDtoPagedItemsDto.md)
  - [KdepaApi.DriveMarkDto](docs/DriveMarkDto.md)
@@ -280,6 +284,8 @@ Class | Method | HTTP request | Description
  - [KdepaApi.FactoriesQueryFilterDto](docs/FactoriesQueryFilterDto.md)
  - [KdepaApi.FactoryDto](docs/FactoryDto.md)
  - [KdepaApi.FactoryDtoFactoriesQueryFilterDtoPagedItemsDto](docs/FactoryDtoFactoriesQueryFilterDtoPagedItemsDto.md)
+ - [KdepaApi.FileDto](docs/FileDto.md)
+ - [KdepaApi.FileDtoQueryIdsFilterDtoPagedItemsDto](docs/FileDtoQueryIdsFilterDtoPagedItemsDto.md)
  - [KdepaApi.MediumDto](docs/MediumDto.md)
  - [KdepaApi.MotorDto](docs/MotorDto.md)
  - [KdepaApi.MotorDtoMotorsQueryFilterDtoPagedItemsDto](docs/MotorDtoMotorsQueryFilterDtoPagedItemsDto.md)
@@ -287,17 +293,22 @@ Class | Method | HTTP request | Description
  - [KdepaApi.MotorMarkDtoMotorMarksQueryFilterDtoPagedItemsDto](docs/MotorMarkDtoMotorMarksQueryFilterDtoPagedItemsDto.md)
  - [KdepaApi.MotorMarksQueryFilterDto](docs/MotorMarksQueryFilterDto.md)
  - [KdepaApi.MotorsQueryFilterDto](docs/MotorsQueryFilterDto.md)
+ - [KdepaApi.NameValuePareDto](docs/NameValuePareDto.md)
  - [KdepaApi.PositionDto](docs/PositionDto.md)
  - [KdepaApi.PositionDtoPositionsQueryFilterDtoPagedItemsDto](docs/PositionDtoPositionsQueryFilterDtoPagedItemsDto.md)
  - [KdepaApi.PositionExtendedDto](docs/PositionExtendedDto.md)
  - [KdepaApi.PositionsQueryFilterDto](docs/PositionsQueryFilterDto.md)
  - [KdepaApi.ProblemDetails](docs/ProblemDetails.md)
  - [KdepaApi.QueryIdsFilterDto](docs/QueryIdsFilterDto.md)
+ - [KdepaApi.RegulatoryDocumentDto](docs/RegulatoryDocumentDto.md)
+ - [KdepaApi.RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto](docs/RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto.md)
  - [KdepaApi.SafetyClassDto](docs/SafetyClassDto.md)
  - [KdepaApi.SeismicCategoryDto](docs/SeismicCategoryDto.md)
  - [KdepaApi.ShopDto](docs/ShopDto.md)
  - [KdepaApi.ShopDtoShopsQueryFilterDtoPagedItemsDto](docs/ShopDtoShopsQueryFilterDtoPagedItemsDto.md)
  - [KdepaApi.ShopsQueryFilterDto](docs/ShopsQueryFilterDto.md)
+ - [KdepaApi.SingleParamDto](docs/SingleParamDto.md)
+ - [KdepaApi.SingleParamRowDto](docs/SingleParamRowDto.md)
  - [KdepaApi.SlicingDto](docs/SlicingDto.md)
  - [KdepaApi.SlicingRequest](docs/SlicingRequest.md)
  - [KdepaApi.SortDto](docs/SortDto.md)
@@ -305,6 +316,14 @@ Class | Method | HTTP request | Description
  - [KdepaApi.StationDtoQueryIdsFilterDtoPagedItemsDto](docs/StationDtoQueryIdsFilterDtoPagedItemsDto.md)
  - [KdepaApi.StationSystemDto](docs/StationSystemDto.md)
  - [KdepaApi.StationSystemDtoSystemsQueryFilterDtoPagedItemsDto](docs/StationSystemDtoSystemsQueryFilterDtoPagedItemsDto.md)
+ - [KdepaApi.Statistics](docs/Statistics.md)
+ - [KdepaApi.SubscriptDesignationDto](docs/SubscriptDesignationDto.md)
+ - [KdepaApi.SummaryFullCloseDto](docs/SummaryFullCloseDto.md)
+ - [KdepaApi.SummaryFullDto](docs/SummaryFullDto.md)
+ - [KdepaApi.SummaryFullGeneralDto](docs/SummaryFullGeneralDto.md)
+ - [KdepaApi.SummaryFullOpenDto](docs/SummaryFullOpenDto.md)
+ - [KdepaApi.SummaryShortDto](docs/SummaryShortDto.md)
+ - [KdepaApi.SummaryShortPreviousDto](docs/SummaryShortPreviousDto.md)
  - [KdepaApi.SurveyDto](docs/SurveyDto.md)
  - [KdepaApi.SurveyDtoSurveysQueryFilterDtoPagedItemsDto](docs/SurveyDtoSurveysQueryFilterDtoPagedItemsDto.md)
  - [KdepaApi.SurveyExtendedDto](docs/SurveyExtendedDto.md)
@@ -313,7 +332,8 @@ Class | Method | HTTP request | Description
  - [KdepaApi.SurveysExtendedQueryFilterDto](docs/SurveysExtendedQueryFilterDto.md)
  - [KdepaApi.SystemsQueryFilterDto](docs/SystemsQueryFilterDto.md)
  - [KdepaApi.TimeRangeDto](docs/TimeRangeDto.md)
- - [KdepaApi.TimeSpan](docs/TimeSpan.md)
+ - [KdepaApi.TripleParamDto](docs/TripleParamDto.md)
+ - [KdepaApi.TripleParamRowDto](docs/TripleParamRowDto.md)
  - [KdepaApi.UpdateChannelSubRequest](docs/UpdateChannelSubRequest.md)
  - [KdepaApi.UpdateSurveyRequest](docs/UpdateSurveyRequest.md)
  - [KdepaApi.UsingClassDto](docs/UsingClassDto.md)

@@ -74,12 +74,6 @@ class CreateOrUpdateDriveMarkRequest {
             if (data.hasOwnProperty('weight')) {
                 obj['weight'] = ApiClient.convertToType(data['weight'], 'Number');
             }
-            if (data.hasOwnProperty('movementTimeMin')) {
-                obj['movementTimeMin'] = ApiClient.convertToType(data['movementTimeMin'], 'Number');
-            }
-            if (data.hasOwnProperty('movementTimeMax')) {
-                obj['movementTimeMax'] = ApiClient.convertToType(data['movementTimeMax'], 'Number');
-            }
             if (data.hasOwnProperty('serviceLife')) {
                 obj['serviceLife'] = ApiClient.convertToType(data['serviceLife'], 'Number');
             }
@@ -169,16 +163,6 @@ CreateOrUpdateDriveMarkRequest.prototype['turnNumberMax'] = undefined;
  * @member {Number} weight
  */
 CreateOrUpdateDriveMarkRequest.prototype['weight'] = undefined;
-
-/**
- * @member {Number} movementTimeMin
- */
-CreateOrUpdateDriveMarkRequest.prototype['movementTimeMin'] = undefined;
-
-/**
- * @member {Number} movementTimeMax
- */
-CreateOrUpdateDriveMarkRequest.prototype['movementTimeMax'] = undefined;
 
 /**
  * @member {Number} serviceLife

@@ -13,8 +13,6 @@ Name | Type | Description | Notes
 **turnNumberMin** | **Number** |  | [optional] 
 **turnNumberMax** | **Number** |  | [optional] 
 **weight** | **Number** |  | [optional] 
-**movementTimeMin** | **Number** |  | [optional] 
-**movementTimeMax** | **Number** |  | [optional] 
 **serviceLife** | **Number** |  | [optional] 
 **assignedResource** | **Number** |  | [optional] 
 **timeToFailure** | **Number** |  | [optional] 

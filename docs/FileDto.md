@@ -1,13 +1,12 @@
-# KdepaApi.DocFileDto
+# KdepaApi.FileDto
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** |  | [optional] 
-**shortName** | **String** |  | [optional] 
-**fullName** | **String** |  | [optional] 
-**fileName** | **String** |  | [optional] 
+**name** | **String** |  | [optional] 
+**ext** | **String** |  | [optional] 
 **contentType** | **String** |  | [optional] 
 
 

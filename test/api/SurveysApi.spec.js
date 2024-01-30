@@ -88,6 +88,16 @@
         done();
       });
     });
+    describe('surveysIdDiagnosticsPost', function() {
+      it('should call surveysIdDiagnosticsPost successfully', function(done) {
+        //uncomment below and update the code to test surveysIdDiagnosticsPost
+        //instance.surveysIdDiagnosticsPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('surveysIdGet', function() {
       it('should call surveysIdGet successfully', function(done) {
         //uncomment below and update the code to test surveysIdGet

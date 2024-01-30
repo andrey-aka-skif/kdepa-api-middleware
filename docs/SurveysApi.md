@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**surveysGet**](SurveysApi.md#surveysGet) | **GET** /Surveys | Получить пагинированый список Обследований
 [**surveysIdChannelsChannelIdGet**](SurveysApi.md#surveysIdChannelsChannelIdGet) | **GET** /Surveys/{id}/channels/{channelId} | Получить график канала по id Обследования и channelId канала
 [**surveysIdDelete**](SurveysApi.md#surveysIdDelete) | **DELETE** /Surveys/{id} | Удалить Обследование
+[**surveysIdDiagnosticsPost**](SurveysApi.md#surveysIdDiagnosticsPost) | **POST** /Surveys/{id}/diagnostics | Создать Диагностирование для Обследования
 [**surveysIdGet**](SurveysApi.md#surveysIdGet) | **GET** /Surveys/{id} | Получить Обследование по id
 [**surveysIdPut**](SurveysApi.md#surveysIdPut) | **PUT** /Surveys/{id} | Обновить Обследование
 [**surveysPost**](SurveysApi.md#surveysPost) | **POST** /Surveys | Создать Обследование
@@ -227,6 +228,48 @@ Name | Type | Description  | Notes
 ### Return type
 
 **String**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## surveysIdDiagnosticsPost
+
+> SurveyDto surveysIdDiagnosticsPost(id)
+
+Создать Диагностирование для Обследования
+
+### Example
+
+```javascript
+import KdepaApi from 'kdepa_api';
+
+let apiInstance = new KdepaApi.SurveysApi();
+let id = 56; // Number | 
+apiInstance.surveysIdDiagnosticsPost(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**|  | 
+
+### Return type
+
+[**SurveyDto**](SurveyDto.md)
 
 ### Authorization
 

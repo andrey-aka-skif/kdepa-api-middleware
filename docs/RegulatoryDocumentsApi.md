@@ -1,17 +1,17 @@
-# KdepaApi.DocsApi
+# KdepaApi.RegulatoryDocumentsApi
 
 All URIs are relative to *http://127.0.0.1:5005/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**docsGet**](DocsApi.md#docsGet) | **GET** /Docs | Получить пагинированный список Документов
-[**docsIdGet**](DocsApi.md#docsIdGet) | **GET** /Docs/{id} | Получить Документ по id
+[**regulatoryDocumentsGet**](RegulatoryDocumentsApi.md#regulatoryDocumentsGet) | **GET** /RegulatoryDocuments | Получить пагинированный список Документов
+[**regulatoryDocumentsIdGet**](RegulatoryDocumentsApi.md#regulatoryDocumentsIdGet) | **GET** /RegulatoryDocuments/{id} | Получить Документ по id
 
 
 
-## docsGet
+## regulatoryDocumentsGet
 
-> DocFileDtoQueryIdsFilterDtoPagedItemsDto docsGet(opts)
+> RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto regulatoryDocumentsGet(opts)
 
 Получить пагинированный список Документов
 
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 ```javascript
 import KdepaApi from 'kdepa_api';
 
-let apiInstance = new KdepaApi.DocsApi();
+let apiInstance = new KdepaApi.RegulatoryDocumentsApi();
 let opts = {
   'pageSize': 10, // Number | 
   'pageIndex': 0, // Number | 
@@ -28,7 +28,7 @@ let opts = {
   'ascending': true, // Boolean | 
   'ids': [null] // [Number] | 
 };
-apiInstance.docsGet(opts).then((data) => {
+apiInstance.regulatoryDocumentsGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DocFileDtoQueryIdsFilterDtoPagedItemsDto**](DocFileDtoQueryIdsFilterDtoPagedItemsDto.md)
+[**RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto**](RegulatoryDocumentDtoQueryIdsFilterDtoPagedItemsDto.md)
 
 ### Authorization
 
@@ -61,9 +61,9 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## docsIdGet
+## regulatoryDocumentsIdGet
 
-> File docsIdGet(id)
+> RegulatoryDocumentDto regulatoryDocumentsIdGet(id)
 
 Получить Документ по id
 
@@ -72,9 +72,9 @@ No authorization required
 ```javascript
 import KdepaApi from 'kdepa_api';
 
-let apiInstance = new KdepaApi.DocsApi();
+let apiInstance = new KdepaApi.RegulatoryDocumentsApi();
 let id = 56; // Number | 
-apiInstance.docsIdGet(id).then((data) => {
+apiInstance.regulatoryDocumentsIdGet(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+[**RegulatoryDocumentDto**](RegulatoryDocumentDto.md)
 
 ### Authorization
 

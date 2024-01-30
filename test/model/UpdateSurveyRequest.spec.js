@@ -54,12 +54,6 @@
       //expect(instance).to.be.a(KdepaApi.UpdateSurveyRequest);
     });
 
-    it('should have the property assemblyId (base name: "assemblyId")', function() {
-      // uncomment below and update the code to test the property assemblyId
-      //var instance = new KdepaApi.UpdateSurveyRequest();
-      //expect(instance).to.be();
-    });
-
     it('should have the property dateTime (base name: "dateTime")', function() {
       // uncomment below and update the code to test the property dateTime
       //var instance = new KdepaApi.UpdateSurveyRequest();
@@ -98,12 +92,6 @@
 
     it('should have the property slicing (base name: "slicing")', function() {
       // uncomment below and update the code to test the property slicing
-      //var instance = new KdepaApi.UpdateSurveyRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property shift (base name: "shift")', function() {
-      // uncomment below and update the code to test the property shift
       //var instance = new KdepaApi.UpdateSurveyRequest();
       //expect(instance).to.be();
     });

@@ -12,23 +12,23 @@
  */
 
 import ApiClient from '../ApiClient';
-import DocFileDto from './DocFileDto';
+import FileDto from './FileDto';
 import QueryIdsFilterDto from './QueryIdsFilterDto';
 import SortDto from './SortDto';
 
 /**
- * The DocFileDtoQueryIdsFilterDtoPagedItemsDto model module.
- * @module model/DocFileDtoQueryIdsFilterDtoPagedItemsDto
+ * The FileDtoQueryIdsFilterDtoPagedItemsDto model module.
+ * @module model/FileDtoQueryIdsFilterDtoPagedItemsDto
  * @version 0.1.0
  */
-class DocFileDtoQueryIdsFilterDtoPagedItemsDto {
+class FileDtoQueryIdsFilterDtoPagedItemsDto {
     /**
-     * Constructs a new <code>DocFileDtoQueryIdsFilterDtoPagedItemsDto</code>.
-     * @alias module:model/DocFileDtoQueryIdsFilterDtoPagedItemsDto
+     * Constructs a new <code>FileDtoQueryIdsFilterDtoPagedItemsDto</code>.
+     * @alias module:model/FileDtoQueryIdsFilterDtoPagedItemsDto
      */
     constructor() { 
         
-        DocFileDtoQueryIdsFilterDtoPagedItemsDto.initialize(this);
+        FileDtoQueryIdsFilterDtoPagedItemsDto.initialize(this);
     }
 
     /**
@@ -40,15 +40,15 @@ class DocFileDtoQueryIdsFilterDtoPagedItemsDto {
     }
 
     /**
-     * Constructs a <code>DocFileDtoQueryIdsFilterDtoPagedItemsDto</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>FileDtoQueryIdsFilterDtoPagedItemsDto</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/DocFileDtoQueryIdsFilterDtoPagedItemsDto} obj Optional instance to populate.
-     * @return {module:model/DocFileDtoQueryIdsFilterDtoPagedItemsDto} The populated <code>DocFileDtoQueryIdsFilterDtoPagedItemsDto</code> instance.
+     * @param {module:model/FileDtoQueryIdsFilterDtoPagedItemsDto} obj Optional instance to populate.
+     * @return {module:model/FileDtoQueryIdsFilterDtoPagedItemsDto} The populated <code>FileDtoQueryIdsFilterDtoPagedItemsDto</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new DocFileDtoQueryIdsFilterDtoPagedItemsDto();
+            obj = obj || new FileDtoQueryIdsFilterDtoPagedItemsDto();
 
             if (data.hasOwnProperty('pageIndex')) {
                 obj['pageIndex'] = ApiClient.convertToType(data['pageIndex'], 'Number');
@@ -63,7 +63,7 @@ class DocFileDtoQueryIdsFilterDtoPagedItemsDto {
                 obj['totalPages'] = ApiClient.convertToType(data['totalPages'], 'Number');
             }
             if (data.hasOwnProperty('items')) {
-                obj['items'] = ApiClient.convertToType(data['items'], [DocFileDto]);
+                obj['items'] = ApiClient.convertToType(data['items'], [FileDto]);
             }
             if (data.hasOwnProperty('sort')) {
                 obj['sort'] = SortDto.constructFromObject(data['sort']);
@@ -76,9 +76,9 @@ class DocFileDtoQueryIdsFilterDtoPagedItemsDto {
     }
 
     /**
-     * Validates the JSON data with respect to <code>DocFileDtoQueryIdsFilterDtoPagedItemsDto</code>.
+     * Validates the JSON data with respect to <code>FileDtoQueryIdsFilterDtoPagedItemsDto</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DocFileDtoQueryIdsFilterDtoPagedItemsDto</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>FileDtoQueryIdsFilterDtoPagedItemsDto</code>.
      */
     static validateJSON(data) {
         if (data['items']) { // data not null
@@ -88,7 +88,7 @@ class DocFileDtoQueryIdsFilterDtoPagedItemsDto {
             }
             // validate the optional field `items` (array)
             for (const item of data['items']) {
-                DocFileDto.validateJSON(item);
+                FileDto.validateJSON(item);
             };
         }
         // validate the optional field `sort`
@@ -111,42 +111,42 @@ class DocFileDtoQueryIdsFilterDtoPagedItemsDto {
 /**
  * @member {Number} pageIndex
  */
-DocFileDtoQueryIdsFilterDtoPagedItemsDto.prototype['pageIndex'] = undefined;
+FileDtoQueryIdsFilterDtoPagedItemsDto.prototype['pageIndex'] = undefined;
 
 /**
  * @member {Number} pageSize
  */
-DocFileDtoQueryIdsFilterDtoPagedItemsDto.prototype['pageSize'] = undefined;
+FileDtoQueryIdsFilterDtoPagedItemsDto.prototype['pageSize'] = undefined;
 
 /**
  * @member {Number} totalItems
  */
-DocFileDtoQueryIdsFilterDtoPagedItemsDto.prototype['totalItems'] = undefined;
+FileDtoQueryIdsFilterDtoPagedItemsDto.prototype['totalItems'] = undefined;
 
 /**
  * @member {Number} totalPages
  */
-DocFileDtoQueryIdsFilterDtoPagedItemsDto.prototype['totalPages'] = undefined;
+FileDtoQueryIdsFilterDtoPagedItemsDto.prototype['totalPages'] = undefined;
 
 /**
- * @member {Array.<module:model/DocFileDto>} items
+ * @member {Array.<module:model/FileDto>} items
  */
-DocFileDtoQueryIdsFilterDtoPagedItemsDto.prototype['items'] = undefined;
+FileDtoQueryIdsFilterDtoPagedItemsDto.prototype['items'] = undefined;
 
 /**
  * @member {module:model/SortDto} sort
  */
-DocFileDtoQueryIdsFilterDtoPagedItemsDto.prototype['sort'] = undefined;
+FileDtoQueryIdsFilterDtoPagedItemsDto.prototype['sort'] = undefined;
 
 /**
  * @member {module:model/QueryIdsFilterDto} filter
  */
-DocFileDtoQueryIdsFilterDtoPagedItemsDto.prototype['filter'] = undefined;
+FileDtoQueryIdsFilterDtoPagedItemsDto.prototype['filter'] = undefined;
 
 
 
 
 
 
-export default DocFileDtoQueryIdsFilterDtoPagedItemsDto;
+export default FileDtoQueryIdsFilterDtoPagedItemsDto;
 
