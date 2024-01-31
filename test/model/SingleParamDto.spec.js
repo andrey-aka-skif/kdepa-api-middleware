@@ -78,6 +78,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property toleranceResult (base name: "toleranceResult")', function() {
+      // uncomment below and update the code to test the property toleranceResult
+      //var instance = new KdepaApi.SingleParamDto();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

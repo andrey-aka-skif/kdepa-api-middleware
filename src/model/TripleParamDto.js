@@ -61,6 +61,9 @@ class TripleParamDto {
             if (data.hasOwnProperty('values')) {
                 obj['values'] = ApiClient.convertToType(data['values'], [NameValuePareDto]);
             }
+            if (data.hasOwnProperty('toleranceResult')) {
+                obj['toleranceResult'] = ApiClient.convertToType(data['toleranceResult'], 'String');
+            }
         }
         return obj;
     }
@@ -93,6 +96,10 @@ class TripleParamDto {
                 NameValuePareDto.validateJSON(item);
             };
         }
+        // ensure the json data is a string
+        if (data['toleranceResult'] && !(typeof data['toleranceResult'] === 'string' || data['toleranceResult'] instanceof String)) {
+            throw new Error("Expected the field `toleranceResult` to be a primitive type in the JSON string but got " + data['toleranceResult']);
+        }
 
         return true;
     }
@@ -121,6 +128,11 @@ TripleParamDto.prototype['unit'] = undefined;
  * @member {Array.<module:model/NameValuePareDto>} values
  */
 TripleParamDto.prototype['values'] = undefined;
+
+/**
+ * @member {String} toleranceResult
+ */
+TripleParamDto.prototype['toleranceResult'] = undefined;
 
 
 

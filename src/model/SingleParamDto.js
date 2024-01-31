@@ -60,6 +60,9 @@ class SingleParamDto {
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'Number');
             }
+            if (data.hasOwnProperty('toleranceResult')) {
+                obj['toleranceResult'] = ApiClient.convertToType(data['toleranceResult'], 'String');
+            }
         }
         return obj;
     }
@@ -81,6 +84,10 @@ class SingleParamDto {
         // ensure the json data is a string
         if (data['unit'] && !(typeof data['unit'] === 'string' || data['unit'] instanceof String)) {
             throw new Error("Expected the field `unit` to be a primitive type in the JSON string but got " + data['unit']);
+        }
+        // ensure the json data is a string
+        if (data['toleranceResult'] && !(typeof data['toleranceResult'] === 'string' || data['toleranceResult'] instanceof String)) {
+            throw new Error("Expected the field `toleranceResult` to be a primitive type in the JSON string but got " + data['toleranceResult']);
         }
 
         return true;
@@ -110,6 +117,11 @@ SingleParamDto.prototype['unit'] = undefined;
  * @member {Number} value
  */
 SingleParamDto.prototype['value'] = undefined;
+
+/**
+ * @member {String} toleranceResult
+ */
+SingleParamDto.prototype['toleranceResult'] = undefined;
 
 
 

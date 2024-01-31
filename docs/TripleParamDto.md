@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **symbol** | [**SubscriptDesignationDto**](SubscriptDesignationDto.md) |  | [optional] 
 **unit** | **String** |  | [optional] 
 **values** | [**[NameValuePareDto]**](NameValuePareDto.md) |  | [optional] 
+**toleranceResult** | **String** |  | [optional] 
 
 
