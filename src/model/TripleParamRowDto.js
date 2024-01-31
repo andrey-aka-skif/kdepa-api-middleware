@@ -12,6 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
+import DocDto from './DocDto';
+import Statistics from './Statistics';
 import TripleParamDto from './TripleParamDto';
 
 /**
@@ -51,6 +53,12 @@ class TripleParamRowDto {
             if (data.hasOwnProperty('parameter')) {
                 obj['parameter'] = TripleParamDto.constructFromObject(data['parameter']);
             }
+            if (data.hasOwnProperty('docs')) {
+                obj['docs'] = ApiClient.convertToType(data['docs'], [DocDto]);
+            }
+            if (data.hasOwnProperty('statistics')) {
+                obj['statistics'] = Statistics.constructFromObject(data['statistics']);
+            }
         }
         return obj;
     }
@@ -65,6 +73,20 @@ class TripleParamRowDto {
         if (data['parameter']) { // data not null
           TripleParamDto.validateJSON(data['parameter']);
         }
+        if (data['docs']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['docs'])) {
+                throw new Error("Expected the field `docs` to be an array in the JSON data but got " + data['docs']);
+            }
+            // validate the optional field `docs` (array)
+            for (const item of data['docs']) {
+                DocDto.validateJSON(item);
+            };
+        }
+        // validate the optional field `statistics`
+        if (data['statistics']) { // data not null
+          Statistics.validateJSON(data['statistics']);
+        }
 
         return true;
     }
@@ -78,6 +100,16 @@ class TripleParamRowDto {
  * @member {module:model/TripleParamDto} parameter
  */
 TripleParamRowDto.prototype['parameter'] = undefined;
+
+/**
+ * @member {Array.<module:model/DocDto>} docs
+ */
+TripleParamRowDto.prototype['docs'] = undefined;
+
+/**
+ * @member {module:model/Statistics} statistics
+ */
+TripleParamRowDto.prototype['statistics'] = undefined;
 
 
 

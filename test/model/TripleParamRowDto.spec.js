@@ -60,6 +60,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property docs (base name: "docs")', function() {
+      // uncomment below and update the code to test the property docs
+      //var instance = new KdepaApi.TripleParamRowDto();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property statistics (base name: "statistics")', function() {
+      // uncomment below and update the code to test the property statistics
+      //var instance = new KdepaApi.TripleParamRowDto();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
