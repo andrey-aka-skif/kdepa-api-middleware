@@ -14,7 +14,7 @@
 import ApiClient from '../ApiClient';
 import DocDto from './DocDto';
 import SingleParamDto from './SingleParamDto';
-import Statistics from './Statistics';
+import StatisticsDto from './StatisticsDto';
 
 /**
  * The SingleParamRowDto model module.
@@ -57,7 +57,7 @@ class SingleParamRowDto {
                 obj['docs'] = ApiClient.convertToType(data['docs'], [DocDto]);
             }
             if (data.hasOwnProperty('statistics')) {
-                obj['statistics'] = Statistics.constructFromObject(data['statistics']);
+                obj['statistics'] = StatisticsDto.constructFromObject(data['statistics']);
             }
         }
         return obj;
@@ -85,7 +85,7 @@ class SingleParamRowDto {
         }
         // validate the optional field `statistics`
         if (data['statistics']) { // data not null
-          Statistics.validateJSON(data['statistics']);
+          StatisticsDto.validateJSON(data['statistics']);
         }
 
         return true;
@@ -107,7 +107,7 @@ SingleParamRowDto.prototype['parameter'] = undefined;
 SingleParamRowDto.prototype['docs'] = undefined;
 
 /**
- * @member {module:model/Statistics} statistics
+ * @member {module:model/StatisticsDto} statistics
  */
 SingleParamRowDto.prototype['statistics'] = undefined;
 

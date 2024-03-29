@@ -89,7 +89,7 @@ import StationDto from './model/StationDto';
 import StationDtoQueryIdsFilterDtoPagedItemsDto from './model/StationDtoQueryIdsFilterDtoPagedItemsDto';
 import StationSystemDto from './model/StationSystemDto';
 import StationSystemDtoSystemsQueryFilterDtoPagedItemsDto from './model/StationSystemDtoSystemsQueryFilterDtoPagedItemsDto';
-import Statistics from './model/Statistics';
+import StatisticsDto from './model/StatisticsDto';
 import SubscriptDesignationDto from './model/SubscriptDesignationDto';
 import SummaryFullCloseDto from './model/SummaryFullCloseDto';
 import SummaryFullDto from './model/SummaryFullDto';
@@ -637,10 +637,10 @@ export {
     StationSystemDtoSystemsQueryFilterDtoPagedItemsDto,
 
     /**
-     * The Statistics model constructor.
-     * @property {module:model/Statistics}
+     * The StatisticsDto model constructor.
+     * @property {module:model/StatisticsDto}
      */
-    Statistics,
+    StatisticsDto,
 
     /**
      * The SubscriptDesignationDto model constructor.

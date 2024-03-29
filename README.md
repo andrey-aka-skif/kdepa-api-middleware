@@ -316,7 +316,7 @@ Class | Method | HTTP request | Description
  - [KdepaApi.StationDtoQueryIdsFilterDtoPagedItemsDto](docs/StationDtoQueryIdsFilterDtoPagedItemsDto.md)
  - [KdepaApi.StationSystemDto](docs/StationSystemDto.md)
  - [KdepaApi.StationSystemDtoSystemsQueryFilterDtoPagedItemsDto](docs/StationSystemDtoSystemsQueryFilterDtoPagedItemsDto.md)
- - [KdepaApi.Statistics](docs/Statistics.md)
+ - [KdepaApi.StatisticsDto](docs/StatisticsDto.md)
  - [KdepaApi.SubscriptDesignationDto](docs/SubscriptDesignationDto.md)
  - [KdepaApi.SummaryFullCloseDto](docs/SummaryFullCloseDto.md)
  - [KdepaApi.SummaryFullDto](docs/SummaryFullDto.md)
