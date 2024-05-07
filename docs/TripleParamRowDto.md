@@ -6,6 +6,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **parameter** | [**TripleParamDto**](TripleParamDto.md) |  | [optional] 
 **docs** | [**[DocDto]**](DocDto.md) |  | [optional] 
-**statistics** | [**StatisticsDto**](StatisticsDto.md) |  | [optional] 
+**statistics** | [**Statistics**](Statistics.md) |  | [optional] 
 
 

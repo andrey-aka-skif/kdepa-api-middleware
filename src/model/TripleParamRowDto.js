@@ -13,7 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import DocDto from './DocDto';
-import StatisticsDto from './StatisticsDto';
+import Statistics from './Statistics';
 import TripleParamDto from './TripleParamDto';
 
 /**
@@ -57,7 +57,7 @@ class TripleParamRowDto {
                 obj['docs'] = ApiClient.convertToType(data['docs'], [DocDto]);
             }
             if (data.hasOwnProperty('statistics')) {
-                obj['statistics'] = StatisticsDto.constructFromObject(data['statistics']);
+                obj['statistics'] = Statistics.constructFromObject(data['statistics']);
             }
         }
         return obj;
@@ -85,7 +85,7 @@ class TripleParamRowDto {
         }
         // validate the optional field `statistics`
         if (data['statistics']) { // data not null
-          StatisticsDto.validateJSON(data['statistics']);
+          Statistics.validateJSON(data['statistics']);
         }
 
         return true;
@@ -107,7 +107,7 @@ TripleParamRowDto.prototype['parameter'] = undefined;
 TripleParamRowDto.prototype['docs'] = undefined;
 
 /**
- * @member {module:model/StatisticsDto} statistics
+ * @member {module:model/Statistics} statistics
  */
 TripleParamRowDto.prototype['statistics'] = undefined;
 

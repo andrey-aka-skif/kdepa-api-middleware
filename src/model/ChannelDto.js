@@ -65,8 +65,17 @@ class ChannelDto {
             if (data.hasOwnProperty('sampleRate')) {
                 obj['sampleRate'] = ApiClient.convertToType(data['sampleRate'], 'Number');
             }
+            if (data.hasOwnProperty('sumCoeff')) {
+                obj['sumCoeff'] = ApiClient.convertToType(data['sumCoeff'], 'Number');
+            }
+            if (data.hasOwnProperty('devCoeff')) {
+                obj['devCoeff'] = ApiClient.convertToType(data['devCoeff'], 'Number');
+            }
             if (data.hasOwnProperty('samplesCount')) {
                 obj['samplesCount'] = ApiClient.convertToType(data['samplesCount'], 'Number');
+            }
+            if (data.hasOwnProperty('offsetFromZero')) {
+                obj['offsetFromZero'] = ApiClient.convertToType(data['offsetFromZero'], 'Number');
             }
             if (data.hasOwnProperty('length')) {
                 obj['length'] = ApiClient.convertToType(data['length'], 'Number');
@@ -133,9 +142,24 @@ ChannelDto.prototype['unit'] = undefined;
 ChannelDto.prototype['sampleRate'] = undefined;
 
 /**
+ * @member {Number} sumCoeff
+ */
+ChannelDto.prototype['sumCoeff'] = undefined;
+
+/**
+ * @member {Number} devCoeff
+ */
+ChannelDto.prototype['devCoeff'] = undefined;
+
+/**
  * @member {Number} samplesCount
  */
 ChannelDto.prototype['samplesCount'] = undefined;
+
+/**
+ * @member {Number} offsetFromZero
+ */
+ChannelDto.prototype['offsetFromZero'] = undefined;
 
 /**
  * @member {Number} length

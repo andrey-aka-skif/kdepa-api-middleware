@@ -1,12 +1,11 @@
-# KdepaApi.StatisticsDto
+# KdepaApi.Statistics
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**hasInterval** | **Boolean** |  | [optional] 
-**lower** | **Number** |  | [optional] 
-**upper** | **Number** |  | [optional] 
+**min** | **Number** |  | [optional] 
+**max** | **Number** |  | [optional] 
 **p** | **Number** |  | [optional] 
 **fine** | **Boolean** |  | [optional] 
 

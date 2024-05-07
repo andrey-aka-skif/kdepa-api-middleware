@@ -95,7 +95,7 @@ docs/StationDtoQueryIdsFilterDtoPagedItemsDto.md
 docs/StationSystemDto.md
 docs/StationSystemDtoSystemsQueryFilterDtoPagedItemsDto.md
 docs/StationsApi.md
-docs/StatisticsDto.md
+docs/Statistics.md
 docs/SubscriptDesignationDto.md
 docs/SummaryFullCloseDto.md
 docs/SummaryFullDto.md
@@ -232,7 +232,7 @@ src/model/StationDto.js
 src/model/StationDtoQueryIdsFilterDtoPagedItemsDto.js
 src/model/StationSystemDto.js
 src/model/StationSystemDtoSystemsQueryFilterDtoPagedItemsDto.js
-src/model/StatisticsDto.js
+src/model/Statistics.js
 src/model/SubscriptDesignationDto.js
 src/model/SummaryFullCloseDto.js
 src/model/SummaryFullDto.js
@@ -359,7 +359,7 @@ test/model/StationDto.spec.js
 test/model/StationDtoQueryIdsFilterDtoPagedItemsDto.spec.js
 test/model/StationSystemDto.spec.js
 test/model/StationSystemDtoSystemsQueryFilterDtoPagedItemsDto.spec.js
-test/model/StatisticsDto.spec.js
+test/model/Statistics.spec.js
 test/model/SubscriptDesignationDto.spec.js
 test/model/SummaryFullCloseDto.spec.js
 test/model/SummaryFullDto.spec.js

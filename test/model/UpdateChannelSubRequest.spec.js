@@ -90,6 +90,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property sumCoeff (base name: "sumCoeff")', function() {
+      // uncomment below and update the code to test the property sumCoeff
+      //var instance = new KdepaApi.UpdateChannelSubRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property devCoeff (base name: "devCoeff")', function() {
+      // uncomment below and update the code to test the property devCoeff
+      //var instance = new KdepaApi.UpdateChannelSubRequest();
+      //expect(instance).to.be();
+    });
+
     it('should have the property offsetFromZero (base name: "offsetFromZero")', function() {
       // uncomment below and update the code to test the property offsetFromZero
       //var instance = new KdepaApi.UpdateChannelSubRequest();
