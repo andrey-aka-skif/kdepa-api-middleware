@@ -11,8 +11,6 @@ Method | HTTP request | Description
 [**lookUpSafetyClassesGet**](LookUpApi.md#lookUpSafetyClassesGet) | **GET** /LookUp/safety-classes | Получить Классы безопасности по НП-001-15
 [**lookUpSeismicCategoriesGet**](LookUpApi.md#lookUpSeismicCategoriesGet) | **GET** /LookUp/seismic-categories | Получить Категории сейсмостойкости по НП-031-01
 [**lookUpUsingClassesGet**](LookUpApi.md#lookUpUsingClassesGet) | **GET** /LookUp/using-classes | Получить Классификации арматуры по назначению и условиям эксплуатации в соответствии с НП-068-05
-[**lookUpValveDesignsGet**](LookUpApi.md#lookUpValveDesignsGet) | **GET** /LookUp/valve-designs | Получить Типы арматуры по исполнению по НП-068
-[**lookUpValveTypesGet**](LookUpApi.md#lookUpValveTypesGet) | **GET** /LookUp/valve-types | Получить Виды арматуры по назначению по НП-068
 
 
 
@@ -271,82 +269,6 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**[UsingClassDto]**](UsingClassDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## lookUpValveDesignsGet
-
-> [ValveDesignDto] lookUpValveDesignsGet()
-
-Получить Типы арматуры по исполнению по НП-068
-
-### Example
-
-```javascript
-import KdepaApi from 'kdepa_api';
-
-let apiInstance = new KdepaApi.LookUpApi();
-apiInstance.lookUpValveDesignsGet().then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**[ValveDesignDto]**](ValveDesignDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## lookUpValveTypesGet
-
-> [ValveTypeDto] lookUpValveTypesGet()
-
-Получить Виды арматуры по назначению по НП-068
-
-### Example
-
-```javascript
-import KdepaApi from 'kdepa_api';
-
-let apiInstance = new KdepaApi.LookUpApi();
-apiInstance.lookUpValveTypesGet().then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**[ValveTypeDto]**](ValveTypeDto.md)
 
 ### Authorization
 

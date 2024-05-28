@@ -66,20 +66,26 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property valveTypeId (base name: "valveTypeId")', function() {
-      // uncomment below and update the code to test the property valveTypeId
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
       //var instance = new KdepaApi.ValveMarkDto();
       //expect(instance).to.be();
     });
 
-    it('should have the property valveType (base name: "valveType")', function() {
-      // uncomment below and update the code to test the property valveType
+    it('should have the property design (base name: "design")', function() {
+      // uncomment below and update the code to test the property design
       //var instance = new KdepaApi.ValveMarkDto();
       //expect(instance).to.be();
     });
 
     it('should have the property dn (base name: "dn")', function() {
       // uncomment below and update the code to test the property dn
+      //var instance = new KdepaApi.ValveMarkDto();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property dn2 (base name: "dn2")', function() {
+      // uncomment below and update the code to test the property dn2
       //var instance = new KdepaApi.ValveMarkDto();
       //expect(instance).to.be();
     });

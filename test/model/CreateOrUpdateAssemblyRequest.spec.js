@@ -84,18 +84,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property openTime (base name: "openTime")', function() {
-      // uncomment below and update the code to test the property openTime
-      //var instance = new KdepaApi.CreateOrUpdateAssemblyRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property closeTime (base name: "closeTime")', function() {
-      // uncomment below and update the code to test the property closeTime
-      //var instance = new KdepaApi.CreateOrUpdateAssemblyRequest();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));

@@ -168,6 +168,11 @@ Class | Method | HTTP request | Description
 *KdepaApi.FactoriesApi* | [**factoriesPost**](docs/FactoriesApi.md#factoriesPost) | **POST** /Factories | Создать Изготовителя
 *KdepaApi.FilesApi* | [**filesGet**](docs/FilesApi.md#filesGet) | **GET** /Files | Получить пагинированный список Файлов
 *KdepaApi.FilesApi* | [**filesIdGet**](docs/FilesApi.md#filesIdGet) | **GET** /Files/{id} | Получить Файл по id
+*KdepaApi.FlowsApi* | [**flowsGet**](docs/FlowsApi.md#flowsGet) | **GET** /Flows | Получить пагинированный список Диагностирований протечек
+*KdepaApi.FlowsApi* | [**flowsIdDelete**](docs/FlowsApi.md#flowsIdDelete) | **DELETE** /Flows/{id} | Удалить Диагностирование протечки
+*KdepaApi.FlowsApi* | [**flowsIdGet**](docs/FlowsApi.md#flowsIdGet) | **GET** /Flows/{id} | Получить Диагностирование протечки по id
+*KdepaApi.FlowsApi* | [**flowsIdPut**](docs/FlowsApi.md#flowsIdPut) | **PUT** /Flows/{id} | Обновить Диагностирование протечки
+*KdepaApi.FlowsApi* | [**flowsPost**](docs/FlowsApi.md#flowsPost) | **POST** /Flows | Добавить Диагностирования из ПК ДУЗ
 *KdepaApi.LookUpApi* | [**lookUpAtmosphereTypesGet**](docs/LookUpApi.md#lookUpAtmosphereTypesGet) | **GET** /LookUp/atmosphere-types | Получить Типы атмосферы по ГОСТ 15150
 *KdepaApi.LookUpApi* | [**lookUpClimaticExecutionsGet**](docs/LookUpApi.md#lookUpClimaticExecutionsGet) | **GET** /LookUp/climatic-executions | Получить Климатические исполнения по ГОСТ 15150
 *KdepaApi.LookUpApi* | [**lookUpEquipmentGroupsGet**](docs/LookUpApi.md#lookUpEquipmentGroupsGet) | **GET** /LookUp/equipment-groups | Получить Группы безопасности по НП-089-15
@@ -175,8 +180,6 @@ Class | Method | HTTP request | Description
 *KdepaApi.LookUpApi* | [**lookUpSafetyClassesGet**](docs/LookUpApi.md#lookUpSafetyClassesGet) | **GET** /LookUp/safety-classes | Получить Классы безопасности по НП-001-15
 *KdepaApi.LookUpApi* | [**lookUpSeismicCategoriesGet**](docs/LookUpApi.md#lookUpSeismicCategoriesGet) | **GET** /LookUp/seismic-categories | Получить Категории сейсмостойкости по НП-031-01
 *KdepaApi.LookUpApi* | [**lookUpUsingClassesGet**](docs/LookUpApi.md#lookUpUsingClassesGet) | **GET** /LookUp/using-classes | Получить Классификации арматуры по назначению и условиям эксплуатации в соответствии с НП-068-05
-*KdepaApi.LookUpApi* | [**lookUpValveDesignsGet**](docs/LookUpApi.md#lookUpValveDesignsGet) | **GET** /LookUp/valve-designs | Получить Типы арматуры по исполнению по НП-068
-*KdepaApi.LookUpApi* | [**lookUpValveTypesGet**](docs/LookUpApi.md#lookUpValveTypesGet) | **GET** /LookUp/valve-types | Получить Виды арматуры по назначению по НП-068
 *KdepaApi.MotorMarksApi* | [**motorMarksGet**](docs/MotorMarksApi.md#motorMarksGet) | **GET** /MotorMarks | Получить пагинированный список Марок Двигателей
 *KdepaApi.MotorMarksApi* | [**motorMarksIdDelete**](docs/MotorMarksApi.md#motorMarksIdDelete) | **DELETE** /MotorMarks/{id} | Удалить Марку Двигателя
 *KdepaApi.MotorMarksApi* | [**motorMarksIdGet**](docs/MotorMarksApi.md#motorMarksIdGet) | **GET** /MotorMarks/{id} | Получить Марку Двигателя по id
@@ -286,6 +289,8 @@ Class | Method | HTTP request | Description
  - [KdepaApi.FactoryDtoFactoriesQueryFilterDtoPagedItemsDto](docs/FactoryDtoFactoriesQueryFilterDtoPagedItemsDto.md)
  - [KdepaApi.FileDto](docs/FileDto.md)
  - [KdepaApi.FileDtoQueryIdsFilterDtoPagedItemsDto](docs/FileDtoQueryIdsFilterDtoPagedItemsDto.md)
+ - [KdepaApi.FlowDto](docs/FlowDto.md)
+ - [KdepaApi.FlowDtoValvesQueryFilterDtoPagedItemsDto](docs/FlowDtoValvesQueryFilterDtoPagedItemsDto.md)
  - [KdepaApi.MediumDto](docs/MediumDto.md)
  - [KdepaApi.MotorDto](docs/MotorDto.md)
  - [KdepaApi.MotorDtoMotorsQueryFilterDtoPagedItemsDto](docs/MotorDtoMotorsQueryFilterDtoPagedItemsDto.md)
@@ -316,7 +321,7 @@ Class | Method | HTTP request | Description
  - [KdepaApi.StationDtoQueryIdsFilterDtoPagedItemsDto](docs/StationDtoQueryIdsFilterDtoPagedItemsDto.md)
  - [KdepaApi.StationSystemDto](docs/StationSystemDto.md)
  - [KdepaApi.StationSystemDtoSystemsQueryFilterDtoPagedItemsDto](docs/StationSystemDtoSystemsQueryFilterDtoPagedItemsDto.md)
- - [KdepaApi.Statistics](docs/Statistics.md)
+ - [KdepaApi.StatisticsDto](docs/StatisticsDto.md)
  - [KdepaApi.SubscriptDesignationDto](docs/SubscriptDesignationDto.md)
  - [KdepaApi.SummaryFullCloseDto](docs/SummaryFullCloseDto.md)
  - [KdepaApi.SummaryFullDto](docs/SummaryFullDto.md)
@@ -335,16 +340,15 @@ Class | Method | HTTP request | Description
  - [KdepaApi.TripleParamDto](docs/TripleParamDto.md)
  - [KdepaApi.TripleParamRowDto](docs/TripleParamRowDto.md)
  - [KdepaApi.UpdateChannelSubRequest](docs/UpdateChannelSubRequest.md)
+ - [KdepaApi.UpdateFlowRequest](docs/UpdateFlowRequest.md)
  - [KdepaApi.UpdateSurveyRequest](docs/UpdateSurveyRequest.md)
  - [KdepaApi.UsingClassDto](docs/UsingClassDto.md)
- - [KdepaApi.ValveDesignDto](docs/ValveDesignDto.md)
  - [KdepaApi.ValveDto](docs/ValveDto.md)
  - [KdepaApi.ValveDtoValvesQueryFilterDtoPagedItemsDto](docs/ValveDtoValvesQueryFilterDtoPagedItemsDto.md)
  - [KdepaApi.ValveMarkDto](docs/ValveMarkDto.md)
  - [KdepaApi.ValveMarkDtoValveMarksQueryFilterDtoPagedItemsDto](docs/ValveMarkDtoValveMarksQueryFilterDtoPagedItemsDto.md)
  - [KdepaApi.ValveMarkExtendedDto](docs/ValveMarkExtendedDto.md)
  - [KdepaApi.ValveMarksQueryFilterDto](docs/ValveMarksQueryFilterDto.md)
- - [KdepaApi.ValveTypeDto](docs/ValveTypeDto.md)
  - [KdepaApi.ValvesQueryFilterDto](docs/ValvesQueryFilterDto.md)
 
 

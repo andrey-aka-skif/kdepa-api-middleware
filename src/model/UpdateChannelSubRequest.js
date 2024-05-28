@@ -65,12 +65,6 @@ class UpdateChannelSubRequest {
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
-            if (data.hasOwnProperty('sumCoeff')) {
-                obj['sumCoeff'] = ApiClient.convertToType(data['sumCoeff'], 'Number');
-            }
-            if (data.hasOwnProperty('devCoeff')) {
-                obj['devCoeff'] = ApiClient.convertToType(data['devCoeff'], 'Number');
-            }
             if (data.hasOwnProperty('offsetFromZero')) {
                 obj['offsetFromZero'] = ApiClient.convertToType(data['offsetFromZero'], 'Number');
             }
@@ -134,16 +128,6 @@ UpdateChannelSubRequest.prototype['unit'] = undefined;
  * @member {String} type
  */
 UpdateChannelSubRequest.prototype['type'] = undefined;
-
-/**
- * @member {Number} sumCoeff
- */
-UpdateChannelSubRequest.prototype['sumCoeff'] = undefined;
-
-/**
- * @member {Number} devCoeff
- */
-UpdateChannelSubRequest.prototype['devCoeff'] = undefined;
 
 /**
  * @member {Number} offsetFromZero

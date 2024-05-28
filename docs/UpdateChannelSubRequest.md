@@ -10,8 +10,6 @@ Name | Type | Description | Notes
 **sampleRate** | **Number** |  | [optional] 
 **unit** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
-**sumCoeff** | **Number** |  | [optional] 
-**devCoeff** | **Number** |  | [optional] 
 **offsetFromZero** | **Number** |  | [optional] 
 
 

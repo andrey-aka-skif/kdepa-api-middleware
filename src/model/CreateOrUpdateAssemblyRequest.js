@@ -62,12 +62,6 @@ class CreateOrUpdateAssemblyRequest {
             if (data.hasOwnProperty('buildingDate')) {
                 obj['buildingDate'] = ApiClient.convertToType(data['buildingDate'], 'Date');
             }
-            if (data.hasOwnProperty('openTime')) {
-                obj['openTime'] = ApiClient.convertToType(data['openTime'], 'Number');
-            }
-            if (data.hasOwnProperty('closeTime')) {
-                obj['closeTime'] = ApiClient.convertToType(data['closeTime'], 'Number');
-            }
         }
         return obj;
     }
@@ -111,16 +105,6 @@ CreateOrUpdateAssemblyRequest.prototype['positionId'] = undefined;
  * @member {Date} buildingDate
  */
 CreateOrUpdateAssemblyRequest.prototype['buildingDate'] = undefined;
-
-/**
- * @member {Number} openTime
- */
-CreateOrUpdateAssemblyRequest.prototype['openTime'] = undefined;
-
-/**
- * @member {Number} closeTime
- */
-CreateOrUpdateAssemblyRequest.prototype['closeTime'] = undefined;
 
 
 

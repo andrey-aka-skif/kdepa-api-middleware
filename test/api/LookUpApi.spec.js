@@ -118,26 +118,6 @@
         done();
       });
     });
-    describe('lookUpValveDesignsGet', function() {
-      it('should call lookUpValveDesignsGet successfully', function(done) {
-        //uncomment below and update the code to test lookUpValveDesignsGet
-        //instance.lookUpValveDesignsGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('lookUpValveTypesGet', function() {
-      it('should call lookUpValveTypesGet successfully', function(done) {
-        //uncomment below and update the code to test lookUpValveTypesGet
-        //instance.lookUpValveTypesGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
   });
 
 }));

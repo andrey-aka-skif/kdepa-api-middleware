@@ -57,6 +57,9 @@ docs/FactoryDtoFactoriesQueryFilterDtoPagedItemsDto.md
 docs/FileDto.md
 docs/FileDtoQueryIdsFilterDtoPagedItemsDto.md
 docs/FilesApi.md
+docs/FlowDto.md
+docs/FlowDtoValvesQueryFilterDtoPagedItemsDto.md
+docs/FlowsApi.md
 docs/LookUpApi.md
 docs/MediumDto.md
 docs/MotorDto.md
@@ -95,7 +98,7 @@ docs/StationDtoQueryIdsFilterDtoPagedItemsDto.md
 docs/StationSystemDto.md
 docs/StationSystemDtoSystemsQueryFilterDtoPagedItemsDto.md
 docs/StationsApi.md
-docs/Statistics.md
+docs/StatisticsDto.md
 docs/SubscriptDesignationDto.md
 docs/SummaryFullCloseDto.md
 docs/SummaryFullDto.md
@@ -117,9 +120,9 @@ docs/TimeRangeDto.md
 docs/TripleParamDto.md
 docs/TripleParamRowDto.md
 docs/UpdateChannelSubRequest.md
+docs/UpdateFlowRequest.md
 docs/UpdateSurveyRequest.md
 docs/UsingClassDto.md
-docs/ValveDesignDto.md
 docs/ValveDto.md
 docs/ValveDtoValvesQueryFilterDtoPagedItemsDto.md
 docs/ValveMarkDto.md
@@ -127,7 +130,6 @@ docs/ValveMarkDtoValveMarksQueryFilterDtoPagedItemsDto.md
 docs/ValveMarkExtendedDto.md
 docs/ValveMarksApi.md
 docs/ValveMarksQueryFilterDto.md
-docs/ValveTypeDto.md
 docs/ValvesApi.md
 docs/ValvesQueryFilterDto.md
 git_push.sh
@@ -142,6 +144,7 @@ src/api/DriveMarksApi.js
 src/api/DrivesApi.js
 src/api/FactoriesApi.js
 src/api/FilesApi.js
+src/api/FlowsApi.js
 src/api/LookUpApi.js
 src/api/MotorMarksApi.js
 src/api/MotorsApi.js
@@ -202,6 +205,8 @@ src/model/FactoryDto.js
 src/model/FactoryDtoFactoriesQueryFilterDtoPagedItemsDto.js
 src/model/FileDto.js
 src/model/FileDtoQueryIdsFilterDtoPagedItemsDto.js
+src/model/FlowDto.js
+src/model/FlowDtoValvesQueryFilterDtoPagedItemsDto.js
 src/model/MediumDto.js
 src/model/MotorDto.js
 src/model/MotorDtoMotorsQueryFilterDtoPagedItemsDto.js
@@ -232,7 +237,7 @@ src/model/StationDto.js
 src/model/StationDtoQueryIdsFilterDtoPagedItemsDto.js
 src/model/StationSystemDto.js
 src/model/StationSystemDtoSystemsQueryFilterDtoPagedItemsDto.js
-src/model/Statistics.js
+src/model/StatisticsDto.js
 src/model/SubscriptDesignationDto.js
 src/model/SummaryFullCloseDto.js
 src/model/SummaryFullDto.js
@@ -251,16 +256,15 @@ src/model/TimeRangeDto.js
 src/model/TripleParamDto.js
 src/model/TripleParamRowDto.js
 src/model/UpdateChannelSubRequest.js
+src/model/UpdateFlowRequest.js
 src/model/UpdateSurveyRequest.js
 src/model/UsingClassDto.js
-src/model/ValveDesignDto.js
 src/model/ValveDto.js
 src/model/ValveDtoValvesQueryFilterDtoPagedItemsDto.js
 src/model/ValveMarkDto.js
 src/model/ValveMarkDtoValveMarksQueryFilterDtoPagedItemsDto.js
 src/model/ValveMarkExtendedDto.js
 src/model/ValveMarksQueryFilterDto.js
-src/model/ValveTypeDto.js
 src/model/ValvesQueryFilterDto.js
 test/api/AssembliesApi.spec.js
 test/api/BlocksApi.spec.js
@@ -270,6 +274,7 @@ test/api/DriveMarksApi.spec.js
 test/api/DrivesApi.spec.js
 test/api/FactoriesApi.spec.js
 test/api/FilesApi.spec.js
+test/api/FlowsApi.spec.js
 test/api/LookUpApi.spec.js
 test/api/MotorMarksApi.spec.js
 test/api/MotorsApi.spec.js
@@ -329,6 +334,8 @@ test/model/FactoryDto.spec.js
 test/model/FactoryDtoFactoriesQueryFilterDtoPagedItemsDto.spec.js
 test/model/FileDto.spec.js
 test/model/FileDtoQueryIdsFilterDtoPagedItemsDto.spec.js
+test/model/FlowDto.spec.js
+test/model/FlowDtoValvesQueryFilterDtoPagedItemsDto.spec.js
 test/model/MediumDto.spec.js
 test/model/MotorDto.spec.js
 test/model/MotorDtoMotorsQueryFilterDtoPagedItemsDto.spec.js
@@ -359,7 +366,7 @@ test/model/StationDto.spec.js
 test/model/StationDtoQueryIdsFilterDtoPagedItemsDto.spec.js
 test/model/StationSystemDto.spec.js
 test/model/StationSystemDtoSystemsQueryFilterDtoPagedItemsDto.spec.js
-test/model/Statistics.spec.js
+test/model/StatisticsDto.spec.js
 test/model/SubscriptDesignationDto.spec.js
 test/model/SummaryFullCloseDto.spec.js
 test/model/SummaryFullDto.spec.js
@@ -378,14 +385,13 @@ test/model/TimeRangeDto.spec.js
 test/model/TripleParamDto.spec.js
 test/model/TripleParamRowDto.spec.js
 test/model/UpdateChannelSubRequest.spec.js
+test/model/UpdateFlowRequest.spec.js
 test/model/UpdateSurveyRequest.spec.js
 test/model/UsingClassDto.spec.js
-test/model/ValveDesignDto.spec.js
 test/model/ValveDto.spec.js
 test/model/ValveDtoValvesQueryFilterDtoPagedItemsDto.spec.js
 test/model/ValveMarkDto.spec.js
 test/model/ValveMarkDtoValveMarksQueryFilterDtoPagedItemsDto.spec.js
 test/model/ValveMarkExtendedDto.spec.js
 test/model/ValveMarksQueryFilterDto.spec.js
-test/model/ValveTypeDto.spec.js
 test/model/ValvesQueryFilterDto.spec.js

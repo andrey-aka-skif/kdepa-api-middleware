@@ -10,10 +10,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **unit** | **String** |  | [optional] 
 **sampleRate** | **Number** |  | [optional] 
-**sumCoeff** | **Number** |  | [optional] 
-**devCoeff** | **Number** |  | [optional] 
 **samplesCount** | **Number** |  | [optional] 
-**offsetFromZero** | **Number** |  | [optional] 
 **length** | **Number** |  | [optional] 
 
 

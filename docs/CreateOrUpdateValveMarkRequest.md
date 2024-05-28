@@ -5,8 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** |  | [optional] 
-**valveTypeId** | **Number** |  | [optional] 
+**type** | **String** |  | [optional] 
+**design** | **String** |  | [optional] 
 **dn** | **Number** |  | [optional] 
+**dn2** | **Number** |  | [optional] 
 **pn** | **Number** |  | [optional] 
 **tn** | **Number** |  | [optional] 
 **movementTimeMin** | **Number** |  | [optional] 

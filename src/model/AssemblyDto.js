@@ -77,15 +77,6 @@ class AssemblyDto {
             if (data.hasOwnProperty('buildingDate')) {
                 obj['buildingDate'] = ApiClient.convertToType(data['buildingDate'], 'Date');
             }
-            if (data.hasOwnProperty('openTime')) {
-                obj['openTime'] = ApiClient.convertToType(data['openTime'], 'Number');
-            }
-            if (data.hasOwnProperty('closeTime')) {
-                obj['closeTime'] = ApiClient.convertToType(data['closeTime'], 'Number');
-            }
-            if (data.hasOwnProperty('isFastActing')) {
-                obj['isFastActing'] = ApiClient.convertToType(data['isFastActing'], 'Boolean');
-            }
         }
         return obj;
     }
@@ -170,21 +161,6 @@ AssemblyDto.prototype['position'] = undefined;
  * @member {Date} buildingDate
  */
 AssemblyDto.prototype['buildingDate'] = undefined;
-
-/**
- * @member {Number} openTime
- */
-AssemblyDto.prototype['openTime'] = undefined;
-
-/**
- * @member {Number} closeTime
- */
-AssemblyDto.prototype['closeTime'] = undefined;
-
-/**
- * @member {Boolean} isFastActing
- */
-AssemblyDto.prototype['isFastActing'] = undefined;
 
 
 

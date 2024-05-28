@@ -14,8 +14,5 @@ Name | Type | Description | Notes
 **positionId** | **Number** |  | [optional] 
 **position** | **String** |  | [optional] 
 **buildingDate** | **Date** |  | [optional] 
-**openTime** | **Number** |  | [optional] 
-**closeTime** | **Number** |  | [optional] 
-**isFastActing** | **Boolean** |  | [optional] 
 
 

@@ -53,14 +53,17 @@ class ValveMarkDto {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('valveTypeId')) {
-                obj['valveTypeId'] = ApiClient.convertToType(data['valveTypeId'], 'Number');
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
-            if (data.hasOwnProperty('valveType')) {
-                obj['valveType'] = ApiClient.convertToType(data['valveType'], 'String');
+            if (data.hasOwnProperty('design')) {
+                obj['design'] = ApiClient.convertToType(data['design'], 'String');
             }
             if (data.hasOwnProperty('dn')) {
                 obj['dn'] = ApiClient.convertToType(data['dn'], 'Number');
+            }
+            if (data.hasOwnProperty('dn2')) {
+                obj['dn2'] = ApiClient.convertToType(data['dn2'], 'Number');
             }
             if (data.hasOwnProperty('pn')) {
                 obj['pn'] = ApiClient.convertToType(data['pn'], 'Number');
@@ -134,8 +137,12 @@ class ValveMarkDto {
             throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
         }
         // ensure the json data is a string
-        if (data['valveType'] && !(typeof data['valveType'] === 'string' || data['valveType'] instanceof String)) {
-            throw new Error("Expected the field `valveType` to be a primitive type in the JSON string but got " + data['valveType']);
+        if (data['type'] && !(typeof data['type'] === 'string' || data['type'] instanceof String)) {
+            throw new Error("Expected the field `type` to be a primitive type in the JSON string but got " + data['type']);
+        }
+        // ensure the json data is a string
+        if (data['design'] && !(typeof data['design'] === 'string' || data['design'] instanceof String)) {
+            throw new Error("Expected the field `design` to be a primitive type in the JSON string but got " + data['design']);
         }
         // ensure the json data is a string
         if (data['modification'] && !(typeof data['modification'] === 'string' || data['modification'] instanceof String)) {
@@ -177,19 +184,24 @@ ValveMarkDto.prototype['id'] = undefined;
 ValveMarkDto.prototype['name'] = undefined;
 
 /**
- * @member {Number} valveTypeId
+ * @member {String} type
  */
-ValveMarkDto.prototype['valveTypeId'] = undefined;
+ValveMarkDto.prototype['type'] = undefined;
 
 /**
- * @member {String} valveType
+ * @member {String} design
  */
-ValveMarkDto.prototype['valveType'] = undefined;
+ValveMarkDto.prototype['design'] = undefined;
 
 /**
  * @member {Number} dn
  */
 ValveMarkDto.prototype['dn'] = undefined;
+
+/**
+ * @member {Number} dn2
+ */
+ValveMarkDto.prototype['dn2'] = undefined;
 
 /**
  * @member {Number} pn

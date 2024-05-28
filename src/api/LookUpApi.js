@@ -20,8 +20,6 @@ import MediumDto from '../model/MediumDto';
 import SafetyClassDto from '../model/SafetyClassDto';
 import SeismicCategoryDto from '../model/SeismicCategoryDto';
 import UsingClassDto from '../model/UsingClassDto';
-import ValveDesignDto from '../model/ValveDesignDto';
-import ValveTypeDto from '../model/ValveTypeDto';
 
 /**
 * LookUp service.
@@ -310,84 +308,6 @@ export default class LookUpApi {
      */
     lookUpUsingClassesGet() {
       return this.lookUpUsingClassesGetWithHttpInfo()
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Получить Типы арматуры по исполнению по НП-068
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ValveDesignDto>} and HTTP response
-     */
-    lookUpValveDesignsGetWithHttpInfo() {
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = [ValveDesignDto];
-      return this.apiClient.callApi(
-        '/LookUp/valve-designs', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Получить Типы арматуры по исполнению по НП-068
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ValveDesignDto>}
-     */
-    lookUpValveDesignsGet() {
-      return this.lookUpValveDesignsGetWithHttpInfo()
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Получить Виды арматуры по назначению по НП-068
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ValveTypeDto>} and HTTP response
-     */
-    lookUpValveTypesGetWithHttpInfo() {
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = [ValveTypeDto];
-      return this.apiClient.callApi(
-        '/LookUp/valve-types', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Получить Виды арматуры по назначению по НП-068
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ValveTypeDto>}
-     */
-    lookUpValveTypesGet() {
-      return this.lookUpValveTypesGetWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -59,6 +59,8 @@ import FactoryDto from './model/FactoryDto';
 import FactoryDtoFactoriesQueryFilterDtoPagedItemsDto from './model/FactoryDtoFactoriesQueryFilterDtoPagedItemsDto';
 import FileDto from './model/FileDto';
 import FileDtoQueryIdsFilterDtoPagedItemsDto from './model/FileDtoQueryIdsFilterDtoPagedItemsDto';
+import FlowDto from './model/FlowDto';
+import FlowDtoValvesQueryFilterDtoPagedItemsDto from './model/FlowDtoValvesQueryFilterDtoPagedItemsDto';
 import MediumDto from './model/MediumDto';
 import MotorDto from './model/MotorDto';
 import MotorDtoMotorsQueryFilterDtoPagedItemsDto from './model/MotorDtoMotorsQueryFilterDtoPagedItemsDto';
@@ -89,7 +91,7 @@ import StationDto from './model/StationDto';
 import StationDtoQueryIdsFilterDtoPagedItemsDto from './model/StationDtoQueryIdsFilterDtoPagedItemsDto';
 import StationSystemDto from './model/StationSystemDto';
 import StationSystemDtoSystemsQueryFilterDtoPagedItemsDto from './model/StationSystemDtoSystemsQueryFilterDtoPagedItemsDto';
-import Statistics from './model/Statistics';
+import StatisticsDto from './model/StatisticsDto';
 import SubscriptDesignationDto from './model/SubscriptDesignationDto';
 import SummaryFullCloseDto from './model/SummaryFullCloseDto';
 import SummaryFullDto from './model/SummaryFullDto';
@@ -108,16 +110,15 @@ import TimeRangeDto from './model/TimeRangeDto';
 import TripleParamDto from './model/TripleParamDto';
 import TripleParamRowDto from './model/TripleParamRowDto';
 import UpdateChannelSubRequest from './model/UpdateChannelSubRequest';
+import UpdateFlowRequest from './model/UpdateFlowRequest';
 import UpdateSurveyRequest from './model/UpdateSurveyRequest';
 import UsingClassDto from './model/UsingClassDto';
-import ValveDesignDto from './model/ValveDesignDto';
 import ValveDto from './model/ValveDto';
 import ValveDtoValvesQueryFilterDtoPagedItemsDto from './model/ValveDtoValvesQueryFilterDtoPagedItemsDto';
 import ValveMarkDto from './model/ValveMarkDto';
 import ValveMarkDtoValveMarksQueryFilterDtoPagedItemsDto from './model/ValveMarkDtoValveMarksQueryFilterDtoPagedItemsDto';
 import ValveMarkExtendedDto from './model/ValveMarkExtendedDto';
 import ValveMarksQueryFilterDto from './model/ValveMarksQueryFilterDto';
-import ValveTypeDto from './model/ValveTypeDto';
 import ValvesQueryFilterDto from './model/ValvesQueryFilterDto';
 import AssembliesApi from './api/AssembliesApi';
 import BlocksApi from './api/BlocksApi';
@@ -127,6 +128,7 @@ import DriveMarksApi from './api/DriveMarksApi';
 import DrivesApi from './api/DrivesApi';
 import FactoriesApi from './api/FactoriesApi';
 import FilesApi from './api/FilesApi';
+import FlowsApi from './api/FlowsApi';
 import LookUpApi from './api/LookUpApi';
 import MotorMarksApi from './api/MotorMarksApi';
 import MotorsApi from './api/MotorsApi';
@@ -457,6 +459,18 @@ export {
     FileDtoQueryIdsFilterDtoPagedItemsDto,
 
     /**
+     * The FlowDto model constructor.
+     * @property {module:model/FlowDto}
+     */
+    FlowDto,
+
+    /**
+     * The FlowDtoValvesQueryFilterDtoPagedItemsDto model constructor.
+     * @property {module:model/FlowDtoValvesQueryFilterDtoPagedItemsDto}
+     */
+    FlowDtoValvesQueryFilterDtoPagedItemsDto,
+
+    /**
      * The MediumDto model constructor.
      * @property {module:model/MediumDto}
      */
@@ -637,10 +651,10 @@ export {
     StationSystemDtoSystemsQueryFilterDtoPagedItemsDto,
 
     /**
-     * The Statistics model constructor.
-     * @property {module:model/Statistics}
+     * The StatisticsDto model constructor.
+     * @property {module:model/StatisticsDto}
      */
-    Statistics,
+    StatisticsDto,
 
     /**
      * The SubscriptDesignationDto model constructor.
@@ -751,6 +765,12 @@ export {
     UpdateChannelSubRequest,
 
     /**
+     * The UpdateFlowRequest model constructor.
+     * @property {module:model/UpdateFlowRequest}
+     */
+    UpdateFlowRequest,
+
+    /**
      * The UpdateSurveyRequest model constructor.
      * @property {module:model/UpdateSurveyRequest}
      */
@@ -761,12 +781,6 @@ export {
      * @property {module:model/UsingClassDto}
      */
     UsingClassDto,
-
-    /**
-     * The ValveDesignDto model constructor.
-     * @property {module:model/ValveDesignDto}
-     */
-    ValveDesignDto,
 
     /**
      * The ValveDto model constructor.
@@ -803,12 +817,6 @@ export {
      * @property {module:model/ValveMarksQueryFilterDto}
      */
     ValveMarksQueryFilterDto,
-
-    /**
-     * The ValveTypeDto model constructor.
-     * @property {module:model/ValveTypeDto}
-     */
-    ValveTypeDto,
 
     /**
      * The ValvesQueryFilterDto model constructor.
@@ -863,6 +871,12 @@ export {
     * @property {module:api/FilesApi}
     */
     FilesApi,
+
+    /**
+    * The FlowsApi service constructor.
+    * @property {module:api/FlowsApi}
+    */
+    FlowsApi,
 
     /**
     * The LookUpApi service constructor.

@@ -16,7 +16,6 @@ import EquipmentGroupDto from './EquipmentGroupDto';
 import SafetyClassDto from './SafetyClassDto';
 import SeismicCategoryDto from './SeismicCategoryDto';
 import UsingClassDto from './UsingClassDto';
-import ValveTypeDto from './ValveTypeDto';
 
 /**
  * The ValveMarkExtendedDto model module.
@@ -58,17 +57,23 @@ class ValveMarkExtendedDto {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('valveTypeId')) {
-                obj['valveTypeId'] = ApiClient.convertToType(data['valveTypeId'], 'Number');
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
-            if (data.hasOwnProperty('valveType')) {
-                obj['valveType'] = ApiClient.convertToType(data['valveType'], 'String');
+            if (data.hasOwnProperty('types')) {
+                obj['types'] = ApiClient.convertToType(data['types'], ['String']);
             }
-            if (data.hasOwnProperty('valveTypes')) {
-                obj['valveTypes'] = ApiClient.convertToType(data['valveTypes'], [ValveTypeDto]);
+            if (data.hasOwnProperty('design')) {
+                obj['design'] = ApiClient.convertToType(data['design'], 'String');
+            }
+            if (data.hasOwnProperty('designs')) {
+                obj['designs'] = ApiClient.convertToType(data['designs'], ['String']);
             }
             if (data.hasOwnProperty('dn')) {
                 obj['dn'] = ApiClient.convertToType(data['dn'], 'Number');
+            }
+            if (data.hasOwnProperty('dn2')) {
+                obj['dn2'] = ApiClient.convertToType(data['dn2'], 'Number');
             }
             if (data.hasOwnProperty('pn')) {
                 obj['pn'] = ApiClient.convertToType(data['pn'], 'Number');
@@ -154,18 +159,20 @@ class ValveMarkExtendedDto {
             throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
         }
         // ensure the json data is a string
-        if (data['valveType'] && !(typeof data['valveType'] === 'string' || data['valveType'] instanceof String)) {
-            throw new Error("Expected the field `valveType` to be a primitive type in the JSON string but got " + data['valveType']);
+        if (data['type'] && !(typeof data['type'] === 'string' || data['type'] instanceof String)) {
+            throw new Error("Expected the field `type` to be a primitive type in the JSON string but got " + data['type']);
         }
-        if (data['valveTypes']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['valveTypes'])) {
-                throw new Error("Expected the field `valveTypes` to be an array in the JSON data but got " + data['valveTypes']);
-            }
-            // validate the optional field `valveTypes` (array)
-            for (const item of data['valveTypes']) {
-                ValveTypeDto.validateJSON(item);
-            };
+        // ensure the json data is an array
+        if (!Array.isArray(data['types'])) {
+            throw new Error("Expected the field `types` to be an array in the JSON data but got " + data['types']);
+        }
+        // ensure the json data is a string
+        if (data['design'] && !(typeof data['design'] === 'string' || data['design'] instanceof String)) {
+            throw new Error("Expected the field `design` to be a primitive type in the JSON string but got " + data['design']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['designs'])) {
+            throw new Error("Expected the field `designs` to be an array in the JSON data but got " + data['designs']);
         }
         // ensure the json data is a string
         if (data['modification'] && !(typeof data['modification'] === 'string' || data['modification'] instanceof String)) {
@@ -247,24 +254,34 @@ ValveMarkExtendedDto.prototype['id'] = undefined;
 ValveMarkExtendedDto.prototype['name'] = undefined;
 
 /**
- * @member {Number} valveTypeId
+ * @member {String} type
  */
-ValveMarkExtendedDto.prototype['valveTypeId'] = undefined;
+ValveMarkExtendedDto.prototype['type'] = undefined;
 
 /**
- * @member {String} valveType
+ * @member {Array.<String>} types
  */
-ValveMarkExtendedDto.prototype['valveType'] = undefined;
+ValveMarkExtendedDto.prototype['types'] = undefined;
 
 /**
- * @member {Array.<module:model/ValveTypeDto>} valveTypes
+ * @member {String} design
  */
-ValveMarkExtendedDto.prototype['valveTypes'] = undefined;
+ValveMarkExtendedDto.prototype['design'] = undefined;
+
+/**
+ * @member {Array.<String>} designs
+ */
+ValveMarkExtendedDto.prototype['designs'] = undefined;
 
 /**
  * @member {Number} dn
  */
 ValveMarkExtendedDto.prototype['dn'] = undefined;
+
+/**
+ * @member {Number} dn2
+ */
+ValveMarkExtendedDto.prototype['dn2'] = undefined;
 
 /**
  * @member {Number} pn

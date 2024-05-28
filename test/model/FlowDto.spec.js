@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KdepaApi.UpdateChannelSubRequest();
+    instance = new KdepaApi.FlowDto();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,52 +47,52 @@
       object[property] = value;
   }
 
-  describe('UpdateChannelSubRequest', function() {
-    it('should create an instance of UpdateChannelSubRequest', function() {
-      // uncomment below and update the code to test UpdateChannelSubRequest
-      //var instance = new KdepaApi.UpdateChannelSubRequest();
-      //expect(instance).to.be.a(KdepaApi.UpdateChannelSubRequest);
+  describe('FlowDto', function() {
+    it('should create an instance of FlowDto', function() {
+      // uncomment below and update the code to test FlowDto
+      //var instance = new KdepaApi.FlowDto();
+      //expect(instance).to.be.a(KdepaApi.FlowDto);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new KdepaApi.UpdateChannelSubRequest();
+      //var instance = new KdepaApi.FlowDto();
       //expect(instance).to.be();
     });
 
-    it('should have the property surveyId (base name: "surveyId")', function() {
-      // uncomment below and update the code to test the property surveyId
-      //var instance = new KdepaApi.UpdateChannelSubRequest();
+    it('should have the property date (base name: "date")', function() {
+      // uncomment below and update the code to test the property date
+      //var instance = new KdepaApi.FlowDto();
       //expect(instance).to.be();
     });
 
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instance = new KdepaApi.UpdateChannelSubRequest();
+    it('should have the property position (base name: "position")', function() {
+      // uncomment below and update the code to test the property position
+      //var instance = new KdepaApi.FlowDto();
       //expect(instance).to.be();
     });
 
-    it('should have the property sampleRate (base name: "sampleRate")', function() {
-      // uncomment below and update the code to test the property sampleRate
-      //var instance = new KdepaApi.UpdateChannelSubRequest();
+    it('should have the property valve (base name: "valve")', function() {
+      // uncomment below and update the code to test the property valve
+      //var instance = new KdepaApi.FlowDto();
       //expect(instance).to.be();
     });
 
-    it('should have the property unit (base name: "unit")', function() {
-      // uncomment below and update the code to test the property unit
-      //var instance = new KdepaApi.UpdateChannelSubRequest();
+    it('should have the property leakageAmount (base name: "leakageAmount")', function() {
+      // uncomment below and update the code to test the property leakageAmount
+      //var instance = new KdepaApi.FlowDto();
       //expect(instance).to.be();
     });
 
-    it('should have the property type (base name: "type")', function() {
-      // uncomment below and update the code to test the property type
-      //var instance = new KdepaApi.UpdateChannelSubRequest();
+    it('should have the property tightnessClass (base name: "tightnessClass")', function() {
+      // uncomment below and update the code to test the property tightnessClass
+      //var instance = new KdepaApi.FlowDto();
       //expect(instance).to.be();
     });
 
-    it('should have the property offsetFromZero (base name: "offsetFromZero")', function() {
-      // uncomment below and update the code to test the property offsetFromZero
-      //var instance = new KdepaApi.UpdateChannelSubRequest();
+    it('should have the property registrationSettings (base name: "registrationSettings")', function() {
+      // uncomment below and update the code to test the property registrationSettings
+      //var instance = new KdepaApi.FlowDto();
       //expect(instance).to.be();
     });
 

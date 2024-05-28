@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KdepaApi.Statistics();
+    instance = new KdepaApi.StatisticsDto();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,34 +47,40 @@
       object[property] = value;
   }
 
-  describe('Statistics', function() {
-    it('should create an instance of Statistics', function() {
-      // uncomment below and update the code to test Statistics
-      //var instance = new KdepaApi.Statistics();
-      //expect(instance).to.be.a(KdepaApi.Statistics);
+  describe('StatisticsDto', function() {
+    it('should create an instance of StatisticsDto', function() {
+      // uncomment below and update the code to test StatisticsDto
+      //var instance = new KdepaApi.StatisticsDto();
+      //expect(instance).to.be.a(KdepaApi.StatisticsDto);
     });
 
-    it('should have the property min (base name: "min")', function() {
-      // uncomment below and update the code to test the property min
-      //var instance = new KdepaApi.Statistics();
+    it('should have the property hasInterval (base name: "hasInterval")', function() {
+      // uncomment below and update the code to test the property hasInterval
+      //var instance = new KdepaApi.StatisticsDto();
       //expect(instance).to.be();
     });
 
-    it('should have the property max (base name: "max")', function() {
-      // uncomment below and update the code to test the property max
-      //var instance = new KdepaApi.Statistics();
+    it('should have the property lower (base name: "lower")', function() {
+      // uncomment below and update the code to test the property lower
+      //var instance = new KdepaApi.StatisticsDto();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property upper (base name: "upper")', function() {
+      // uncomment below and update the code to test the property upper
+      //var instance = new KdepaApi.StatisticsDto();
       //expect(instance).to.be();
     });
 
     it('should have the property p (base name: "p")', function() {
       // uncomment below and update the code to test the property p
-      //var instance = new KdepaApi.Statistics();
+      //var instance = new KdepaApi.StatisticsDto();
       //expect(instance).to.be();
     });
 
     it('should have the property fine (base name: "fine")', function() {
       // uncomment below and update the code to test the property fine
-      //var instance = new KdepaApi.Statistics();
+      //var instance = new KdepaApi.StatisticsDto();
       //expect(instance).to.be();
     });
 

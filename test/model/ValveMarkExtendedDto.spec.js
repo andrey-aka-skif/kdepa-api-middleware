@@ -66,26 +66,38 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property valveTypeId (base name: "valveTypeId")', function() {
-      // uncomment below and update the code to test the property valveTypeId
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
       //var instance = new KdepaApi.ValveMarkExtendedDto();
       //expect(instance).to.be();
     });
 
-    it('should have the property valveType (base name: "valveType")', function() {
-      // uncomment below and update the code to test the property valveType
+    it('should have the property types (base name: "types")', function() {
+      // uncomment below and update the code to test the property types
       //var instance = new KdepaApi.ValveMarkExtendedDto();
       //expect(instance).to.be();
     });
 
-    it('should have the property valveTypes (base name: "valveTypes")', function() {
-      // uncomment below and update the code to test the property valveTypes
+    it('should have the property design (base name: "design")', function() {
+      // uncomment below and update the code to test the property design
+      //var instance = new KdepaApi.ValveMarkExtendedDto();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property designs (base name: "designs")', function() {
+      // uncomment below and update the code to test the property designs
       //var instance = new KdepaApi.ValveMarkExtendedDto();
       //expect(instance).to.be();
     });
 
     it('should have the property dn (base name: "dn")', function() {
       // uncomment below and update the code to test the property dn
+      //var instance = new KdepaApi.ValveMarkExtendedDto();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property dn2 (base name: "dn2")', function() {
+      // uncomment below and update the code to test the property dn2
       //var instance = new KdepaApi.ValveMarkExtendedDto();
       //expect(instance).to.be();
     });

@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The Statistics model module.
- * @module model/Statistics
+ * The StatisticsDto model module.
+ * @module model/StatisticsDto
  * @version 0.1.0
  */
-class Statistics {
+class StatisticsDto {
     /**
-     * Constructs a new <code>Statistics</code>.
-     * @alias module:model/Statistics
+     * Constructs a new <code>StatisticsDto</code>.
+     * @alias module:model/StatisticsDto
      */
     constructor() { 
         
-        Statistics.initialize(this);
+        StatisticsDto.initialize(this);
     }
 
     /**
@@ -37,21 +37,24 @@ class Statistics {
     }
 
     /**
-     * Constructs a <code>Statistics</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>StatisticsDto</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/Statistics} obj Optional instance to populate.
-     * @return {module:model/Statistics} The populated <code>Statistics</code> instance.
+     * @param {module:model/StatisticsDto} obj Optional instance to populate.
+     * @return {module:model/StatisticsDto} The populated <code>StatisticsDto</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new Statistics();
+            obj = obj || new StatisticsDto();
 
-            if (data.hasOwnProperty('min')) {
-                obj['min'] = ApiClient.convertToType(data['min'], 'Number');
+            if (data.hasOwnProperty('hasInterval')) {
+                obj['hasInterval'] = ApiClient.convertToType(data['hasInterval'], 'Boolean');
             }
-            if (data.hasOwnProperty('max')) {
-                obj['max'] = ApiClient.convertToType(data['max'], 'Number');
+            if (data.hasOwnProperty('lower')) {
+                obj['lower'] = ApiClient.convertToType(data['lower'], 'Number');
+            }
+            if (data.hasOwnProperty('upper')) {
+                obj['upper'] = ApiClient.convertToType(data['upper'], 'Number');
             }
             if (data.hasOwnProperty('p')) {
                 obj['p'] = ApiClient.convertToType(data['p'], 'Number');
@@ -64,9 +67,9 @@ class Statistics {
     }
 
     /**
-     * Validates the JSON data with respect to <code>Statistics</code>.
+     * Validates the JSON data with respect to <code>StatisticsDto</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Statistics</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>StatisticsDto</code>.
      */
     static validateJSON(data) {
 
@@ -79,29 +82,34 @@ class Statistics {
 
 
 /**
- * @member {Number} min
+ * @member {Boolean} hasInterval
  */
-Statistics.prototype['min'] = undefined;
+StatisticsDto.prototype['hasInterval'] = undefined;
 
 /**
- * @member {Number} max
+ * @member {Number} lower
  */
-Statistics.prototype['max'] = undefined;
+StatisticsDto.prototype['lower'] = undefined;
+
+/**
+ * @member {Number} upper
+ */
+StatisticsDto.prototype['upper'] = undefined;
 
 /**
  * @member {Number} p
  */
-Statistics.prototype['p'] = undefined;
+StatisticsDto.prototype['p'] = undefined;
 
 /**
  * @member {Boolean} fine
  */
-Statistics.prototype['fine'] = undefined;
+StatisticsDto.prototype['fine'] = undefined;
 
 
 
 
 
 
-export default Statistics;
+export default StatisticsDto;
 

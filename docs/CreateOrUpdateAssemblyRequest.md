@@ -9,7 +9,5 @@ Name | Type | Description | Notes
 **motorId** | **Number** |  | [optional] 
 **positionId** | **Number** |  | [optional] 
 **buildingDate** | **Date** |  | [optional] 
-**openTime** | **Number** |  | [optional] 
-**closeTime** | **Number** |  | [optional] 
 
 
