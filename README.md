@@ -213,6 +213,7 @@ Class | Method | HTTP request | Description
 *KdepaApi.SurveysApi* | [**surveysExtendedGet**](docs/SurveysApi.md#surveysExtendedGet) | **GET** /Surveys/extended | Получить расширенный пагинированый список Обследований
 *KdepaApi.SurveysApi* | [**surveysGet**](docs/SurveysApi.md#surveysGet) | **GET** /Surveys | Получить пагинированый список Обследований
 *KdepaApi.SurveysApi* | [**surveysIdChannelsChannelIdGet**](docs/SurveysApi.md#surveysIdChannelsChannelIdGet) | **GET** /Surveys/{id}/channels/{channelId} | Получить график канала по id Обследования и channelId канала
+*KdepaApi.SurveysApi* | [**surveysIdChartsChannelGet**](docs/SurveysApi.md#surveysIdChartsChannelGet) | **GET** /Surveys/{id}/charts/{channel} | Получить график по id Обследования и типу канала
 *KdepaApi.SurveysApi* | [**surveysIdDelete**](docs/SurveysApi.md#surveysIdDelete) | **DELETE** /Surveys/{id} | Удалить Обследование
 *KdepaApi.SurveysApi* | [**surveysIdDiagnosticsPost**](docs/SurveysApi.md#surveysIdDiagnosticsPost) | **POST** /Surveys/{id}/diagnostics | Создать Диагностирование для Обследования
 *KdepaApi.SurveysApi* | [**surveysIdGet**](docs/SurveysApi.md#surveysIdGet) | **GET** /Surveys/{id} | Получить Обследование по id
@@ -255,7 +256,10 @@ Class | Method | HTTP request | Description
  - [KdepaApi.CabinetsQueryFilterDto](docs/CabinetsQueryFilterDto.md)
  - [KdepaApi.ChannelDto](docs/ChannelDto.md)
  - [KdepaApi.ChannelRawDto](docs/ChannelRawDto.md)
+ - [KdepaApi.ChannelType](docs/ChannelType.md)
  - [KdepaApi.ChartPoint](docs/ChartPoint.md)
+ - [KdepaApi.ChartResult](docs/ChartResult.md)
+ - [KdepaApi.ChartResultMetadata](docs/ChartResultMetadata.md)
  - [KdepaApi.ChartType](docs/ChartType.md)
  - [KdepaApi.ClimaticExecutionDto](docs/ClimaticExecutionDto.md)
  - [KdepaApi.CreateChannelSubRequest](docs/CreateChannelSubRequest.md)
@@ -299,6 +303,7 @@ Class | Method | HTTP request | Description
  - [KdepaApi.MotorMarksQueryFilterDto](docs/MotorMarksQueryFilterDto.md)
  - [KdepaApi.MotorsQueryFilterDto](docs/MotorsQueryFilterDto.md)
  - [KdepaApi.NameValuePareDto](docs/NameValuePareDto.md)
+ - [KdepaApi.Point](docs/Point.md)
  - [KdepaApi.PositionDto](docs/PositionDto.md)
  - [KdepaApi.PositionDtoPositionsQueryFilterDtoPagedItemsDto](docs/PositionDtoPositionsQueryFilterDtoPagedItemsDto.md)
  - [KdepaApi.PositionExtendedDto](docs/PositionExtendedDto.md)

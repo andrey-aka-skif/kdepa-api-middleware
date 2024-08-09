@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**surveysExtendedGet**](SurveysApi.md#surveysExtendedGet) | **GET** /Surveys/extended | Получить расширенный пагинированый список Обследований
 [**surveysGet**](SurveysApi.md#surveysGet) | **GET** /Surveys | Получить пагинированый список Обследований
 [**surveysIdChannelsChannelIdGet**](SurveysApi.md#surveysIdChannelsChannelIdGet) | **GET** /Surveys/{id}/channels/{channelId} | Получить график канала по id Обследования и channelId канала
+[**surveysIdChartsChannelGet**](SurveysApi.md#surveysIdChartsChannelGet) | **GET** /Surveys/{id}/charts/{channel} | Получить график по id Обследования и типу канала
 [**surveysIdDelete**](SurveysApi.md#surveysIdDelete) | **DELETE** /Surveys/{id} | Удалить Обследование
 [**surveysIdDiagnosticsPost**](SurveysApi.md#surveysIdDiagnosticsPost) | **POST** /Surveys/{id}/diagnostics | Создать Диагностирование для Обследования
 [**surveysIdGet**](SurveysApi.md#surveysIdGet) | **GET** /Surveys/{id} | Получить Обследование по id
@@ -186,6 +187,66 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[ChartPoint]**](ChartPoint.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## surveysIdChartsChannelGet
+
+> ChartResult surveysIdChartsChannelGet(id, channel, opts)
+
+Получить график по id Обследования и типу канала
+
+### Example
+
+```javascript
+import KdepaApi from 'kdepa_api';
+
+let apiInstance = new KdepaApi.SurveysApi();
+let id = 56; // Number | 
+let channel = new KdepaApi.ChannelType(); // ChannelType | 
+let opts = {
+  'postProcessing': "postProcessing_example", // String | 
+  'region': "region_example", // String | 
+  'regionPadding': 3.4, // Number | 
+  'from': 3.4, // Number | 
+  'to': 3.4, // Number | 
+  'decimation': "decimation_example", // String | 
+  'decimationSamples': 56 // Number | 
+};
+apiInstance.surveysIdChartsChannelGet(id, channel, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**|  | 
+ **channel** | [**ChannelType**](.md)|  | 
+ **postProcessing** | **String**|  | [optional] 
+ **region** | **String**|  | [optional] 
+ **regionPadding** | **Number**|  | [optional] 
+ **from** | **Number**|  | [optional] 
+ **to** | **Number**|  | [optional] 
+ **decimation** | **String**|  | [optional] 
+ **decimationSamples** | **Number**|  | [optional] 
+
+### Return type
+
+[**ChartResult**](ChartResult.md)
 
 ### Authorization
 

@@ -18,7 +18,10 @@ docs/CabinetsApi.md
 docs/CabinetsQueryFilterDto.md
 docs/ChannelDto.md
 docs/ChannelRawDto.md
+docs/ChannelType.md
 docs/ChartPoint.md
+docs/ChartResult.md
+docs/ChartResultMetadata.md
 docs/ChartType.md
 docs/ClimaticExecutionDto.md
 docs/CreateChannelSubRequest.md
@@ -72,6 +75,7 @@ docs/MotorsApi.md
 docs/MotorsQueryFilterDto.md
 docs/NameValuePareDto.md
 docs/OkmpConnectionsApi.md
+docs/Point.md
 docs/PositionDto.md
 docs/PositionDtoPositionsQueryFilterDtoPagedItemsDto.md
 docs/PositionExtendedDto.md
@@ -171,7 +175,10 @@ src/model/CabinetDtoCabinetsQueryFilterDtoPagedItemsDto.js
 src/model/CabinetsQueryFilterDto.js
 src/model/ChannelDto.js
 src/model/ChannelRawDto.js
+src/model/ChannelType.js
 src/model/ChartPoint.js
+src/model/ChartResult.js
+src/model/ChartResultMetadata.js
 src/model/ChartType.js
 src/model/ClimaticExecutionDto.js
 src/model/CreateChannelSubRequest.js
@@ -215,6 +222,7 @@ src/model/MotorMarkDtoMotorMarksQueryFilterDtoPagedItemsDto.js
 src/model/MotorMarksQueryFilterDto.js
 src/model/MotorsQueryFilterDto.js
 src/model/NameValuePareDto.js
+src/model/Point.js
 src/model/PositionDto.js
 src/model/PositionDtoPositionsQueryFilterDtoPagedItemsDto.js
 src/model/PositionExtendedDto.js
@@ -300,7 +308,10 @@ test/model/CabinetDtoCabinetsQueryFilterDtoPagedItemsDto.spec.js
 test/model/CabinetsQueryFilterDto.spec.js
 test/model/ChannelDto.spec.js
 test/model/ChannelRawDto.spec.js
+test/model/ChannelType.spec.js
 test/model/ChartPoint.spec.js
+test/model/ChartResult.spec.js
+test/model/ChartResultMetadata.spec.js
 test/model/ChartType.spec.js
 test/model/ClimaticExecutionDto.spec.js
 test/model/CreateChannelSubRequest.spec.js
@@ -344,6 +355,7 @@ test/model/MotorMarkDtoMotorMarksQueryFilterDtoPagedItemsDto.spec.js
 test/model/MotorMarksQueryFilterDto.spec.js
 test/model/MotorsQueryFilterDto.spec.js
 test/model/NameValuePareDto.spec.js
+test/model/Point.spec.js
 test/model/PositionDto.spec.js
 test/model/PositionDtoPositionsQueryFilterDtoPagedItemsDto.spec.js
 test/model/PositionExtendedDto.spec.js

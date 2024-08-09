@@ -13,7 +13,9 @@
 
 
 import ApiClient from "../ApiClient";
+import ChannelType from '../model/ChannelType';
 import ChartPoint from '../model/ChartPoint';
+import ChartResult from '../model/ChartResult';
 import ChartType from '../model/ChartType';
 import CreateSurveyRequest from '../model/CreateSurveyRequest';
 import ProblemDetails from '../model/ProblemDetails';
@@ -254,6 +256,83 @@ export default class SurveysApi {
      */
     surveysIdChannelsChannelIdGet(id, channelId, opts) {
       return this.surveysIdChannelsChannelIdGetWithHttpInfo(id, channelId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Получить график по id Обследования и типу канала
+     * @param {Number} id 
+     * @param {module:model/ChannelType} channel 
+     * @param {Object} opts Optional parameters
+     * @param {String} [postProcessing] 
+     * @param {String} [region] 
+     * @param {Number} [regionPadding] 
+     * @param {Number} [from] 
+     * @param {Number} [to] 
+     * @param {String} [decimation] 
+     * @param {Number} [decimationSamples] 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChartResult} and HTTP response
+     */
+    surveysIdChartsChannelGetWithHttpInfo(id, channel, opts) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling surveysIdChartsChannelGet");
+      }
+      // verify the required parameter 'channel' is set
+      if (channel === undefined || channel === null) {
+        throw new Error("Missing the required parameter 'channel' when calling surveysIdChartsChannelGet");
+      }
+
+      let pathParams = {
+        'id': id,
+        'channel': channel
+      };
+      let queryParams = {
+        'PostProcessing': opts['postProcessing'],
+        'Region': opts['region'],
+        'RegionPadding': opts['regionPadding'],
+        'From': opts['from'],
+        'To': opts['to'],
+        'Decimation': opts['decimation'],
+        'DecimationSamples': opts['decimationSamples']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ChartResult;
+      return this.apiClient.callApi(
+        '/Surveys/{id}/charts/{channel}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Получить график по id Обследования и типу канала
+     * @param {Number} id 
+     * @param {module:model/ChannelType} channel 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.postProcessing 
+     * @param {String} opts.region 
+     * @param {Number} opts.regionPadding 
+     * @param {Number} opts.from 
+     * @param {Number} opts.to 
+     * @param {String} opts.decimation 
+     * @param {Number} opts.decimationSamples 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChartResult}
+     */
+    surveysIdChartsChannelGet(id, channel, opts) {
+      return this.surveysIdChartsChannelGetWithHttpInfo(id, channel, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -25,7 +25,10 @@ import CabinetDtoCabinetsQueryFilterDtoPagedItemsDto from './model/CabinetDtoCab
 import CabinetsQueryFilterDto from './model/CabinetsQueryFilterDto';
 import ChannelDto from './model/ChannelDto';
 import ChannelRawDto from './model/ChannelRawDto';
+import ChannelType from './model/ChannelType';
 import ChartPoint from './model/ChartPoint';
+import ChartResult from './model/ChartResult';
+import ChartResultMetadata from './model/ChartResultMetadata';
 import ChartType from './model/ChartType';
 import ClimaticExecutionDto from './model/ClimaticExecutionDto';
 import CreateChannelSubRequest from './model/CreateChannelSubRequest';
@@ -69,6 +72,7 @@ import MotorMarkDtoMotorMarksQueryFilterDtoPagedItemsDto from './model/MotorMark
 import MotorMarksQueryFilterDto from './model/MotorMarksQueryFilterDto';
 import MotorsQueryFilterDto from './model/MotorsQueryFilterDto';
 import NameValuePareDto from './model/NameValuePareDto';
+import Point from './model/Point';
 import PositionDto from './model/PositionDto';
 import PositionDtoPositionsQueryFilterDtoPagedItemsDto from './model/PositionDtoPositionsQueryFilterDtoPagedItemsDto';
 import PositionExtendedDto from './model/PositionExtendedDto';
@@ -255,10 +259,28 @@ export {
     ChannelRawDto,
 
     /**
+     * The ChannelType model constructor.
+     * @property {module:model/ChannelType}
+     */
+    ChannelType,
+
+    /**
      * The ChartPoint model constructor.
      * @property {module:model/ChartPoint}
      */
     ChartPoint,
+
+    /**
+     * The ChartResult model constructor.
+     * @property {module:model/ChartResult}
+     */
+    ChartResult,
+
+    /**
+     * The ChartResultMetadata model constructor.
+     * @property {module:model/ChartResultMetadata}
+     */
+    ChartResultMetadata,
 
     /**
      * The ChartType model constructor.
@@ -517,6 +539,12 @@ export {
      * @property {module:model/NameValuePareDto}
      */
     NameValuePareDto,
+
+    /**
+     * The Point model constructor.
+     * @property {module:model/Point}
+     */
+    Point,
 
     /**
      * The PositionDto model constructor.
