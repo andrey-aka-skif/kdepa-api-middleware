@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**channelName** | **String** |  | [optional] 
 **sampleRate** | **Number** |  | [optional] 
-**postProcessing** | **String** |  | [optional] 
+**from** | **Number** |  | [optional] 
+**to** | **Number** |  | [optional] 
+**spectrum** | **String** |  | [optional] 
+**envelope** | **String** |  | [optional] 
 **decimation** | **String** |  | [optional] 
 **decimationSamples** | **Number** |  | [optional] 
 **decimationRatio** | **Number** |  | [optional] 
-**fromTime** | **Number** |  | [optional] 
-**toTime** | **Number** |  | [optional] 
-**channelName** | **String** |  | [optional] 
 **errors** | **[String]** |  | [optional] 
 
 

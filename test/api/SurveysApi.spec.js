@@ -68,20 +68,20 @@
         done();
       });
     });
-    describe('surveysIdChannelsChannelIdGet', function() {
-      it('should call surveysIdChannelsChannelIdGet successfully', function(done) {
-        //uncomment below and update the code to test surveysIdChannelsChannelIdGet
-        //instance.surveysIdChannelsChannelIdGet(function(error) {
+    describe('surveysIdChannelChannelGet', function() {
+      it('should call surveysIdChannelChannelGet successfully', function(done) {
+        //uncomment below and update the code to test surveysIdChannelChannelGet
+        //instance.surveysIdChannelChannelGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('surveysIdChartsChannelGet', function() {
-      it('should call surveysIdChartsChannelGet successfully', function(done) {
-        //uncomment below and update the code to test surveysIdChartsChannelGet
-        //instance.surveysIdChartsChannelGet(function(error) {
+    describe('surveysIdChannelsChannelIdGet', function() {
+      it('should call surveysIdChannelsChannelIdGet successfully', function(done) {
+        //uncomment below and update the code to test surveysIdChannelsChannelIdGet
+        //instance.surveysIdChannelsChannelIdGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

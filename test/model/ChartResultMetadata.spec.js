@@ -54,14 +54,38 @@
       //expect(instance).to.be.a(KdepaApi.ChartResultMetadata);
     });
 
+    it('should have the property channelName (base name: "channelName")', function() {
+      // uncomment below and update the code to test the property channelName
+      //var instance = new KdepaApi.ChartResultMetadata();
+      //expect(instance).to.be();
+    });
+
     it('should have the property sampleRate (base name: "sampleRate")', function() {
       // uncomment below and update the code to test the property sampleRate
       //var instance = new KdepaApi.ChartResultMetadata();
       //expect(instance).to.be();
     });
 
-    it('should have the property postProcessing (base name: "postProcessing")', function() {
-      // uncomment below and update the code to test the property postProcessing
+    it('should have the property from (base name: "from")', function() {
+      // uncomment below and update the code to test the property from
+      //var instance = new KdepaApi.ChartResultMetadata();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property to (base name: "to")', function() {
+      // uncomment below and update the code to test the property to
+      //var instance = new KdepaApi.ChartResultMetadata();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property spectrum (base name: "spectrum")', function() {
+      // uncomment below and update the code to test the property spectrum
+      //var instance = new KdepaApi.ChartResultMetadata();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property envelope (base name: "envelope")', function() {
+      // uncomment below and update the code to test the property envelope
       //var instance = new KdepaApi.ChartResultMetadata();
       //expect(instance).to.be();
     });
@@ -80,24 +104,6 @@
 
     it('should have the property decimationRatio (base name: "decimationRatio")', function() {
       // uncomment below and update the code to test the property decimationRatio
-      //var instance = new KdepaApi.ChartResultMetadata();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property fromTime (base name: "fromTime")', function() {
-      // uncomment below and update the code to test the property fromTime
-      //var instance = new KdepaApi.ChartResultMetadata();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property toTime (base name: "toTime")', function() {
-      // uncomment below and update the code to test the property toTime
-      //var instance = new KdepaApi.ChartResultMetadata();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property channelName (base name: "channelName")', function() {
-      // uncomment below and update the code to test the property channelName
       //var instance = new KdepaApi.ChartResultMetadata();
       //expect(instance).to.be();
     });

@@ -47,11 +47,23 @@ class ChartResultMetadata {
         if (data) {
             obj = obj || new ChartResultMetadata();
 
+            if (data.hasOwnProperty('channelName')) {
+                obj['channelName'] = ApiClient.convertToType(data['channelName'], 'String');
+            }
             if (data.hasOwnProperty('sampleRate')) {
                 obj['sampleRate'] = ApiClient.convertToType(data['sampleRate'], 'Number');
             }
-            if (data.hasOwnProperty('postProcessing')) {
-                obj['postProcessing'] = ApiClient.convertToType(data['postProcessing'], 'String');
+            if (data.hasOwnProperty('from')) {
+                obj['from'] = ApiClient.convertToType(data['from'], 'Number');
+            }
+            if (data.hasOwnProperty('to')) {
+                obj['to'] = ApiClient.convertToType(data['to'], 'Number');
+            }
+            if (data.hasOwnProperty('spectrum')) {
+                obj['spectrum'] = ApiClient.convertToType(data['spectrum'], 'String');
+            }
+            if (data.hasOwnProperty('envelope')) {
+                obj['envelope'] = ApiClient.convertToType(data['envelope'], 'String');
             }
             if (data.hasOwnProperty('decimation')) {
                 obj['decimation'] = ApiClient.convertToType(data['decimation'], 'String');
@@ -61,15 +73,6 @@ class ChartResultMetadata {
             }
             if (data.hasOwnProperty('decimationRatio')) {
                 obj['decimationRatio'] = ApiClient.convertToType(data['decimationRatio'], 'Number');
-            }
-            if (data.hasOwnProperty('fromTime')) {
-                obj['fromTime'] = ApiClient.convertToType(data['fromTime'], 'Number');
-            }
-            if (data.hasOwnProperty('toTime')) {
-                obj['toTime'] = ApiClient.convertToType(data['toTime'], 'Number');
-            }
-            if (data.hasOwnProperty('channelName')) {
-                obj['channelName'] = ApiClient.convertToType(data['channelName'], 'String');
             }
             if (data.hasOwnProperty('errors')) {
                 obj['errors'] = ApiClient.convertToType(data['errors'], ['String']);
@@ -85,16 +88,20 @@ class ChartResultMetadata {
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['postProcessing'] && !(typeof data['postProcessing'] === 'string' || data['postProcessing'] instanceof String)) {
-            throw new Error("Expected the field `postProcessing` to be a primitive type in the JSON string but got " + data['postProcessing']);
+        if (data['channelName'] && !(typeof data['channelName'] === 'string' || data['channelName'] instanceof String)) {
+            throw new Error("Expected the field `channelName` to be a primitive type in the JSON string but got " + data['channelName']);
+        }
+        // ensure the json data is a string
+        if (data['spectrum'] && !(typeof data['spectrum'] === 'string' || data['spectrum'] instanceof String)) {
+            throw new Error("Expected the field `spectrum` to be a primitive type in the JSON string but got " + data['spectrum']);
+        }
+        // ensure the json data is a string
+        if (data['envelope'] && !(typeof data['envelope'] === 'string' || data['envelope'] instanceof String)) {
+            throw new Error("Expected the field `envelope` to be a primitive type in the JSON string but got " + data['envelope']);
         }
         // ensure the json data is a string
         if (data['decimation'] && !(typeof data['decimation'] === 'string' || data['decimation'] instanceof String)) {
             throw new Error("Expected the field `decimation` to be a primitive type in the JSON string but got " + data['decimation']);
-        }
-        // ensure the json data is a string
-        if (data['channelName'] && !(typeof data['channelName'] === 'string' || data['channelName'] instanceof String)) {
-            throw new Error("Expected the field `channelName` to be a primitive type in the JSON string but got " + data['channelName']);
         }
         // ensure the json data is an array
         if (!Array.isArray(data['errors'])) {
@@ -110,14 +117,34 @@ class ChartResultMetadata {
 
 
 /**
+ * @member {String} channelName
+ */
+ChartResultMetadata.prototype['channelName'] = undefined;
+
+/**
  * @member {Number} sampleRate
  */
 ChartResultMetadata.prototype['sampleRate'] = undefined;
 
 /**
- * @member {String} postProcessing
+ * @member {Number} from
  */
-ChartResultMetadata.prototype['postProcessing'] = undefined;
+ChartResultMetadata.prototype['from'] = undefined;
+
+/**
+ * @member {Number} to
+ */
+ChartResultMetadata.prototype['to'] = undefined;
+
+/**
+ * @member {String} spectrum
+ */
+ChartResultMetadata.prototype['spectrum'] = undefined;
+
+/**
+ * @member {String} envelope
+ */
+ChartResultMetadata.prototype['envelope'] = undefined;
 
 /**
  * @member {String} decimation
@@ -133,21 +160,6 @@ ChartResultMetadata.prototype['decimationSamples'] = undefined;
  * @member {Number} decimationRatio
  */
 ChartResultMetadata.prototype['decimationRatio'] = undefined;
-
-/**
- * @member {Number} fromTime
- */
-ChartResultMetadata.prototype['fromTime'] = undefined;
-
-/**
- * @member {Number} toTime
- */
-ChartResultMetadata.prototype['toTime'] = undefined;
-
-/**
- * @member {String} channelName
- */
-ChartResultMetadata.prototype['channelName'] = undefined;
 
 /**
  * @member {Array.<String>} errors

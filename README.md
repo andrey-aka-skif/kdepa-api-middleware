@@ -212,8 +212,8 @@ Class | Method | HTTP request | Description
 *KdepaApi.StationsApi* | [**stationsPost**](docs/StationsApi.md#stationsPost) | **POST** /Stations | Создать Станцию
 *KdepaApi.SurveysApi* | [**surveysExtendedGet**](docs/SurveysApi.md#surveysExtendedGet) | **GET** /Surveys/extended | Получить расширенный пагинированый список Обследований
 *KdepaApi.SurveysApi* | [**surveysGet**](docs/SurveysApi.md#surveysGet) | **GET** /Surveys | Получить пагинированый список Обследований
+*KdepaApi.SurveysApi* | [**surveysIdChannelChannelGet**](docs/SurveysApi.md#surveysIdChannelChannelGet) | **GET** /Surveys/{id}/channel/{channel} | Получить график по id Обследования и типу канала
 *KdepaApi.SurveysApi* | [**surveysIdChannelsChannelIdGet**](docs/SurveysApi.md#surveysIdChannelsChannelIdGet) | **GET** /Surveys/{id}/channels/{channelId} | Получить график канала по id Обследования и channelId канала
-*KdepaApi.SurveysApi* | [**surveysIdChartsChannelGet**](docs/SurveysApi.md#surveysIdChartsChannelGet) | **GET** /Surveys/{id}/charts/{channel} | Получить график по id Обследования и типу канала
 *KdepaApi.SurveysApi* | [**surveysIdDelete**](docs/SurveysApi.md#surveysIdDelete) | **DELETE** /Surveys/{id} | Удалить Обследование
 *KdepaApi.SurveysApi* | [**surveysIdDiagnosticsPost**](docs/SurveysApi.md#surveysIdDiagnosticsPost) | **POST** /Surveys/{id}/diagnostics | Создать Диагностирование для Обследования
 *KdepaApi.SurveysApi* | [**surveysIdGet**](docs/SurveysApi.md#surveysIdGet) | **GET** /Surveys/{id} | Получить Обследование по id
