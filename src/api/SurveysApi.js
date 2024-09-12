@@ -22,6 +22,8 @@ import ProblemDetails from '../model/ProblemDetails';
 import SurveyDto from '../model/SurveyDto';
 import SurveyDtoSurveysQueryFilterDtoPagedItemsDto from '../model/SurveyDtoSurveysQueryFilterDtoPagedItemsDto';
 import SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto from '../model/SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto';
+import SurveyProtocolDto from '../model/SurveyProtocolDto';
+import UpdateSurveyProtocolRequest from '../model/UpdateSurveyProtocolRequest';
 import UpdateSurveyRequest from '../model/UpdateSurveyRequest';
 
 /**
@@ -474,6 +476,103 @@ export default class SurveysApi {
      */
     surveysIdGet(id) {
       return this.surveysIdGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Получить протокол обследования по id обследования
+     * @param {Number} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SurveyProtocolDto} and HTTP response
+     */
+    surveysIdProtocolGetWithHttpInfo(id) {
+      let postBody = null;
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling surveysIdProtocolGet");
+      }
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = SurveyProtocolDto;
+      return this.apiClient.callApi(
+        '/Surveys/{id}/protocol', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Получить протокол обследования по id обследования
+     * @param {Number} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SurveyProtocolDto}
+     */
+    surveysIdProtocolGet(id) {
+      return this.surveysIdProtocolGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Обновить протокол обследования по id обследования
+     * @param {Number} id 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UpdateSurveyProtocolRequest} [updateSurveyProtocolRequest] 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SurveyProtocolDto} and HTTP response
+     */
+    surveysIdProtocolPutWithHttpInfo(id, opts) {
+      opts = opts || {};
+      let postBody = opts['updateSurveyProtocolRequest'];
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling surveysIdProtocolPut");
+      }
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json', 'text/json', 'application/*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = SurveyProtocolDto;
+      return this.apiClient.callApi(
+        '/Surveys/{id}/protocol', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Обновить протокол обследования по id обследования
+     * @param {Number} id 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UpdateSurveyProtocolRequest} opts.updateSurveyProtocolRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SurveyProtocolDto}
+     */
+    surveysIdProtocolPut(id, opts) {
+      return this.surveysIdProtocolPutWithHttpInfo(id, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

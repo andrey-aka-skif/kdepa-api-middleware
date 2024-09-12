@@ -217,6 +217,8 @@ Class | Method | HTTP request | Description
 *KdepaApi.SurveysApi* | [**surveysIdDelete**](docs/SurveysApi.md#surveysIdDelete) | **DELETE** /Surveys/{id} | Удалить Обследование
 *KdepaApi.SurveysApi* | [**surveysIdDiagnosticsPost**](docs/SurveysApi.md#surveysIdDiagnosticsPost) | **POST** /Surveys/{id}/diagnostics | Создать Диагностирование для Обследования
 *KdepaApi.SurveysApi* | [**surveysIdGet**](docs/SurveysApi.md#surveysIdGet) | **GET** /Surveys/{id} | Получить Обследование по id
+*KdepaApi.SurveysApi* | [**surveysIdProtocolGet**](docs/SurveysApi.md#surveysIdProtocolGet) | **GET** /Surveys/{id}/protocol | Получить протокол обследования по id обследования
+*KdepaApi.SurveysApi* | [**surveysIdProtocolPut**](docs/SurveysApi.md#surveysIdProtocolPut) | **PUT** /Surveys/{id}/protocol | Обновить протокол обследования по id обследования
 *KdepaApi.SurveysApi* | [**surveysIdPut**](docs/SurveysApi.md#surveysIdPut) | **PUT** /Surveys/{id} | Обновить Обследование
 *KdepaApi.SurveysApi* | [**surveysPost**](docs/SurveysApi.md#surveysPost) | **POST** /Surveys | Создать Обследование
 *KdepaApi.SurveysRawApi* | [**surveysRawGet**](docs/SurveysRawApi.md#surveysRawGet) | **GET** /SurveysRaw | Получить список Сырых Обследований
@@ -338,6 +340,7 @@ Class | Method | HTTP request | Description
  - [KdepaApi.SurveyDtoSurveysQueryFilterDtoPagedItemsDto](docs/SurveyDtoSurveysQueryFilterDtoPagedItemsDto.md)
  - [KdepaApi.SurveyExtendedDto](docs/SurveyExtendedDto.md)
  - [KdepaApi.SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto](docs/SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto.md)
+ - [KdepaApi.SurveyProtocolDto](docs/SurveyProtocolDto.md)
  - [KdepaApi.SurveyRawDto](docs/SurveyRawDto.md)
  - [KdepaApi.SurveysExtendedQueryFilterDto](docs/SurveysExtendedQueryFilterDto.md)
  - [KdepaApi.SystemsQueryFilterDto](docs/SystemsQueryFilterDto.md)
@@ -346,6 +349,7 @@ Class | Method | HTTP request | Description
  - [KdepaApi.TripleParamRowDto](docs/TripleParamRowDto.md)
  - [KdepaApi.UpdateChannelSubRequest](docs/UpdateChannelSubRequest.md)
  - [KdepaApi.UpdateFlowRequest](docs/UpdateFlowRequest.md)
+ - [KdepaApi.UpdateSurveyProtocolRequest](docs/UpdateSurveyProtocolRequest.md)
  - [KdepaApi.UpdateSurveyRequest](docs/UpdateSurveyRequest.md)
  - [KdepaApi.UsingClassDto](docs/UsingClassDto.md)
  - [KdepaApi.ValveDto](docs/ValveDto.md)

@@ -1,6 +1,6 @@
 {
   "name": "@andrey-aka-skif/kdepa-api-middleware",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "КДЭПА CRUD API",
   "main": "dist/index.js",
   "scripts": {

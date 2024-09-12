@@ -114,6 +114,7 @@ docs/SurveyDto.md
 docs/SurveyDtoSurveysQueryFilterDtoPagedItemsDto.md
 docs/SurveyExtendedDto.md
 docs/SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto.md
+docs/SurveyProtocolDto.md
 docs/SurveyRawDto.md
 docs/SurveysApi.md
 docs/SurveysExtendedQueryFilterDto.md
@@ -125,6 +126,7 @@ docs/TripleParamDto.md
 docs/TripleParamRowDto.md
 docs/UpdateChannelSubRequest.md
 docs/UpdateFlowRequest.md
+docs/UpdateSurveyProtocolRequest.md
 docs/UpdateSurveyRequest.md
 docs/UsingClassDto.md
 docs/ValveDto.md
@@ -257,6 +259,7 @@ src/model/SurveyDto.js
 src/model/SurveyDtoSurveysQueryFilterDtoPagedItemsDto.js
 src/model/SurveyExtendedDto.js
 src/model/SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto.js
+src/model/SurveyProtocolDto.js
 src/model/SurveyRawDto.js
 src/model/SurveysExtendedQueryFilterDto.js
 src/model/SystemsQueryFilterDto.js
@@ -265,6 +268,7 @@ src/model/TripleParamDto.js
 src/model/TripleParamRowDto.js
 src/model/UpdateChannelSubRequest.js
 src/model/UpdateFlowRequest.js
+src/model/UpdateSurveyProtocolRequest.js
 src/model/UpdateSurveyRequest.js
 src/model/UsingClassDto.js
 src/model/ValveDto.js
@@ -390,6 +394,7 @@ test/model/SurveyDto.spec.js
 test/model/SurveyDtoSurveysQueryFilterDtoPagedItemsDto.spec.js
 test/model/SurveyExtendedDto.spec.js
 test/model/SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto.spec.js
+test/model/SurveyProtocolDto.spec.js
 test/model/SurveyRawDto.spec.js
 test/model/SurveysExtendedQueryFilterDto.spec.js
 test/model/SystemsQueryFilterDto.spec.js
@@ -398,6 +403,7 @@ test/model/TripleParamDto.spec.js
 test/model/TripleParamRowDto.spec.js
 test/model/UpdateChannelSubRequest.spec.js
 test/model/UpdateFlowRequest.spec.js
+test/model/UpdateSurveyProtocolRequest.spec.js
 test/model/UpdateSurveyRequest.spec.js
 test/model/UsingClassDto.spec.js
 test/model/ValveDto.spec.js

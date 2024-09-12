@@ -118,6 +118,26 @@
         done();
       });
     });
+    describe('surveysIdProtocolGet', function() {
+      it('should call surveysIdProtocolGet successfully', function(done) {
+        //uncomment below and update the code to test surveysIdProtocolGet
+        //instance.surveysIdProtocolGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('surveysIdProtocolPut', function() {
+      it('should call surveysIdProtocolPut successfully', function(done) {
+        //uncomment below and update the code to test surveysIdProtocolPut
+        //instance.surveysIdProtocolPut(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('surveysIdPut', function() {
       it('should call surveysIdPut successfully', function(done) {
         //uncomment below and update the code to test surveysIdPut

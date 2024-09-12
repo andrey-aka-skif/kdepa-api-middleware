@@ -11,6 +11,8 @@ Method | HTTP request | Description
 [**surveysIdDelete**](SurveysApi.md#surveysIdDelete) | **DELETE** /Surveys/{id} | Удалить Обследование
 [**surveysIdDiagnosticsPost**](SurveysApi.md#surveysIdDiagnosticsPost) | **POST** /Surveys/{id}/diagnostics | Создать Диагностирование для Обследования
 [**surveysIdGet**](SurveysApi.md#surveysIdGet) | **GET** /Surveys/{id} | Получить Обследование по id
+[**surveysIdProtocolGet**](SurveysApi.md#surveysIdProtocolGet) | **GET** /Surveys/{id}/protocol | Получить протокол обследования по id обследования
+[**surveysIdProtocolPut**](SurveysApi.md#surveysIdProtocolPut) | **PUT** /Surveys/{id}/protocol | Обновить протокол обследования по id обследования
 [**surveysIdPut**](SurveysApi.md#surveysIdPut) | **PUT** /Surveys/{id} | Обновить Обследование
 [**surveysPost**](SurveysApi.md#surveysPost) | **POST** /Surveys | Создать Обследование
 
@@ -383,6 +385,94 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## surveysIdProtocolGet
+
+> SurveyProtocolDto surveysIdProtocolGet(id)
+
+Получить протокол обследования по id обследования
+
+### Example
+
+```javascript
+import KdepaApi from 'kdepa_api';
+
+let apiInstance = new KdepaApi.SurveysApi();
+let id = 56; // Number | 
+apiInstance.surveysIdProtocolGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**|  | 
+
+### Return type
+
+[**SurveyProtocolDto**](SurveyProtocolDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## surveysIdProtocolPut
+
+> SurveyProtocolDto surveysIdProtocolPut(id, opts)
+
+Обновить протокол обследования по id обследования
+
+### Example
+
+```javascript
+import KdepaApi from 'kdepa_api';
+
+let apiInstance = new KdepaApi.SurveysApi();
+let id = 56; // Number | 
+let opts = {
+  'updateSurveyProtocolRequest': new KdepaApi.UpdateSurveyProtocolRequest() // UpdateSurveyProtocolRequest | 
+};
+apiInstance.surveysIdProtocolPut(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**|  | 
+ **updateSurveyProtocolRequest** | [**UpdateSurveyProtocolRequest**](UpdateSurveyProtocolRequest.md)|  | [optional] 
+
+### Return type
+
+[**SurveyProtocolDto**](SurveyProtocolDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/json, application/*+json
 - **Accept**: text/plain, application/json, text/json
 
 

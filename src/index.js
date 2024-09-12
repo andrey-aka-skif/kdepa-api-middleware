@@ -107,6 +107,7 @@ import SurveyDto from './model/SurveyDto';
 import SurveyDtoSurveysQueryFilterDtoPagedItemsDto from './model/SurveyDtoSurveysQueryFilterDtoPagedItemsDto';
 import SurveyExtendedDto from './model/SurveyExtendedDto';
 import SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto from './model/SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto';
+import SurveyProtocolDto from './model/SurveyProtocolDto';
 import SurveyRawDto from './model/SurveyRawDto';
 import SurveysExtendedQueryFilterDto from './model/SurveysExtendedQueryFilterDto';
 import SystemsQueryFilterDto from './model/SystemsQueryFilterDto';
@@ -115,6 +116,7 @@ import TripleParamDto from './model/TripleParamDto';
 import TripleParamRowDto from './model/TripleParamRowDto';
 import UpdateChannelSubRequest from './model/UpdateChannelSubRequest';
 import UpdateFlowRequest from './model/UpdateFlowRequest';
+import UpdateSurveyProtocolRequest from './model/UpdateSurveyProtocolRequest';
 import UpdateSurveyRequest from './model/UpdateSurveyRequest';
 import UsingClassDto from './model/UsingClassDto';
 import ValveDto from './model/ValveDto';
@@ -751,6 +753,12 @@ export {
     SurveyExtendedDtoSurveysExtendedQueryFilterDtoPagedItemsDto,
 
     /**
+     * The SurveyProtocolDto model constructor.
+     * @property {module:model/SurveyProtocolDto}
+     */
+    SurveyProtocolDto,
+
+    /**
      * The SurveyRawDto model constructor.
      * @property {module:model/SurveyRawDto}
      */
@@ -797,6 +805,12 @@ export {
      * @property {module:model/UpdateFlowRequest}
      */
     UpdateFlowRequest,
+
+    /**
+     * The UpdateSurveyProtocolRequest model constructor.
+     * @property {module:model/UpdateSurveyProtocolRequest}
+     */
+    UpdateSurveyProtocolRequest,
 
     /**
      * The UpdateSurveyRequest model constructor.
