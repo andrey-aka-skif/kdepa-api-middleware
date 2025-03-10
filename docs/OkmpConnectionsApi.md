@@ -4,7 +4,7 @@ All URIs are relative to *http://127.0.0.1:5005/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dumpGet**](OkmpConnectionsApi.md#dumpGet) | **GET** /dump | Получить дамп БД
+[**dumpGet**](OkmpConnectionsApi.md#dumpGet) | **GET** /dump | Получить Оперативные позиции
 
 
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 > String dumpGet()
 
-Получить дамп БД
+Получить Оперативные позиции
 
 ### Example
 

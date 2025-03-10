@@ -98,30 +98,10 @@
         done();
       });
     });
-    describe('surveysIdDiagnosticsPost', function() {
-      it('should call surveysIdDiagnosticsPost successfully', function(done) {
-        //uncomment below and update the code to test surveysIdDiagnosticsPost
-        //instance.surveysIdDiagnosticsPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('surveysIdGet', function() {
       it('should call surveysIdGet successfully', function(done) {
         //uncomment below and update the code to test surveysIdGet
         //instance.surveysIdGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('surveysIdProtocolGet', function() {
-      it('should call surveysIdProtocolGet successfully', function(done) {
-        //uncomment below and update the code to test surveysIdProtocolGet
-        //instance.surveysIdProtocolGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -152,6 +132,46 @@
       it('should call surveysPost successfully', function(done) {
         //uncomment below and update the code to test surveysPost
         //instance.surveysPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('surveysProtocolsIdGet', function() {
+      it('should call surveysProtocolsIdGet successfully', function(done) {
+        //uncomment below and update the code to test surveysProtocolsIdGet
+        //instance.surveysProtocolsIdGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('surveysSurveyIdActualProtocolGet', function() {
+      it('should call surveysSurveyIdActualProtocolGet successfully', function(done) {
+        //uncomment below and update the code to test surveysSurveyIdActualProtocolGet
+        //instance.surveysSurveyIdActualProtocolGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('surveysSurveyIdDiagnosticsPost', function() {
+      it('should call surveysSurveyIdDiagnosticsPost successfully', function(done) {
+        //uncomment below and update the code to test surveysSurveyIdDiagnosticsPost
+        //instance.surveysSurveyIdDiagnosticsPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('surveysSurveyIdProtocolsGet', function() {
+      it('should call surveysSurveyIdProtocolsGet successfully', function(done) {
+        //uncomment below and update the code to test surveysSurveyIdProtocolsGet
+        //instance.surveysSurveyIdProtocolsGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

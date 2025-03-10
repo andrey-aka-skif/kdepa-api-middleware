@@ -35,7 +35,7 @@ export default class OkmpConnectionsApi {
 
 
     /**
-     * Получить дамп БД
+     * Получить Оперативные позиции
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link String} and HTTP response
      */
     dumpGetWithHttpInfo() {
@@ -62,7 +62,7 @@ export default class OkmpConnectionsApi {
     }
 
     /**
-     * Получить дамп БД
+     * Получить Оперативные позиции
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link String}
      */
     dumpGet() {

@@ -190,7 +190,7 @@ Class | Method | HTTP request | Description
 *KdepaApi.MotorsApi* | [**motorsIdGet**](docs/MotorsApi.md#motorsIdGet) | **GET** /Motors/{id} | Получить Двигатель по id
 *KdepaApi.MotorsApi* | [**motorsIdPut**](docs/MotorsApi.md#motorsIdPut) | **PUT** /Motors/{id} | Обновить Двигатель
 *KdepaApi.MotorsApi* | [**motorsPost**](docs/MotorsApi.md#motorsPost) | **POST** /Motors | Создать Двигатель
-*KdepaApi.OkmpConnectionsApi* | [**dumpGet**](docs/OkmpConnectionsApi.md#dumpGet) | **GET** /dump | Получить дамп БД
+*KdepaApi.OkmpConnectionsApi* | [**dumpGet**](docs/OkmpConnectionsApi.md#dumpGet) | **GET** /dump | Получить Оперативные позиции
 *KdepaApi.PositionsApi* | [**positionsGet**](docs/PositionsApi.md#positionsGet) | **GET** /Positions | Получить пагинированный список Оперативных Позиций
 *KdepaApi.PositionsApi* | [**positionsIdDelete**](docs/PositionsApi.md#positionsIdDelete) | **DELETE** /Positions/{id} | Удалить Оперативную Позицию
 *KdepaApi.PositionsApi* | [**positionsIdExtendedGet**](docs/PositionsApi.md#positionsIdExtendedGet) | **GET** /Positions/{id}/extended | Получить Оперативную позицию по id, включая контент Справочников
@@ -215,12 +215,14 @@ Class | Method | HTTP request | Description
 *KdepaApi.SurveysApi* | [**surveysIdChannelChannelGet**](docs/SurveysApi.md#surveysIdChannelChannelGet) | **GET** /Surveys/{id}/channel/{channel} | Получить график по id Обследования и типу канала
 *KdepaApi.SurveysApi* | [**surveysIdChannelsChannelIdGet**](docs/SurveysApi.md#surveysIdChannelsChannelIdGet) | **GET** /Surveys/{id}/channels/{channelId} | Получить график канала по id Обследования и channelId канала
 *KdepaApi.SurveysApi* | [**surveysIdDelete**](docs/SurveysApi.md#surveysIdDelete) | **DELETE** /Surveys/{id} | Удалить Обследование
-*KdepaApi.SurveysApi* | [**surveysIdDiagnosticsPost**](docs/SurveysApi.md#surveysIdDiagnosticsPost) | **POST** /Surveys/{id}/diagnostics | Создать Диагностирование для Обследования
 *KdepaApi.SurveysApi* | [**surveysIdGet**](docs/SurveysApi.md#surveysIdGet) | **GET** /Surveys/{id} | Получить Обследование по id
-*KdepaApi.SurveysApi* | [**surveysIdProtocolGet**](docs/SurveysApi.md#surveysIdProtocolGet) | **GET** /Surveys/{id}/protocol | Получить протокол обследования по id обследования
-*KdepaApi.SurveysApi* | [**surveysIdProtocolPut**](docs/SurveysApi.md#surveysIdProtocolPut) | **PUT** /Surveys/{id}/protocol | Обновить протокол обследования по id обследования
+*KdepaApi.SurveysApi* | [**surveysIdProtocolPut**](docs/SurveysApi.md#surveysIdProtocolPut) | **PUT** /Surveys/{id}/protocol | Обновить актуальный протокол обследования по id обследования
 *KdepaApi.SurveysApi* | [**surveysIdPut**](docs/SurveysApi.md#surveysIdPut) | **PUT** /Surveys/{id} | Обновить Обследование
 *KdepaApi.SurveysApi* | [**surveysPost**](docs/SurveysApi.md#surveysPost) | **POST** /Surveys | Создать Обследование
+*KdepaApi.SurveysApi* | [**surveysProtocolsIdGet**](docs/SurveysApi.md#surveysProtocolsIdGet) | **GET** /Surveys/protocols/{id} | Получить протокол по id
+*KdepaApi.SurveysApi* | [**surveysSurveyIdActualProtocolGet**](docs/SurveysApi.md#surveysSurveyIdActualProtocolGet) | **GET** /Surveys/{surveyId}/actual-protocol | Получить актуальный протокол по id обследования
+*KdepaApi.SurveysApi* | [**surveysSurveyIdDiagnosticsPost**](docs/SurveysApi.md#surveysSurveyIdDiagnosticsPost) | **POST** /Surveys/{surveyId}/diagnostics | Создать Диагностирование для Обследования
+*KdepaApi.SurveysApi* | [**surveysSurveyIdProtocolsGet**](docs/SurveysApi.md#surveysSurveyIdProtocolsGet) | **GET** /Surveys/{surveyId}/protocols | Получить все протоколы по id обследования
 *KdepaApi.SurveysRawApi* | [**surveysRawGet**](docs/SurveysRawApi.md#surveysRawGet) | **GET** /SurveysRaw | Получить список Сырых Обследований
 *KdepaApi.SurveysRawApi* | [**surveysRawGuidChannelsIndexGet**](docs/SurveysRawApi.md#surveysRawGuidChannelsIndexGet) | **GET** /SurveysRaw/{guid}/channels/{index} | Получить график канала по guid Сырого Обследования и index канала
 *KdepaApi.SurveysRawApi* | [**surveysRawGuidDelete**](docs/SurveysRawApi.md#surveysRawGuidDelete) | **DELETE** /SurveysRaw/{guid} | Удалить Сырое Обследование

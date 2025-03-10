@@ -9,12 +9,14 @@ Method | HTTP request | Description
 [**surveysIdChannelChannelGet**](SurveysApi.md#surveysIdChannelChannelGet) | **GET** /Surveys/{id}/channel/{channel} | Получить график по id Обследования и типу канала
 [**surveysIdChannelsChannelIdGet**](SurveysApi.md#surveysIdChannelsChannelIdGet) | **GET** /Surveys/{id}/channels/{channelId} | Получить график канала по id Обследования и channelId канала
 [**surveysIdDelete**](SurveysApi.md#surveysIdDelete) | **DELETE** /Surveys/{id} | Удалить Обследование
-[**surveysIdDiagnosticsPost**](SurveysApi.md#surveysIdDiagnosticsPost) | **POST** /Surveys/{id}/diagnostics | Создать Диагностирование для Обследования
 [**surveysIdGet**](SurveysApi.md#surveysIdGet) | **GET** /Surveys/{id} | Получить Обследование по id
-[**surveysIdProtocolGet**](SurveysApi.md#surveysIdProtocolGet) | **GET** /Surveys/{id}/protocol | Получить протокол обследования по id обследования
-[**surveysIdProtocolPut**](SurveysApi.md#surveysIdProtocolPut) | **PUT** /Surveys/{id}/protocol | Обновить протокол обследования по id обследования
+[**surveysIdProtocolPut**](SurveysApi.md#surveysIdProtocolPut) | **PUT** /Surveys/{id}/protocol | Обновить актуальный протокол обследования по id обследования
 [**surveysIdPut**](SurveysApi.md#surveysIdPut) | **PUT** /Surveys/{id} | Обновить Обследование
 [**surveysPost**](SurveysApi.md#surveysPost) | **POST** /Surveys | Создать Обследование
+[**surveysProtocolsIdGet**](SurveysApi.md#surveysProtocolsIdGet) | **GET** /Surveys/protocols/{id} | Получить протокол по id
+[**surveysSurveyIdActualProtocolGet**](SurveysApi.md#surveysSurveyIdActualProtocolGet) | **GET** /Surveys/{surveyId}/actual-protocol | Получить актуальный протокол по id обследования
+[**surveysSurveyIdDiagnosticsPost**](SurveysApi.md#surveysSurveyIdDiagnosticsPost) | **POST** /Surveys/{surveyId}/diagnostics | Создать Диагностирование для Обследования
+[**surveysSurveyIdProtocolsGet**](SurveysApi.md#surveysSurveyIdProtocolsGet) | **GET** /Surveys/{surveyId}/protocols | Получить все протоколы по id обследования
 
 
 
@@ -304,48 +306,6 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## surveysIdDiagnosticsPost
-
-> SurveyDto surveysIdDiagnosticsPost(id)
-
-Создать Диагностирование для Обследования
-
-### Example
-
-```javascript
-import KdepaApi from 'kdepa_api';
-
-let apiInstance = new KdepaApi.SurveysApi();
-let id = 56; // Number | 
-apiInstance.surveysIdDiagnosticsPost(id).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Number**|  | 
-
-### Return type
-
-[**SurveyDto**](SurveyDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
 ## surveysIdGet
 
 > SurveyDto surveysIdGet(id)
@@ -388,53 +348,11 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## surveysIdProtocolGet
-
-> SurveyProtocolDto surveysIdProtocolGet(id)
-
-Получить протокол обследования по id обследования
-
-### Example
-
-```javascript
-import KdepaApi from 'kdepa_api';
-
-let apiInstance = new KdepaApi.SurveysApi();
-let id = 56; // Number | 
-apiInstance.surveysIdProtocolGet(id).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Number**|  | 
-
-### Return type
-
-[**SurveyProtocolDto**](SurveyProtocolDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
 ## surveysIdProtocolPut
 
 > SurveyProtocolDto surveysIdProtocolPut(id, opts)
 
-Обновить протокол обследования по id обследования
+Обновить актуальный протокол обследования по id обследования
 
 ### Example
 
@@ -442,8 +360,9 @@ No authorization required
 import KdepaApi from 'kdepa_api';
 
 let apiInstance = new KdepaApi.SurveysApi();
-let id = 56; // Number | 
+let id = "id_example"; // String | 
 let opts = {
+  'surveyId': 56, // Number | 
   'updateSurveyProtocolRequest': new KdepaApi.UpdateSurveyProtocolRequest() // UpdateSurveyProtocolRequest | 
 };
 apiInstance.surveysIdProtocolPut(id, opts).then((data) => {
@@ -459,7 +378,8 @@ apiInstance.surveysIdProtocolPut(id, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**|  | 
+ **id** | **String**|  | 
+ **surveyId** | **Number**|  | [optional] 
  **updateSurveyProtocolRequest** | [**UpdateSurveyProtocolRequest**](UpdateSurveyProtocolRequest.md)|  | [optional] 
 
 ### Return type
@@ -563,5 +483,173 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json, text/json, application/*+json
+- **Accept**: text/plain, application/json, text/json
+
+
+## surveysProtocolsIdGet
+
+> SurveyProtocolDto surveysProtocolsIdGet(id)
+
+Получить протокол по id
+
+### Example
+
+```javascript
+import KdepaApi from 'kdepa_api';
+
+let apiInstance = new KdepaApi.SurveysApi();
+let id = 56; // Number | 
+apiInstance.surveysProtocolsIdGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**|  | 
+
+### Return type
+
+[**SurveyProtocolDto**](SurveyProtocolDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## surveysSurveyIdActualProtocolGet
+
+> SurveyProtocolDto surveysSurveyIdActualProtocolGet(surveyId)
+
+Получить актуальный протокол по id обследования
+
+### Example
+
+```javascript
+import KdepaApi from 'kdepa_api';
+
+let apiInstance = new KdepaApi.SurveysApi();
+let surveyId = 56; // Number | 
+apiInstance.surveysSurveyIdActualProtocolGet(surveyId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **surveyId** | **Number**|  | 
+
+### Return type
+
+[**SurveyProtocolDto**](SurveyProtocolDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## surveysSurveyIdDiagnosticsPost
+
+> SurveyDto surveysSurveyIdDiagnosticsPost(surveyId)
+
+Создать Диагностирование для Обследования
+
+### Example
+
+```javascript
+import KdepaApi from 'kdepa_api';
+
+let apiInstance = new KdepaApi.SurveysApi();
+let surveyId = 56; // Number | 
+apiInstance.surveysSurveyIdDiagnosticsPost(surveyId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **surveyId** | **Number**|  | 
+
+### Return type
+
+[**SurveyDto**](SurveyDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## surveysSurveyIdProtocolsGet
+
+> SurveyProtocolDto surveysSurveyIdProtocolsGet(surveyId)
+
+Получить все протоколы по id обследования
+
+### Example
+
+```javascript
+import KdepaApi from 'kdepa_api';
+
+let apiInstance = new KdepaApi.SurveysApi();
+let surveyId = 56; // Number | 
+apiInstance.surveysSurveyIdProtocolsGet(surveyId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **surveyId** | **Number**|  | 
+
+### Return type
+
+[**SurveyProtocolDto**](SurveyProtocolDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: text/plain, application/json, text/json
 
