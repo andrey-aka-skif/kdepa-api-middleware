@@ -118,6 +118,7 @@ docs/SurveyProtocolDto.md
 docs/SurveyRawDto.md
 docs/SurveysApi.md
 docs/SurveysExtendedQueryFilterDto.md
+docs/SurveysProtocolsApi.md
 docs/SurveysRawApi.md
 docs/SystemsApi.md
 docs/SystemsQueryFilterDto.md
@@ -160,6 +161,7 @@ src/api/RegulatoryDocumentsApi.js
 src/api/ShopsApi.js
 src/api/StationsApi.js
 src/api/SurveysApi.js
+src/api/SurveysProtocolsApi.js
 src/api/SurveysRawApi.js
 src/api/SystemsApi.js
 src/api/ValveMarksApi.js
@@ -296,6 +298,7 @@ test/api/RegulatoryDocumentsApi.spec.js
 test/api/ShopsApi.spec.js
 test/api/StationsApi.spec.js
 test/api/SurveysApi.spec.js
+test/api/SurveysProtocolsApi.spec.js
 test/api/SurveysRawApi.spec.js
 test/api/SystemsApi.spec.js
 test/api/ValveMarksApi.spec.js

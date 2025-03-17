@@ -54,6 +54,12 @@
       //expect(instance).to.be.a(KdepaApi.SurveyProtocolDto);
     });
 
+    it('should have the property isDraft (base name: "isDraft")', function() {
+      // uncomment below and update the code to test the property isDraft
+      //var instance = new KdepaApi.SurveyProtocolDto();
+      //expect(instance).to.be();
+    });
+
     it('should have the property summary (base name: "summary")', function() {
       // uncomment below and update the code to test the property summary
       //var instance = new KdepaApi.SurveyProtocolDto();

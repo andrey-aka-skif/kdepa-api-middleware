@@ -47,8 +47,11 @@ class SurveyProtocolDto {
         if (data) {
             obj = obj || new SurveyProtocolDto();
 
+            if (data.hasOwnProperty('isDraft')) {
+                obj['isDraft'] = ApiClient.convertToType(data['isDraft'], 'Boolean');
+            }
             if (data.hasOwnProperty('summary')) {
-                obj['summary'] = ApiClient.convertToType(data['summary'], {'String': 'String'});
+                obj['summary'] = ApiClient.convertToType(data['summary'], {'String': Object});
             }
             if (data.hasOwnProperty('units')) {
                 obj['units'] = ApiClient.convertToType(data['units'], {'String': 'String'});
@@ -76,7 +79,12 @@ class SurveyProtocolDto {
 
 
 /**
- * @member {Object.<String, String>} summary
+ * @member {Boolean} isDraft
+ */
+SurveyProtocolDto.prototype['isDraft'] = undefined;
+
+/**
+ * @member {Object.<String, Object>} summary
  */
 SurveyProtocolDto.prototype['summary'] = undefined;
 

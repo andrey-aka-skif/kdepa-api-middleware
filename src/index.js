@@ -144,6 +144,7 @@ import RegulatoryDocumentsApi from './api/RegulatoryDocumentsApi';
 import ShopsApi from './api/ShopsApi';
 import StationsApi from './api/StationsApi';
 import SurveysApi from './api/SurveysApi';
+import SurveysProtocolsApi from './api/SurveysProtocolsApi';
 import SurveysRawApi from './api/SurveysRawApi';
 import SystemsApi from './api/SystemsApi';
 import ValveMarksApi from './api/ValveMarksApi';
@@ -973,6 +974,12 @@ export {
     * @property {module:api/SurveysApi}
     */
     SurveysApi,
+
+    /**
+    * The SurveysProtocolsApi service constructor.
+    * @property {module:api/SurveysProtocolsApi}
+    */
+    SurveysProtocolsApi,
 
     /**
     * The SurveysRawApi service constructor.

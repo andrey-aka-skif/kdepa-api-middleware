@@ -216,13 +216,13 @@ Class | Method | HTTP request | Description
 *KdepaApi.SurveysApi* | [**surveysIdChannelsChannelIdGet**](docs/SurveysApi.md#surveysIdChannelsChannelIdGet) | **GET** /Surveys/{id}/channels/{channelId} | Получить график канала по id Обследования и channelId канала
 *KdepaApi.SurveysApi* | [**surveysIdDelete**](docs/SurveysApi.md#surveysIdDelete) | **DELETE** /Surveys/{id} | Удалить Обследование
 *KdepaApi.SurveysApi* | [**surveysIdGet**](docs/SurveysApi.md#surveysIdGet) | **GET** /Surveys/{id} | Получить Обследование по id
-*KdepaApi.SurveysApi* | [**surveysIdProtocolPut**](docs/SurveysApi.md#surveysIdProtocolPut) | **PUT** /Surveys/{id}/protocol | Обновить актуальный протокол обследования по id обследования
 *KdepaApi.SurveysApi* | [**surveysIdPut**](docs/SurveysApi.md#surveysIdPut) | **PUT** /Surveys/{id} | Обновить Обследование
 *KdepaApi.SurveysApi* | [**surveysPost**](docs/SurveysApi.md#surveysPost) | **POST** /Surveys | Создать Обследование
-*KdepaApi.SurveysApi* | [**surveysProtocolsIdGet**](docs/SurveysApi.md#surveysProtocolsIdGet) | **GET** /Surveys/protocols/{id} | Получить протокол по id
-*KdepaApi.SurveysApi* | [**surveysSurveyIdActualProtocolGet**](docs/SurveysApi.md#surveysSurveyIdActualProtocolGet) | **GET** /Surveys/{surveyId}/actual-protocol | Получить актуальный протокол по id обследования
 *KdepaApi.SurveysApi* | [**surveysSurveyIdDiagnosticsPost**](docs/SurveysApi.md#surveysSurveyIdDiagnosticsPost) | **POST** /Surveys/{surveyId}/diagnostics | Создать Диагностирование для Обследования
-*KdepaApi.SurveysApi* | [**surveysSurveyIdProtocolsGet**](docs/SurveysApi.md#surveysSurveyIdProtocolsGet) | **GET** /Surveys/{surveyId}/protocols | Получить все протоколы по id обследования
+*KdepaApi.SurveysProtocolsApi* | [**surveysProtocolsProtocolsIdGet**](docs/SurveysProtocolsApi.md#surveysProtocolsProtocolsIdGet) | **GET** /SurveysProtocols/protocols/{id} | Получить протокол по id
+*KdepaApi.SurveysProtocolsApi* | [**surveysProtocolsSurveyIdActualProtocolGet**](docs/SurveysProtocolsApi.md#surveysProtocolsSurveyIdActualProtocolGet) | **GET** /SurveysProtocols/{surveyId}/actual-protocol | Получить актуальный протокол по id обследования
+*KdepaApi.SurveysProtocolsApi* | [**surveysProtocolsSurveyIdProtocolPut**](docs/SurveysProtocolsApi.md#surveysProtocolsSurveyIdProtocolPut) | **PUT** /SurveysProtocols/{surveyId}/protocol | Обновить актуальный протокол обследования по id обследования
+*KdepaApi.SurveysProtocolsApi* | [**surveysProtocolsSurveyIdProtocolsGet**](docs/SurveysProtocolsApi.md#surveysProtocolsSurveyIdProtocolsGet) | **GET** /SurveysProtocols/{surveyId}/protocols | Получить все протоколы по id обследования
 *KdepaApi.SurveysRawApi* | [**surveysRawGet**](docs/SurveysRawApi.md#surveysRawGet) | **GET** /SurveysRaw | Получить список Сырых Обследований
 *KdepaApi.SurveysRawApi* | [**surveysRawGuidChannelsIndexGet**](docs/SurveysRawApi.md#surveysRawGuidChannelsIndexGet) | **GET** /SurveysRaw/{guid}/channels/{index} | Получить график канала по guid Сырого Обследования и index канала
 *KdepaApi.SurveysRawApi* | [**surveysRawGuidDelete**](docs/SurveysRawApi.md#surveysRawGuidDelete) | **DELETE** /SurveysRaw/{guid} | Удалить Сырое Обследование

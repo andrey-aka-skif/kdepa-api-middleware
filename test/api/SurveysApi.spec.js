@@ -108,16 +108,6 @@
         done();
       });
     });
-    describe('surveysIdProtocolPut', function() {
-      it('should call surveysIdProtocolPut successfully', function(done) {
-        //uncomment below and update the code to test surveysIdProtocolPut
-        //instance.surveysIdProtocolPut(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('surveysIdPut', function() {
       it('should call surveysIdPut successfully', function(done) {
         //uncomment below and update the code to test surveysIdPut
@@ -138,40 +128,10 @@
         done();
       });
     });
-    describe('surveysProtocolsIdGet', function() {
-      it('should call surveysProtocolsIdGet successfully', function(done) {
-        //uncomment below and update the code to test surveysProtocolsIdGet
-        //instance.surveysProtocolsIdGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('surveysSurveyIdActualProtocolGet', function() {
-      it('should call surveysSurveyIdActualProtocolGet successfully', function(done) {
-        //uncomment below and update the code to test surveysSurveyIdActualProtocolGet
-        //instance.surveysSurveyIdActualProtocolGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('surveysSurveyIdDiagnosticsPost', function() {
       it('should call surveysSurveyIdDiagnosticsPost successfully', function(done) {
         //uncomment below and update the code to test surveysSurveyIdDiagnosticsPost
         //instance.surveysSurveyIdDiagnosticsPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('surveysSurveyIdProtocolsGet', function() {
-      it('should call surveysSurveyIdProtocolsGet successfully', function(done) {
-        //uncomment below and update the code to test surveysSurveyIdProtocolsGet
-        //instance.surveysSurveyIdProtocolsGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
