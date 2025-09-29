@@ -135,6 +135,7 @@ import DrivesApi from './api/DrivesApi';
 import FactoriesApi from './api/FactoriesApi';
 import FilesApi from './api/FilesApi';
 import FlowsApi from './api/FlowsApi';
+import HealthApi from './api/HealthApi';
 import LookUpApi from './api/LookUpApi';
 import MotorMarksApi from './api/MotorMarksApi';
 import MotorsApi from './api/MotorsApi';
@@ -920,6 +921,12 @@ export {
     * @property {module:api/FlowsApi}
     */
     FlowsApi,
+
+    /**
+    * The HealthApi service constructor.
+    * @property {module:api/HealthApi}
+    */
+    HealthApi,
 
     /**
     * The LookUpApi service constructor.

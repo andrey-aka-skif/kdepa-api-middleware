@@ -120,7 +120,7 @@ export default class LookUpApi {
 
 
     /**
-     * Получить Группы безопасности по НП-089-15
+     * Получить Группы оборудования по НП-089-15
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/EquipmentGroupDto>} and HTTP response
      */
     lookUpEquipmentGroupsGetWithHttpInfo() {
@@ -147,7 +147,7 @@ export default class LookUpApi {
     }
 
     /**
-     * Получить Группы безопасности по НП-089-15
+     * Получить Группы оборудования по НП-089-15
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/EquipmentGroupDto>}
      */
     lookUpEquipmentGroupsGet() {

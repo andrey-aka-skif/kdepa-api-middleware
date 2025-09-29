@@ -63,6 +63,7 @@ docs/FilesApi.md
 docs/FlowDto.md
 docs/FlowDtoValvesQueryFilterDtoPagedItemsDto.md
 docs/FlowsApi.md
+docs/HealthApi.md
 docs/LookUpApi.md
 docs/MediumDto.md
 docs/MotorDto.md
@@ -152,6 +153,7 @@ src/api/DrivesApi.js
 src/api/FactoriesApi.js
 src/api/FilesApi.js
 src/api/FlowsApi.js
+src/api/HealthApi.js
 src/api/LookUpApi.js
 src/api/MotorMarksApi.js
 src/api/MotorsApi.js
@@ -289,6 +291,7 @@ test/api/DrivesApi.spec.js
 test/api/FactoriesApi.spec.js
 test/api/FilesApi.spec.js
 test/api/FlowsApi.spec.js
+test/api/HealthApi.spec.js
 test/api/LookUpApi.spec.js
 test/api/MotorMarksApi.spec.js
 test/api/MotorsApi.spec.js

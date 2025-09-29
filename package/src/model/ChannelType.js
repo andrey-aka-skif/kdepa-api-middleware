@@ -103,6 +103,13 @@ export default class ChannelType {
         "11" = 11;
 
     
+        /**
+         * value: 12
+         * @const
+         */
+        "12" = 12;
+
+    
 
     /**
     * Returns a <code>ChannelType</code> enum value from a Javascript object name.

@@ -173,9 +173,10 @@ Class | Method | HTTP request | Description
 *KdepaApi.FlowsApi* | [**flowsIdGet**](docs/FlowsApi.md#flowsIdGet) | **GET** /Flows/{id} | Получить Диагностирование протечки по id
 *KdepaApi.FlowsApi* | [**flowsIdPut**](docs/FlowsApi.md#flowsIdPut) | **PUT** /Flows/{id} | Обновить Диагностирование протечки
 *KdepaApi.FlowsApi* | [**flowsPost**](docs/FlowsApi.md#flowsPost) | **POST** /Flows | Добавить Диагностирования из ПК ДУЗ
+*KdepaApi.HealthApi* | [**healthGet**](docs/HealthApi.md#healthGet) | **GET** /Health | Проверка живости сервиса (liveness probe)
 *KdepaApi.LookUpApi* | [**lookUpAtmosphereTypesGet**](docs/LookUpApi.md#lookUpAtmosphereTypesGet) | **GET** /LookUp/atmosphere-types | Получить Типы атмосферы по ГОСТ 15150
 *KdepaApi.LookUpApi* | [**lookUpClimaticExecutionsGet**](docs/LookUpApi.md#lookUpClimaticExecutionsGet) | **GET** /LookUp/climatic-executions | Получить Климатические исполнения по ГОСТ 15150
-*KdepaApi.LookUpApi* | [**lookUpEquipmentGroupsGet**](docs/LookUpApi.md#lookUpEquipmentGroupsGet) | **GET** /LookUp/equipment-groups | Получить Группы безопасности по НП-089-15
+*KdepaApi.LookUpApi* | [**lookUpEquipmentGroupsGet**](docs/LookUpApi.md#lookUpEquipmentGroupsGet) | **GET** /LookUp/equipment-groups | Получить Группы оборудования по НП-089-15
 *KdepaApi.LookUpApi* | [**lookUpMediumsGet**](docs/LookUpApi.md#lookUpMediumsGet) | **GET** /LookUp/mediums | Получить типы Сред
 *KdepaApi.LookUpApi* | [**lookUpSafetyClassesGet**](docs/LookUpApi.md#lookUpSafetyClassesGet) | **GET** /LookUp/safety-classes | Получить Классы безопасности по НП-001-15
 *KdepaApi.LookUpApi* | [**lookUpSeismicCategoriesGet**](docs/LookUpApi.md#lookUpSeismicCategoriesGet) | **GET** /LookUp/seismic-categories | Получить Категории сейсмостойкости по НП-031-01

@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**lookUpAtmosphereTypesGet**](LookUpApi.md#lookUpAtmosphereTypesGet) | **GET** /LookUp/atmosphere-types | Получить Типы атмосферы по ГОСТ 15150
 [**lookUpClimaticExecutionsGet**](LookUpApi.md#lookUpClimaticExecutionsGet) | **GET** /LookUp/climatic-executions | Получить Климатические исполнения по ГОСТ 15150
-[**lookUpEquipmentGroupsGet**](LookUpApi.md#lookUpEquipmentGroupsGet) | **GET** /LookUp/equipment-groups | Получить Группы безопасности по НП-089-15
+[**lookUpEquipmentGroupsGet**](LookUpApi.md#lookUpEquipmentGroupsGet) | **GET** /LookUp/equipment-groups | Получить Группы оборудования по НП-089-15
 [**lookUpMediumsGet**](LookUpApi.md#lookUpMediumsGet) | **GET** /LookUp/mediums | Получить типы Сред
 [**lookUpSafetyClassesGet**](LookUpApi.md#lookUpSafetyClassesGet) | **GET** /LookUp/safety-classes | Получить Классы безопасности по НП-001-15
 [**lookUpSeismicCategoriesGet**](LookUpApi.md#lookUpSeismicCategoriesGet) | **GET** /LookUp/seismic-categories | Получить Категории сейсмостойкости по НП-031-01
@@ -94,7 +94,7 @@ No authorization required
 
 > [EquipmentGroupDto] lookUpEquipmentGroupsGet()
 
-Получить Группы безопасности по НП-089-15
+Получить Группы оборудования по НП-089-15
 
 ### Example
 
